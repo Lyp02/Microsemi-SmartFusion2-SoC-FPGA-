@@ -1,0 +1,4 @@
+Selecting top level module EDIB_M2
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\EDIB_M2\EDIB_M2\hdl\EDIB_M2.v":4:7:4:13|Synthesizing module EDIB_M2 in library work.
+
+@E: CS153 :"D:\M2S010TQG144\EDIB_1\EDIB_M2\EDIB_M2\hdl\EDIB_M2.v":50:13:50:13|Can't mix blocking and non-blocking assignments to a variable

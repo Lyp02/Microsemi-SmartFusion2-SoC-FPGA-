@@ -1,0 +1,8 @@
+C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\c_hdl.exe  -osyn  D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\synwork\EDIB_CMD_comp.srs  -top  EDIB_CMD  -hdllog  D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\synlog\EDIB_CMD_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -infer_seqShift -primux -dspmac -pqdpadd -fixsmult -sdff_counter -divnmod -nram   -I D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\  -I C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib   -v2001  -devicelib  C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v  -encrypt  -pro  -dmgen  D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v 
+rc:2 success:0 runtime:1
+file:D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\synwork\EDIB_CMD_comp.srs|io:o|time:0|size:0|exec:0
+file:D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\synthesis\synlog\EDIB_CMD_compiler.srr|io:o|time:1529324672|size:2196|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v|io:i|time:1487916428|size:16359|exec:0
+file:D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v|io:i|time:1528886362|size:6487|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\c_hdl.exe|io:i|time:1479348364|size:1337856|exec:1
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\c_hdl.exe|io:i|time:1479348568|size:1973248|exec:1

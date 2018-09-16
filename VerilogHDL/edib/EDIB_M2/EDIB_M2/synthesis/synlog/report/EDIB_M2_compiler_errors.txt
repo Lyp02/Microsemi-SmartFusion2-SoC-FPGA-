@@ -1,0 +1,2 @@
+@E: CS153 :"D:\M2S010TQG144\EDIB_1\EDIB_M2\EDIB_M2\hdl\EDIB_M2.v":50:13:50:13|Can't mix blocking and non-blocking assignments to a variable
+

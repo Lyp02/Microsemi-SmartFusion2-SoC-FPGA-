@@ -1,0 +1,10 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
+. DMAAPB, 16, 37, 0, 0, 0, 1, 0, 2, 1
+.	. CoreAPB3_Z1, 0, 33, 0, 0, 0, 0, 0, 0, 0
+.	.	. COREAPB3_MUXPTOB3, 0, 31, 0, 0, 0, 0, 0, 0, 0
+.	. DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM_19s_16s_0s_128s_1024s_1s, 16, 4, 0, 0, 0, 1, 0, 0, 0
+.	.	. DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s, 0, 0, 0, 0, 0, 1, 0, 0, 0
+.	. DMAAPB_FCCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 1, 0
+.	. DMAAPB_MSS, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	. DMAAPB_OSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0

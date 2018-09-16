@@ -1,0 +1,94 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.8 SP2 11.8.2.4
+
+# Design Name: DMAAPB 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 144 TQ , Speed grade: STD 
+
+# Date generated: Sun Jun 10 08:47:51 2018 
+
+
+#
+# I/O constraints
+#
+
+set_io GPIO_0_M2F -DIRECTION OUTPUT -pinname 100 -fixed no
+
+#
+# Core cell constraints
+#
+
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[3\] -fixed no 355 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[2\] -fixed no 359 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[14\] -fixed no 357 48
+set_location FCCC_0/GL0_INST -fixed no 219 54
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[4\] -fixed no 359 39
+set_location COREAPBLSRAM_0/PRDATA4_s -fixed no 344 51
+set_location COREAPBLSRAM_0/PRDATA4 -fixed no 353 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_0\[5\] -fixed no 350 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[6\] -fixed no 352 51
+set_location COREAPBLSRAM_0/PRDATA_reg\[13\] -fixed no 354 52
+set_location FCCC_0/GL0_INST/U0_RGB1 -fixed no 218 102
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[15\] -fixed no 356 48
+set_location COREAPBLSRAM_0/PRDATA_reg\[4\] -fixed no 357 52
+set_location COREAPBLSRAM_0/PRDATA_reg\[1\] -fixed no 337 52
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[12\] -fixed no 355 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[10\] -fixed no 349 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[0\] -fixed no 351 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[0\] -fixed no 353 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_0_1\[1\] -fixed no 356 51
+set_location COREAPBLSRAM_0/PRDATA_reg\[6\] -fixed no 352 52
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[7\] -fixed no 358 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[11\] -fixed no 357 39
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[11\] -fixed no 349 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[8\] -fixed no 349 39
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[13\] -fixed no 354 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[3\] -fixed no 358 39
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[9\] -fixed no 351 51
+set_location COREAPBLSRAM_0/PRDATA_reg\[14\] -fixed no 357 49
+set_location SYSRESET_0_RNIHNV1 -fixed no 220 54
+set_location COREAPBLSRAM_0/PRDATA_reg\[3\] -fixed no 358 40
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[2\] -fixed no 348 39
+set_location CoreAPB3_0/iPSELS_1\[3\] -fixed no 353 39
+set_location ip_interface_inst -fixed no 191 0
+set_location COREAPBLSRAM_0/PRDATA_reg\[11\] -fixed no 349 52
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[12\] -fixed no 352 36
+set_location COREAPBLSRAM_0/PRDATA_reg\[8\] -fixed no 348 52
+set_location COREAPBLSRAM_0/PRDATA_reg\[10\] -fixed no 352 49
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_0\[1\] -fixed no 337 51
+set_location COREAPBLSRAM_0/PRDATA_reg\[9\] -fixed no 351 52
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[8\] -fixed no 348 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[4\] -fixed no 357 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[15\] -fixed no 359 48
+set_location COREAPBLSRAM_0/wen -fixed no 354 39
+set_location SYSRESET_0_RNIHNV1/U0_RGB1 -fixed no 219 51
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[10\] -fixed no 352 48
+set_location COREAPBLSRAM_0/PRDATA4_1 -fixed no 358 51
+set_location OSC_0/I_RCOSC_25_50MHZ -fixed no 396 92
+set_location COREAPBLSRAM_0/PRDATA_reg\[15\] -fixed no 359 49
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[7\] -fixed no 354 48
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns\[14\] -fixed no 355 36
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[13\] -fixed no 351 39
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[6\] -fixed no 350 39
+set_location COREAPBLSRAM_0/PRDATA_reg\[7\] -fixed no 354 49
+set_location COREAPBLSRAM_0/PRDATA_reg\[0\] -fixed no 353 49
+set_location COREAPBLSRAM_0/PRDATA_reg\[2\] -fixed no 359 52
+set_location CoreAPB3_0/iPSELS_2\[3\] -fixed no 356 39
+set_location CoreAPB3_0/u_mux_p_to_b3/PRDATA_xx_mm_ns_1\[9\] -fixed no 352 39
+set_location COREAPBLSRAM_0/PRDATA_reg\[12\] -fixed no 355 49
+set_location CFG0_GND_INST -fixed no 355 39
+set_location COREAPBLSRAM_0/PRDATA_reg\[5\] -fixed no 350 52
+set_location FCCC_0/CCC_INST -fixed no 390 92
+set_location SYSRESET_0 -fixed no 396 8
+set_location COREAPBLSRAM_0/genblk1_genblk1_lsram_1024to70656x16_block0/block1 -fixed no 228 47
+set_location DMAAPB_MSS_0/MSS_ADLIB_INST -fixed no 300 104
+set_location FCCC_0/GL0_INST/U0_RGB1_RGB0 -fixed no 218 51
+set_location FCCC_0/GL0_INST/U0_RGB1_RGB1 -fixed no 218 48
+set_location FCCC_0/GL0_INST/U0_RGB1_RGB2 -fixed no 218 45
+set_location FCCC_0/GL0_INST/U0_RGB1_RGB3 -fixed no 218 39
+set_location SYSRESET_0_RNIHNV1/U0_RGB1_RGB0 -fixed no 219 48
+set_location SYSRESET_0_RNIHNV1/U0_RGB1_RGB1 -fixed no 219 45
+set_location SYSRESET_0_RNIHNV1/U0_RGB1_RGB2 -fixed no 219 39

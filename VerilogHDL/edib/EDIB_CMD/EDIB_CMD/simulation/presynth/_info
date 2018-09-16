@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/simulation
+vEDIB_CMD
+Z1 !s110 1529324681
+!i10b 1
+!s100 68Cj;zVA@MNoW9Xm42oe50
+I0cJ59nP:h=j8A7R0kX;VV3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1528886362
+8D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/hdl/EDIB_CMD.v
+FD:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/hdl/EDIB_CMD.v
+L0 1
+Z3 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z4 !s108 1529324681.000000
+!s107 D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/hdl/EDIB_CMD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/hdl/EDIB_CMD.v|
+!s101 -O0
+!i113 1
+Z5 o-vlog01compat -work presynth -O0
+Z6 tCvgOpt 0
+n@e@d@i@b_@c@m@d
+vEDIB_CMD_tb
+R1
+!i10b 1
+!s100 h:UjcnSl=dbZ>XmJ^1ST02
+IU@<Moj^FDKjHzD`6]CkN60
+R2
+R0
+w1528886253
+8D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus/EDIB_CMD_tb.v
+FD:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus/EDIB_CMD_tb.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus/EDIB_CMD_tb.v|
+!s90 -reportprogress|300|+incdir+D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus|-vlog01compat|-work|presynth|D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus/EDIB_CMD_tb.v|
+!s101 -O0
+!i113 1
+R5
+!s92 +incdir+D:/M2S010TQG144/EDIB_1/EDIB_CMD/EDIB_CMD/stimulus -vlog01compat -work presynth -O0
+R6
+n@e@d@i@b_@c@m@d_tb

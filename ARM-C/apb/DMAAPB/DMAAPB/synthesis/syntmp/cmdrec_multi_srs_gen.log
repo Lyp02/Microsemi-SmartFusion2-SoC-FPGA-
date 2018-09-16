@@ -1,0 +1,7 @@
+C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  DMAAPB  -multisrs  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_comp.srs  -osyn  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_mult.srs  -log  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synlog\DMAAPB_multi_srs_gen.srr 
+rc:0 success:1 runtime:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_comp.srs|io:i|time:1528591634|size:66794|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_mult.srs|io:o|time:1528591635|size:8436|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synlog\DMAAPB_multi_srs_gen.srr|io:o|time:1528591635|size:508|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\syn_nfilter.exe|io:i|time:1479348458|size:3128320|exec:1
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1479348724|size:4208128|exec:1

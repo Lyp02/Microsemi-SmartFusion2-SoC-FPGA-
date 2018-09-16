@@ -1,0 +1,2 @@
+@W: MT246 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\fccc_0\dmaapb_fccc_0_fccc.v":20:36:20:43|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:FCCC_0.GL0_net"

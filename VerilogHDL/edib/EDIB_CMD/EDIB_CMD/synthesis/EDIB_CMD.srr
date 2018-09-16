@@ -1,0 +1,37 @@
+#Build: Synplify Pro L-2016.09M-2, Build 065R, Nov 16 2016
+#install: C:\Microsemi\Libero_SoC_v11.8\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-E962I26
+
+# Mon Jun 18 20:24:31 2018
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q3p1, Build 127R, built Nov 24 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v" (library work)
+Verilog syntax check successful!
+Selecting top level module EDIB_CMD
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v":1:7:1:14|Synthesizing module EDIB_CMD in library work.
+
+@E: CS153 :"D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v":52:13:52:13|Can't mix blocking and non-blocking assignments to a variable
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 18 20:24:32 2018
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 18 20:24:32 2018
+
+###########################################################]

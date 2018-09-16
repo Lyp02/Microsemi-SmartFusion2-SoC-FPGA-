@@ -1,0 +1,29 @@
+@W: CG775 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":244:12:244:20|Removing wire IA_PRDATA, as there is no assignment to it.
+@W: CG775 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:40|Found Component DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB
+@W: CG134 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":79:40:79:47|No assignment to bit 8 of ckRdAddr
+@W: CL169 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":649:4:649:9|Pruning unused register ckRdAddr[16:9]. Make sure that there are no unused intermediate registers.
+@W: CG133 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":88:32:88:41|Object PREADY_reg is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":92:32:92:49|Removing wire lsram_512_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":93:32:93:54|Removing wire lsram_512to46k_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":95:32:95:48|Removing wire lsram_2k_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":98:32:98:48|Removing wire usram_2K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":99:32:99:48|Removing wire usram_3K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":100:32:100:48|Removing wire usram_4K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":101:32:101:48|Removing wire usram_9K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":105:32:105:51|Removing wire lsram_width32_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":106:32:106:51|Removing wire lsram_width24_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":108:32:108:51|Removing wire lsram_width08_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":110:32:110:51|Removing wire usram_width32_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":111:32:111:51|Removing wire usram_width24_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":112:32:112:51|Removing wire usram_width16_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":113:32:113:51|Removing wire usram_width08_PRDATA, as there is no assignment to it.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":16:7:16:24|*Output RCOSC_25_50MHZ_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL246 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":61:40:61:48|Input port bits 17 to 10 of writeAddr[17:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL247 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":75:32:75:36|Input port bit 19 of PADDR[19:0] is unused
+@W: CL247 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":75:32:75:36|Input port bit 0 of PADDR[19:0] is unused
+

@@ -1,0 +1,14 @@
+C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\m_generic.exe  -mp  4  -prjfile  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis   -part M2S010  -package TQ144  -grade STD    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -low_power_ram_decomp 0 -seqshift_to_uram 0 -opcond COMTC -report_path 4000 -RWCheckOnRam 0 -summaryfile D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synlog\report\DMAAPB_premap.xml  -top_level_module  DMAAPB  -oedif  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.edn  -conchk_prepass  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB_cck.rpt   -freq 100.000   D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_mult.srs  -flow prepass  -gcc_prepass  -osrd  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_prem.srd  -qsap  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v  -ologparam  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\syntmp\DMAAPB.plg  -osyn  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_prem.srd  -prjdir  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\  -prjname  DMAAPB_syn  -log  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synlog\DMAAPB_premap.srr 
+rc:1 success:1 runtime:1
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\scratchproject.prs|io:o|time:1528525718|size:3913|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.edn|io:o|time:1528558268|size:222437|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB_cck.rpt|io:o|time:1528591636|size:2589|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_mult.srs|io:i|time:1528591635|size:8436|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_prem.srd|io:o|time:1528591636|size:89137|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.sap|io:o|time:1528591636|size:1138|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v|io:i|time:1487916428|size:16359|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\syntmp\DMAAPB.plg|io:o|time:1528591636|size:0|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_prem.srd|io:o|time:1528591636|size:89137|exec:0
+file:D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synlog\DMAAPB_premap.srr|io:o|time:1528591636|size:28492|exec:0
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\m_generic.exe|io:i|time:1485279362|size:17958400|exec:1
+file:C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\m_generic.exe|io:i|time:1485280914|size:32495616|exec:1

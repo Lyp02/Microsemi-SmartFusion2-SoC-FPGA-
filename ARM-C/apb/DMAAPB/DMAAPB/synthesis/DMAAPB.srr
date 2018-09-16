@@ -1,0 +1,827 @@
+#Build: Synplify Pro L-2016.09M-2, Build 065R, Nov 16 2016
+#install: C:\Microsemi\Libero_SoC_v11.8\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-E962I26
+
+# Sun Jun 10 08:47:12 2018
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q3p1, Build 127R, built Nov 24 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\FCCC_0\DMAAPB_FCCC_0_FCCC.v" (library work)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS_syn.v" (library work)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS.v" (library work)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\SgCore\OSC\2.0.101\osc_comps.v" (library work)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v" (library work)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v" (library COREAPB3_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v" (library COREAPB3_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v" (library COREAPB3_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_128to9216x8.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to2304x32.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to4608x16.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v" (library COREAPBLSRAM_LIB)
+@I::"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\DMAAPB.v" (library work)
+Verilog syntax check successful!
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\FCCC_0\DMAAPB_FCCC_0_FCCC.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS_syn.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_128to9216x8.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to2304x32.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to4608x16.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v changed - recompiling
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\DMAAPB.v changed - recompiling
+Selecting top level module DMAAPB
+@W: CG775 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Found Component CoreAPB3 in library COREAPB3_LIB
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3 in library COREAPB3_LIB.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3 in library COREAPB3_LIB.
+
+	APB_DWIDTH=6'b010000
+	IADDR_OPTION=32'b00000000000000000000000000000000
+	APBSLOT0ENABLE=1'b0
+	APBSLOT1ENABLE=1'b0
+	APBSLOT2ENABLE=1'b0
+	APBSLOT3ENABLE=1'b1
+	APBSLOT4ENABLE=1'b0
+	APBSLOT5ENABLE=1'b0
+	APBSLOT6ENABLE=1'b0
+	APBSLOT7ENABLE=1'b0
+	APBSLOT8ENABLE=1'b0
+	APBSLOT9ENABLE=1'b0
+	APBSLOT10ENABLE=1'b0
+	APBSLOT11ENABLE=1'b0
+	APBSLOT12ENABLE=1'b0
+	APBSLOT13ENABLE=1'b0
+	APBSLOT14ENABLE=1'b0
+	APBSLOT15ENABLE=1'b0
+	SC_0=1'b0
+	SC_1=1'b0
+	SC_2=1'b0
+	SC_3=1'b0
+	SC_4=1'b0
+	SC_5=1'b0
+	SC_6=1'b0
+	SC_7=1'b0
+	SC_8=1'b0
+	SC_9=1'b0
+	SC_10=1'b0
+	SC_11=1'b0
+	SC_12=1'b0
+	SC_13=1'b0
+	SC_14=1'b0
+	SC_15=1'b0
+	MADDR_BITS=6'b011100
+	UPR_NIBBLE_POSN=4'b0110
+	FAMILY=32'b00000000000000000000000000010011
+	SYNC_RESET=32'b00000000000000000000000000000000
+	IADDR_NOTINUSE=32'b00000000000000000000000000000000
+	IADDR_EXTERNAL=32'b00000000000000000000000000000001
+	IADDR_SLOT0=32'b00000000000000000000000000000010
+	IADDR_SLOT1=32'b00000000000000000000000000000011
+	IADDR_SLOT2=32'b00000000000000000000000000000100
+	IADDR_SLOT3=32'b00000000000000000000000000000101
+	IADDR_SLOT4=32'b00000000000000000000000000000110
+	IADDR_SLOT5=32'b00000000000000000000000000000111
+	IADDR_SLOT6=32'b00000000000000000000000000001000
+	IADDR_SLOT7=32'b00000000000000000000000000001001
+	IADDR_SLOT8=32'b00000000000000000000000000001010
+	IADDR_SLOT9=32'b00000000000000000000000000001011
+	IADDR_SLOT10=32'b00000000000000000000000000001100
+	IADDR_SLOT11=32'b00000000000000000000000000001101
+	IADDR_SLOT12=32'b00000000000000000000000000001110
+	IADDR_SLOT13=32'b00000000000000000000000000001111
+	IADDR_SLOT14=32'b00000000000000000000000000010000
+	IADDR_SLOT15=32'b00000000000000000000000000010001
+	SL0=16'b0000000000000000
+	SL1=16'b0000000000000000
+	SL2=16'b0000000000000000
+	SL3=16'b0000000000001000
+	SL4=16'b0000000000000000
+	SL5=16'b0000000000000000
+	SL6=16'b0000000000000000
+	SL7=16'b0000000000000000
+	SL8=16'b0000000000000000
+	SL9=16'b0000000000000000
+	SL10=16'b0000000000000000
+	SL11=16'b0000000000000000
+	SL12=16'b0000000000000000
+	SL13=16'b0000000000000000
+	SL14=16'b0000000000000000
+	SL15=16'b0000000000000000
+	SC=16'b0000000000000000
+	SC_qual=16'b0000000000000000
+   Generated name = CoreAPB3_Z1
+
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":244:12:244:20|Removing wire IA_PRDATA, as there is no assignment to it.
+@W: CG775 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:40|Found Component DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:40|Synthesizing module DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB.
+
+	FAMILY=32'b00000000000000000000000000010011
+	APB_DWIDTH=32'b00000000000000000000000000010000
+	SEL_SRAM_TYPE=32'b00000000000000000000000000000000
+	USRAM_NUM_LOCATIONS_DWIDTH=32'b00000000000000000000000010000000
+	LSRAM_NUM_LOCATIONS_DWIDTH=32'b00000000000000000000010000000000
+	ADDR_SCHEME=32'b00000000000000000000000000000001
+   Generated name = DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM_19s_16s_0s_128s_1024s_1s
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":382:7:382:13|Synthesizing module RAM1K18 in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":28:7:28:48|Synthesizing module DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16 in library COREAPBLSRAM_LIB.
+
+	DEPTH=32'b00000000000000000000010000000000
+	APB_DWIDTH=32'b00000000000000000000000000010000
+   Generated name = DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s
+
+@W: CG134 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":79:40:79:47|No assignment to bit 8 of ckRdAddr
+@W: CL169 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":649:4:649:9|Pruning unused register ckRdAddr[16:9]. Make sure that there are no unused intermediate registers.
+@W: CG133 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":88:32:88:41|Object PREADY_reg is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":92:32:92:49|Removing wire lsram_512_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":93:32:93:54|Removing wire lsram_512to46k_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":95:32:95:48|Removing wire lsram_2k_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":98:32:98:48|Removing wire usram_2K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":99:32:99:48|Removing wire usram_3K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":100:32:100:48|Removing wire usram_4K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":101:32:101:48|Removing wire usram_9K_BUSY_all, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":105:32:105:51|Removing wire lsram_width32_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":106:32:106:51|Removing wire lsram_width24_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":108:32:108:51|Removing wire lsram_width08_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":110:32:110:51|Removing wire usram_width32_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":111:32:111:51|Removing wire usram_width24_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":112:32:112:51|Removing wire usram_width16_PRDATA, as there is no assignment to it.
+@W: CG360 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":113:32:113:51|Removing wire usram_width08_PRDATA, as there is no assignment to it.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS_syn.v":5:7:5:13|Synthesizing module MSS_010 in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS.v":9:7:9:16|Synthesizing module DMAAPB_MSS in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":376:7:376:9|Synthesizing module VCC in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":372:7:372:9|Synthesizing module GND in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":727:7:727:9|Synthesizing module CCC in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\FCCC_0\DMAAPB_FCCC_0_FCCC.v":5:7:5:24|Synthesizing module DMAAPB_FCCC_0_FCCC in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":5:7:5:22|Synthesizing module DMAAPB_OSC_0_OSC in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":718:7:718:14|Synthesizing module SYSRESET in library work.
+
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\DMAAPB.v":9:7:9:12|Synthesizing module DMAAPB in library work.
+
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":16:7:16:24|*Output RCOSC_25_50MHZ_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL157 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":14:7:14:9|Input XTL is unused.
+@W: CL246 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":61:40:61:48|Input port bits 17 to 10 of writeAddr[17:0] are unused. Assign logic for all port bits or change the input port size.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":60:40:60:42|Input ren is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":62:40:62:47|Input readAddr is unused.
+@W: CL247 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":75:32:75:36|Input port bit 19 of PADDR[19:0] is unused
+
+@W: CL247 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":75:32:75:36|Input port bit 0 of PADDR[19:0] is unused
+
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":73:13:73:19|Input PRESETN is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":74:13:74:16|Input PCLK is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":104:18:104:25|Input PRDATAS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":105:18:105:25|Input PRDATAS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":106:18:106:25|Input PRDATAS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":108:18:108:25|Input PRDATAS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":109:18:109:25|Input PRDATAS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":110:18:110:25|Input PRDATAS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":111:18:111:25|Input PRDATAS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":112:18:112:25|Input PRDATAS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":113:18:113:25|Input PRDATAS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":114:18:114:26|Input PRDATAS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":115:18:115:26|Input PRDATAS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":116:18:116:26|Input PRDATAS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":117:18:117:26|Input PRDATAS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":118:18:118:26|Input PRDATAS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":119:18:119:26|Input PRDATAS15 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":121:13:121:20|Input PREADYS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":122:13:122:20|Input PREADYS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":123:13:123:20|Input PREADYS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":125:13:125:20|Input PREADYS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":126:13:126:20|Input PREADYS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":127:13:127:20|Input PREADYS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":128:13:128:20|Input PREADYS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":129:13:129:20|Input PREADYS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":130:13:130:20|Input PREADYS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":131:13:131:21|Input PREADYS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":132:13:132:21|Input PREADYS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":133:13:133:21|Input PREADYS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":134:13:134:21|Input PREADYS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":135:13:135:21|Input PREADYS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":136:13:136:21|Input PREADYS15 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":138:13:138:21|Input PSLVERRS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":139:13:139:21|Input PSLVERRS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":140:13:140:21|Input PSLVERRS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":142:13:142:21|Input PSLVERRS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":143:13:143:21|Input PSLVERRS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":144:13:144:21|Input PSLVERRS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":145:13:145:21|Input PSLVERRS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":146:13:146:21|Input PSLVERRS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":147:13:147:21|Input PSLVERRS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":148:13:148:22|Input PSLVERRS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":149:13:149:22|Input PSLVERRS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":150:13:150:22|Input PSLVERRS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 177MB peak: 178MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Jun 10 08:47:13 2018
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Jun 10 08:47:14 2018
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Jun 10 08:47:14 2018
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 73MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Jun 10 08:47:15 2018
+
+###########################################################]
+Pre-mapping Report
+
+# Sun Jun 10 08:47:16 2018
+
+Synopsys Generic Technology Pre-mapping, Version map201609actrcp1, Build 005R, Built Jan 25 2017 01:01:33
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB_scck.rpt 
+Printing clock  summary report in "D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 110MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 110MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
+
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":17:7:17:20|Tristate driver RCOSC_1MHZ_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_1MHZ_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":18:7:18:20|Tristate driver RCOSC_1MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_1MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":16:7:16:24|Tristate driver RCOSC_25_50MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_25_50MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":19:7:19:16|Tristate driver XTLOSC_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net XTLOSC_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":20:7:20:16|Tristate driver XTLOSC_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net XTLOSC_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41668:12:41668:18|Removing sequential instance block68 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41688:12:41688:18|Removing sequential instance block67 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41708:12:41708:18|Removing sequential instance block66 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41728:12:41728:18|Removing sequential instance block65 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41748:12:41748:18|Removing sequential instance block64 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41768:12:41768:18|Removing sequential instance block63 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41788:12:41788:18|Removing sequential instance block62 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41808:12:41808:18|Removing sequential instance block61 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41828:12:41828:18|Removing sequential instance block60 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41848:12:41848:18|Removing sequential instance block59 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41868:12:41868:18|Removing sequential instance block58 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41888:12:41888:18|Removing sequential instance block57 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41908:12:41908:18|Removing sequential instance block56 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41928:12:41928:18|Removing sequential instance block55 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41948:12:41948:18|Removing sequential instance block54 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41968:12:41968:18|Removing sequential instance block53 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":41988:12:41988:18|Removing sequential instance block52 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42008:12:42008:18|Removing sequential instance block51 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42028:12:42028:18|Removing sequential instance block50 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42048:12:42048:18|Removing sequential instance block49 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42068:12:42068:18|Removing sequential instance block48 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42088:12:42088:18|Removing sequential instance block47 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42108:12:42108:18|Removing sequential instance block46 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42128:12:42128:18|Removing sequential instance block45 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42148:12:42148:18|Removing sequential instance block44 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42168:12:42168:18|Removing sequential instance block43 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42188:12:42188:18|Removing sequential instance block42 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42208:12:42208:18|Removing sequential instance block41 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42228:12:42228:18|Removing sequential instance block40 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42248:12:42248:18|Removing sequential instance block39 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42268:12:42268:18|Removing sequential instance block38 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42288:12:42288:18|Removing sequential instance block37 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42308:12:42308:18|Removing sequential instance block36 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42328:12:42328:18|Removing sequential instance block35 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42348:12:42348:18|Removing sequential instance block34 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42368:12:42368:18|Removing sequential instance block33 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42388:12:42388:18|Removing sequential instance block32 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42408:12:42408:18|Removing sequential instance block31 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42428:12:42428:18|Removing sequential instance block30 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42448:12:42448:18|Removing sequential instance block29 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42468:12:42468:18|Removing sequential instance block28 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42488:12:42488:18|Removing sequential instance block27 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42508:12:42508:18|Removing sequential instance block26 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42528:12:42528:18|Removing sequential instance block25 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42548:12:42548:18|Removing sequential instance block24 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42568:12:42568:18|Removing sequential instance block23 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42588:12:42588:18|Removing sequential instance block22 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42608:12:42608:18|Removing sequential instance block21 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42628:12:42628:18|Removing sequential instance block20 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42648:12:42648:18|Removing sequential instance block19 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42668:12:42668:18|Removing sequential instance block18 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42688:12:42688:18|Removing sequential instance block17 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42708:12:42708:18|Removing sequential instance block16 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42728:12:42728:18|Removing sequential instance block15 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42748:12:42748:18|Removing sequential instance block14 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42768:12:42768:18|Removing sequential instance block13 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42788:12:42788:18|Removing sequential instance block12 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42808:12:42808:18|Removing sequential instance block11 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42828:12:42828:18|Removing sequential instance block10 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42848:12:42848:17|Removing sequential instance block9 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42868:12:42868:17|Removing sequential instance block8 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42888:12:42888:17|Removing sequential instance block7 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42908:10:42908:15|Removing sequential instance block6 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42928:12:42928:17|Removing sequential instance block5 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42948:12:42948:17|Removing sequential instance block4 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42968:12:42968:17|Removing sequential instance block3 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":42988:12:42988:17|Removing sequential instance block2 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+@N: BN362 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":43028:12:43028:17|Removing sequential instance block0 (in view: COREAPBLSRAM_LIB.DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16_1024s_16s(verilog)) of type view:ACG4.RAM1K18(PRIM) because it does not drive other instances.
+syn_allowed_resources : blockrams=21  set on top level netlist DMAAPB
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 138MB)
+
+
+
+Clock Summary
+*****************
+
+Start                                         Requested     Requested     Clock        Clock                   Clock
+Clock                                         Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------------------------
+DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     19   
+System                                        100.0 MHz     10.000        system       system_clkgroup         0    
+====================================================================================================================
+
+@W: MT530 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\coreapblsram_0\rtl\vlog\core\lsram_1024to70656x16.v":43008:12:43008:17|Found inferred clock DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock which controls 19 sequential elements including COREAPBLSRAM_0.genblk1\.genblk1\.lsram_1024to70656x16_block0.block1. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 138MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 138MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 50MB peak: 138MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Jun 10 08:47:16 2018
+
+###########################################################]
+Map & Optimize Report
+
+# Sun Jun 10 08:47:16 2018
+
+Synopsys Generic Technology Mapper, Version map201609actrcp1, Build 005R, Built Jan 25 2017 01:01:33
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 136MB)
+
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":20:7:20:16|Tristate driver XTLOSC_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net XTLOSC_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":19:7:19:16|Tristate driver XTLOSC_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net XTLOSC_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":18:7:18:20|Tristate driver RCOSC_1MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_1MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":17:7:17:20|Tristate driver RCOSC_1MHZ_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_1MHZ_CCC (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\osc_0\dmaapb_osc_0_osc.v":16:7:16:24|Tristate driver RCOSC_25_50MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) on net RCOSC_25_50MHZ_O2F (in view: work.DMAAPB_OSC_0_OSC(verilog)) has its enable tied to GND.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.27ns		  51 /        16
+   2		0h:00m:00s		    -0.15ns		  37 /        16
+
+   3		0h:00m:00s		    -0.15ns		  37 /        16
+   4		0h:00m:00s		     0.20ns		  38 /        16
+@N: FP130 |Promoting Net SYSRESET_0_POWER_ON_RESET_N on CLKINT  I_40 
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 19 clock pin(s) of sequential element(s)
+0 instances converted, 19 sequential instances remain driven by gated/generated clocks
+
+===================================================================== Gated/Generated Clocks ======================================================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance                 Explanation                                                
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       FCCC_0.CCC_INST     CCC                    19         DMAAPB_MSS_0.MSS_ADLIB_INST     No gated clock conversion method for cell cell:work.MSS_010
+===================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 136MB)
+
+Writing Analyst data base D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 136MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.edn
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+L-2016.09M-2
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+@W: MT246 :"d:\m2s010tqg144\edib_1\dmaapb\dmaapb\component\work\dmaapb\fccc_0\dmaapb_fccc_0_fccc.v":20:36:20:43|Blackbox CCC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:FCCC_0.GL0_net"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Jun 10 08:47:17 2018
+#
+
+
+Top view:               DMAAPB
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 1.081
+
+                                              Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock                                Frequency     Frequency     Period        Period        Slack     Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------------
+DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     112.1 MHz     10.000        8.919         1.081     inferred     Inferred_clkgroup_0
+System                                        100.0 MHz     895.2 MHz     10.000        1.117         8.883     system       system_clkgroup    
+================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                   Ending                                     |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                     System                                     |  10.000      8.883  |  No paths    -      |  No paths    -      |  No paths    -    
+DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock  DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock  |  10.000      1.081  |  No paths    -      |  No paths    -      |  No paths    -    
+============================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                Starting                                                                                                                 Arrival          
+Instance                        Reference                                     Type        Pin                Net                                         Time        Slack
+                                Clock                                                                                                                                     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[24]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[24]     3.730       1.081
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[26]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[26]     3.854       1.083
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[27]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[27]     3.732       1.143
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_WRITE        CoreAPB3_0_APBmslave3_PWRITE                3.682       1.290
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ENABLE       CoreAPB3_0_APBmslave3_PENABLE               3.736       1.292
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[25]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[25]     3.555       1.318
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_SEL          DMAAPB_MSS_0_FIC_0_APB_MASTER_PSELx         3.488       1.853
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[10]     CoreAPB3_0_APBmslave3_PADDR[10]             3.949       4.297
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[8]      CoreAPB3_0_APBmslave3_PADDR[8]              3.945       4.301
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_ADDR[6]      CoreAPB3_0_APBmslave3_PADDR[6]              3.746       4.500
+==========================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                Starting                                                                                                                   Required          
+Instance                        Reference                                     Type        Pin                 Net                                          Time         Slack
+                                Clock                                                                                                                                        
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[3]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[3]      9.475        1.081
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[4]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[4]      9.541        1.147
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[9]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[9]      9.604        1.210
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[0]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[0]      9.633        1.239
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[13]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[13]     9.659        1.265
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[11]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[11]     9.671        1.277
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[6]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[6]      9.672        1.278
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[8]      DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[8]      9.692        1.298
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[14]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[14]     9.715        1.321
+DMAAPB_MSS_0.MSS_ADLIB_INST     DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock     MSS_010     F_HM0_RDATA[15]     DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[15]     9.724        1.330
+=============================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.525
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.475
+
+    - Propagation time:                      8.394
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     1.081
+
+    Number of logic level(s):                3
+    Starting point:                          DMAAPB_MSS_0.MSS_ADLIB_INST / F_HM0_ADDR[24]
+    Ending point:                            DMAAPB_MSS_0.MSS_ADLIB_INST / F_HM0_RDATA[3]
+    The start point is clocked by            DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK_BASE
+    The end   point is clocked by            DMAAPB_FCCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK_BASE
+
+Instance / Net                                              Pin                Pin               Arrival     No. of    
+Name                                            Type        Name               Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------
+DMAAPB_MSS_0.MSS_ADLIB_INST                     MSS_010     F_HM0_ADDR[24]     Out     3.730     3.730       -         
+DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[24]         Net         -                  -       1.140     -           15        
+CoreAPB3_0.iPSELS_1[3]                          CFG2        B                  In      -         4.870       -         
+CoreAPB3_0.iPSELS_1[3]                          CFG2        Y                  Out     0.164     5.034       -         
+iPSELS_1[3]                                     Net         -                  -       0.678     -           3         
+COREAPBLSRAM_0.PRDATA4                          CFG4        C                  In      -         5.713       -         
+COREAPBLSRAM_0.PRDATA4                          CFG4        Y                  Out     0.210     5.922       -         
+PRDATA4                                         Net         -                  -       1.190     -           30        
+CoreAPB3_0.u_mux_p_to_b3.PRDATA_xx_mm_ns[3]     CFG4        B                  In      -         7.112       -         
+CoreAPB3_0.u_mux_p_to_b3.PRDATA_xx_mm_ns[3]     CFG4        Y                  Out     0.165     7.277       -         
+DMAAPB_MSS_0_FIC_0_APB_MASTER_PRDATA[3]         Net         -                  -       1.117     -           1         
+DMAAPB_MSS_0.MSS_ADLIB_INST                     MSS_010     F_HM0_RDATA[3]     In      -         8.394       -         
+=======================================================================================================================
+Total path delay (propagation time + setup) of 8.919 is 4.793(53.7%) logic and 4.126(46.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                           Starting                                                                                        Arrival          
+Instance                   Reference     Type               Pin        Net                                                 Time        Slack
+                           Clock                                                                                                            
+--------------------------------------------------------------------------------------------------------------------------------------------
+OSC_0.I_RCOSC_25_50MHZ     System        RCOSC_25_50MHZ     CLKOUT     OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     0.000       8.883
+============================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                    Starting                                                                                      Required          
+Instance            Reference     Type     Pin                Net                                                 Time         Slack
+                    Clock                                                                                                           
+------------------------------------------------------------------------------------------------------------------------------------
+FCCC_0.CCC_INST     System        CCC      RCOSC_25_50MHZ     OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     10.000       8.883
+====================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         10.000
+
+    - Propagation time:                      1.117
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 8.883
+
+    Number of logic level(s):                0
+    Starting point:                          OSC_0.I_RCOSC_25_50MHZ / CLKOUT
+    Ending point:                            FCCC_0.CCC_INST / RCOSC_25_50MHZ
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                                         Pin                Pin               Arrival     No. of    
+Name                                                Type               Name               Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------
+OSC_0.I_RCOSC_25_50MHZ                              RCOSC_25_50MHZ     CLKOUT             Out     0.000     0.000       -         
+OSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC     Net                -                  -       1.117     -           1         
+FCCC_0.CCC_INST                                     CCC                RCOSC_25_50MHZ     In      -         1.117       -         
+==================================================================================================================================
+Total path delay (propagation time + setup) of 1.117 is 0.000(0.0%) logic and 1.117(100.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+---------------------------------------
+Resource Usage Report for DMAAPB 
+
+Mapping to part: m2s010tq144std
+Cell usage:
+CCC             1 use
+CLKINT          2 uses
+MSS_010         1 use
+RCOSC_25_50MHZ  1 use
+SYSRESET        1 use
+CFG2           4 uses
+CFG3           15 uses
+CFG4           18 uses
+
+
+Sequential Cells: 
+SLE            16 uses
+
+DSP Blocks:    0 of 22 (0%)
+
+I/O ports: 2
+I/O primitives: 1
+OUTBUF         1 use
+
+
+Global Clock Buffers: 2 of 8 (25%)
+
+
+RAM/ROM usage summary
+Total Block RAMs (RAM1K18) : 1 of 21 (4%)
+
+Total LUTs:    37
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K18  Interface Logic : SLEs = 36; LUTs = 36;
+MACC     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  16 + 0 + 36 + 0 = 52;
+Total number of LUTs after P&R:  37 + 0 + 36 + 0 = 73;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 136MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Jun 10 08:47:17 2018
+
+###########################################################]

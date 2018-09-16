@@ -1,0 +1,97 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\synthesis\\synwork\\DMAAPB_comp.srs|-top|DMAAPB|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-I|D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|COREAPBLSRAM_LIB|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\bin64\\c_ver.exe":1479953424
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\generic\\smartfusion2.v":1487916428
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\hypermods.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\umr_capim.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1487916586
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\FCCC_0\\DMAAPB_FCCC_0_FCCC.v":1528591611
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB_MSS\\DMAAPB_MSS_syn.v":1528591584
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB_MSS\\DMAAPB_MSS.v":1528591585
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\Actel\\SgCore\\OSC\\2.0.101\\osc_comps.v":1525674520
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\OSC_0\\DMAAPB_OSC_0_OSC.v":1528591613
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_muxptob3.v":1526112992
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3_iaddr_reg.v":1526112992
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vlog\\core\\coreapb3.v":1526112992
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_1024to70656x16.v":1528591609
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_2048to141312x8.v":1528591609
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\lsram_512to35328x32.v":1528591609
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\usram_128to9216x8.v":1528591610
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\usram_64to2304x32.v":1528591609
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\usram_64to4608x16.v":1528591609
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\COREAPBLSRAM_0\\rtl\\vlog\\core\\CoreAPBLSRAM.v":1528591608
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\DMAAPB\\DMAAPB\\component\\work\\DMAAPB\\DMAAPB.v":1528591613
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\FCCC_0\DMAAPB_FCCC_0_FCCC.v" verilog
+1			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS_syn.v" verilog
+2			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS.v" verilog
+3			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\SgCore\OSC\2.0.101\osc_comps.v" verilog
+4			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v" verilog
+5			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v" verilog
+6			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v" verilog
+7			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v" verilog
+8			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v" verilog
+9			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_2048to141312x8.v" verilog
+10			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_512to35328x32.v" verilog
+11			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_128to9216x8.v" verilog
+12			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to2304x32.v" verilog
+13			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\usram_64to4608x16.v" verilog
+14			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v" verilog
+15			"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\DMAAPB.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 1
+3 -1
+4 3
+5 -1
+6 -1
+7 5 6
+8 -1
+9 -1
+10 -1
+11 -1
+12 -1
+13 -1
+14 8 10 9 12 13 11
+15 7 14 2 0 4
+#Dependency Lists(Users Of)
+0 15
+1 2
+2 15
+3 4
+4 15
+5 7
+6 7
+7 15
+8 14
+9 14
+10 14
+11 14
+12 14
+13 14
+14 15
+15 -1
+#Design Unit to File Association
+module work DMAAPB_FCCC_0_FCCC 0
+module work MSS_010 1
+module work DMAAPB_MSS 2
+module work RCOSC_1MHZ 3
+module work RCOSC_25_50MHZ 3
+module work XTLOSC 3
+module work RCOSC_1MHZ_FAB 3
+module work RCOSC_25_50MHZ_FAB 3
+module work XTLOSC_FAB 3
+module work DMAAPB_OSC_0_OSC 4
+module work DMAAPB 15
+module COREAPB3_LIB COREAPB3_MUXPTOB3 5
+module COREAPB3_LIB coreapb3_iaddr_reg 6
+module COREAPB3_LIB CoreAPB3 7
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16 8
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_lsram_2048to141312x8 9
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_lsram_512to35328x32 10
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_usram_128to9216x8 11
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_usram_64to2304x32 12
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_usram_64to4608x16 13
+module COREAPBLSRAM_LIB DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM 14

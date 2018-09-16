@@ -1,0 +1,189 @@
+Compile Report
+Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
+Date: Sun Jun 10 08:47:22 2018
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S010         |
+| Package                        | 144 TQ         |
+| Speed Grade                    | STD            |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 3.3V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+------------------------------------------------------------------+
+| Topcell | DMAAPB                                                           |
+| Format  | EDIF                                                             |
+| Source  | D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\DMAAPB.edn        |
+| Source  | D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\constraint\io\DMAAPB.io.pdc |
+| Source  | D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\constraint\fp\DMAAPB.fp.pdc |
++---------+------------------------------------------------------------------+
+
+Options
++---------------------------------------------------------+-------+
+| Merge User SDC file(s) with Existing Timing Constraints | true  |
+| Abort Compile if errors are found in PDC file(s)        | true  |
+| Enable Single Event Transient mitigation                | false |
+| Enable Design Separation Methodology                    | false |
+| Limit the number of high fanout nets to display to      | 10    |
++---------------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 74   | 12084 | 0.61       |
+| DFF                       | 52   | 12084 | 0.43       |
+| I/O Register              | 0    | 246   | 0.00       |
+| User I/O                  | 1    | 82    | 1.22       |
+| -- Single-ended I/O       | 1    | 82    | 1.22       |
+| -- Differential I/O Pairs | 0    | 36    | 0.00       |
+| RAM64x18                  | 0    | 22    | 0.00       |
+| RAM1K18                   | 1    | 21    | 4.76       |
+| MACC                      | 0    | 22    | 0.00       |
+| Chip Globals              | 2    | 8     | 25.00      |
+| CCC                       | 1    | 2     | 50.00      |
+| RCOSC_25_50MHZ            | 1    | 1     | 100.00     |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 1    | 1     | 100.00     |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 38   | 16  |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 36   | 36  |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 74   | 52  |
++--------------------------+------+-----+
+
+MSS Resource Usage
++---------------+------+-------+
+| Type          | Used | Total |
++---------------+------+-------+
+| Cortex-M3*    | 1    | 1     |
+| eNVM (256KB)* | 1    | 1     |
+| eSRAM*        | 2    | 2     |
+| TIMER*        | 2    | 2     |
+| CAN           | 0    | 1     |
+| SPI           | 0    | 2     |
+| I2C           | 0    | 2     |
+| UART          | 0    | 2     |
+| USB           | 0    | 1     |
+| MAC           | 0    | 1     |
+| MDDR          | 0    | 1     |
+| HPDMA         | 1    | 1     |
+| PDMA          | 1    | 1     |
++---------------+------+-------+
+
+* These resources are always marked as used when you are using the MSS
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 0            | 0           | 0               |
+| Output I/O                    | 1            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS25     |  2.50v |  N/A |  0    |  1     |  0            |
++--------------+--------+------+-------+--------+---------------+
+
+I/O Placement
++----------+-------+------------+
+| Type     | Count | Percentage |
++----------+-------+------------+
+| Locked   |  1    | 100.00%    |
+| Placed   |  0    | 0.00%      |
+| UnPlaced |  0    | 0.00%      |
++----------+-------+------------+
+
+Nets assigned to chip global resources
++--------+---------+-------------------------------------+
+| Fanout | Type    | Name                                |
++--------+---------+-------------------------------------+
+| 19     | INT_NET | Net   : FCCC_0_GL0                  |
+|        |         | Driver: FCCC_0/GL0_INST/U0_RGB1     |
+|        |         | Source: NETLIST                     |
+| 18     | INT_NET | Net   : SYSRESET_0_POWER_ON_RESET_N |
+|        |         | Driver: SYSRESET_0_RNIHNV1/U0_RGB1  |
+|        |         | Source: NETLIST                     |
++--------+---------+-------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+-------------------------------------------------+
+| Fanout | Type    | Name                                            |
++--------+---------+-------------------------------------------------+
+| 30     | INT_NET | Net   : COREAPBLSRAM_0.PRDATA4                  |
+|        |         | Driver: COREAPBLSRAM_0/PRDATA4                  |
+| 16     | INT_NET | Net   : CoreAPB3_0.iPSELS_2[3]                  |
+|        |         | Driver: CoreAPB3_0/iPSELS_2[3]                  |
+| 15     | INT_NET | Net   : DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[24] |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 15     | INT_NET | Net   : DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[27] |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 3      | INT_NET | Net   : CoreAPB3_0.iPSELS_1[3]                  |
+|        |         | Driver: CoreAPB3_0/iPSELS_1[3]                  |
+| 3      | INT_NET | Net   : COREAPBLSRAM_0.PRDATA4_out              |
+|        |         | Driver: COREAPBLSRAM_0/PRDATA4_s                |
+| 3      | INT_NET | Net   : CFG0_GND_INST_NET                       |
+|        |         | Driver: CFG0_GND_INST                           |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[1]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[2]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[3]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
++--------+---------+-------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+-------------------------------------------------+
+| Fanout | Type    | Name                                            |
++--------+---------+-------------------------------------------------+
+| 30     | INT_NET | Net   : COREAPBLSRAM_0.PRDATA4                  |
+|        |         | Driver: COREAPBLSRAM_0/PRDATA4                  |
+| 16     | INT_NET | Net   : CoreAPB3_0.iPSELS_2[3]                  |
+|        |         | Driver: CoreAPB3_0/iPSELS_2[3]                  |
+| 15     | INT_NET | Net   : DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[24] |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 15     | INT_NET | Net   : DMAAPB_MSS_0_FIC_0_APB_MASTER_PADDR[27] |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 3      | INT_NET | Net   : CoreAPB3_0.iPSELS_1[3]                  |
+|        |         | Driver: CoreAPB3_0/iPSELS_1[3]                  |
+| 3      | INT_NET | Net   : COREAPBLSRAM_0.PRDATA4_out              |
+|        |         | Driver: COREAPBLSRAM_0/PRDATA4_s                |
+| 3      | INT_NET | Net   : CFG0_GND_INST_NET                       |
+|        |         | Driver: CFG0_GND_INST                           |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[1]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[2]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
+| 2      | INT_NET | Net   : CoreAPB3_0_APBmslave3_PADDR[3]          |
+|        |         | Driver: DMAAPB_MSS_0/MSS_ADLIB_INST             |
++--------+---------+-------------------------------------------------+
+

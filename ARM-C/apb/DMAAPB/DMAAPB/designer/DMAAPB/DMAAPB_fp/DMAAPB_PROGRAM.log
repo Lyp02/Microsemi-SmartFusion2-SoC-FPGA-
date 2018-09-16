@@ -1,0 +1,37 @@
+Software Version: 11.8.2.4
+Driver : 3.0.0 build 1
+programmer '95895' : FlashPro4
+Opened 'D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\designer\DMAAPB\DMAAPB_fp\DMAAPB.pro'
+The 'open_project' command succeeded.
+IPD file 'D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/designer/DMAAPB/DMAAPB.ipd' has been loaded successfully.
+DESIGN : DMAAPB;  CHECKSUM : B8BA;  PDB_VERSION : 1.9
+The 'set_programming_file' command succeeded.
+Warning: Programming is already enabled for device 'M2S010'.
+The 'enable_device' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer '95895' : Scan Chain...
+Warning: programmer '95895' : Vpump has been selected on programmer AND an externally provided Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '95895' : Check Chain...
+programmer '95895' : Scan and Check Chain PASSED.
+programmer '95895' : device 'M2S010' : Executing action PROGRAM
+programmer '95895' : device 'M2S010' : Family: SmartFusion2
+programmer '95895' : device 'M2S010' : Product:      M2S010
+programmer '95895' : device 'M2S010' : EXPORT ISC_ENABLE_RESULT[32] = 00816c44
+programmer '95895' : device 'M2S010' : EXPORT CRCERR[1] = 0
+programmer '95895' : device 'M2S010' : EXPORT EDCERR[1] = 0
+programmer '95895' : device 'M2S010' : Programming FPGA Array...
+programmer '95895' : device 'M2S010' : ===================================================================================
+programmer '95895' : device 'M2S010' : EXPORT DSN[128] = 225fdcab4025cbbc81f24ba586c12fca
+programmer '95895' : device 'M2S010' : ===================================================================================
+programmer '95895' : device 'M2S010' : Finished: Sun Jun 10 08:49:16 2018 (Elapsed time 00:00:23)
+programmer '95895' : device 'M2S010' : Executing action PROGRAM PASSED.
+programmer '95895' : Chain programming PASSED.
+Chain Programming Finished: Sun Jun 10 08:49:16 2018 (Elapsed time 00:00:23)
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

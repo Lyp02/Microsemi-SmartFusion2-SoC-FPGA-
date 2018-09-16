@@ -1,0 +1,55 @@
+# Reading C:/Microsemi/Libero_SoC_v11.8/Modelsim/tcl/vsim/pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi vmap 10.5c Lib Mapping Utility 2016.07 Jul 21 2016
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi vmap 10.5c Lib Mapping Utility 2016.07 Jul 21 2016
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v11.8/Designer/lib/modelsim/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi vlog 10.5c Compiler 2016.07 Jul 21 2016
+# Start time: 20:31:40 on Jun 18,2018
+# vlog -reportprogress 300 -vlog01compat -work presynth D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/hdl/EDIB_M57.v 
+# -- Compiling module EDIB_M57
+# 
+# Top level modules:
+# 	EDIB_M57
+# End time: 20:31:41 on Jun 18,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi vlog 10.5c Compiler 2016.07 Jul 21 2016
+# Start time: 20:31:41 on Jun 18,2018
+# vlog -reportprogress 300 "+incdir+D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/stimulus" -vlog01compat -work presynth D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/stimulus/EDIB_M57_tb.v 
+# -- Compiling module EDIB_M57_tb
+# 
+# Top level modules:
+# 	EDIB_M57_tb
+# End time: 20:31:41 on Jun 18,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.EDIB_M57_tb 
+# Start time: 20:31:41 on Jun 18,2018
+# //  ModelSim Microsemi 10.5c Jul 21 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading presynth.EDIB_M57_tb
+# Loading presynth.EDIB_M57
+# ** Warning: (vsim-3015) D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/stimulus/EDIB_M57_tb.v(25): [PCDPC] - Port size (22) does not match connection size (14) for port 'SynReg'. The port definition is at: D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/hdl/EDIB_M57.v(4).
+#    Time: 0 fs  Iteration: 0  Instance: /EDIB_M57_tb/EDIB_M57_0 File: D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/hdl/EDIB_M57.v
+run -all
+# ** Note: $stop    : D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/stimulus/EDIB_M57_tb.v(39)
+#    Time: 3132864 ps  Iteration: 0  Instance: /EDIB_M57_tb
+# Break in Module EDIB_M57_tb at D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/stimulus/EDIB_M57_tb.v line 39
+run -all
+# Break key hit
+# Break in Module EDIB_M57 at D:/M2S010TQG144/EDIB_1/EDIB_M57/EDIB_M57/hdl/EDIB_M57.v line 182
+# End time: 20:50:15 on Jun 18,2018, Elapsed time: 0:18:34
+# Errors: 0, Warnings: 1

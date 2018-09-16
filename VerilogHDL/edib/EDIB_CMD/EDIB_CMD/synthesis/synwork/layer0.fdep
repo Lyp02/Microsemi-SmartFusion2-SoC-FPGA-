@@ -1,0 +1,17 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\M2S010TQG144\\EDIB_1\\EDIB_CMD\\EDIB_CMD\\synthesis\\synwork\\EDIB_CMD_comp.srs|-top|EDIB_CMD|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-I|D:\\M2S010TQG144\\EDIB_1\\EDIB_CMD\\EDIB_CMD\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\bin64\\c_ver.exe":1479953424
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\generic\\smartfusion2.v":1487916428
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\hypermods.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\umr_capim.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1487916586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1487916586
+#CUR:"D:\\M2S010TQG144\\EDIB_1\\EDIB_CMD\\EDIB_CMD\\hdl\\EDIB_CMD.v":1528886362
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+#Dependency Lists(Users Of)
+0 -1
+#Design Unit to File Association
+module work EDIB_CMD 0

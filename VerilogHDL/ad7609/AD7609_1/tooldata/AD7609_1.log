@@ -1,0 +1,16 @@
+Project Name: AD7609_1
+Location: D:\M2S010TQG144\AD7609_1
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S010-TQ144
+Family         : SmartFusion2
+Die            : M2S010
+Package        : 144 TQ
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

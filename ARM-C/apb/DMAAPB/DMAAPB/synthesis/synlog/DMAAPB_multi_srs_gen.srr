@@ -1,0 +1,12 @@
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+File D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\synthesis\synwork\DMAAPB_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 73MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Jun 10 08:47:15 2018
+
+###########################################################]

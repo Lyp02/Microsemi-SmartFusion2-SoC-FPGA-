@@ -1,0 +1,17 @@
+<!-- File generated from D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\CMSIS\startup_gcc\debug-in-microsemi-smartfusion2-envm.ld -->
+<board>
+ <properties>
+  <property name="system-v6-m"/>
+ </properties>
+ <memory-map>
+    <memory-device address="0x60000000" size="256k" type="flash" device="microsemi-smartfusion2-envm">
+      <description>Flash</description>
+    </memory-device>
+    <memory-device address="0x00000000" size="256k" type="rom">
+      <description>ROM</description>
+    </memory-device>
+    <memory-device address="0x20000000" size="64k" type="ram">
+      <description>SRAM</description>
+    </memory-device>
+  </memory-map>
+</board>

@@ -1,0 +1,60 @@
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+High-effort              : OFF
+Repair min-delay         : ON
+Incremental              : OFF
+Inter-clock optimization : OFF
+TDPR scenario            : Primary
+
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 1 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 0 seconds
+
+Placer V4.0 - 11.8.2 
+Design: DMAAPB                          Started: Sun Jun 10 08:47:31 2018
+
+Initializing Timing-Driven Placement ...
+Placing design...
+End of placement.
+Pre-Placement Runtime        : 0 seconds
+Placement Runtime            : 0 seconds
+
+Placer completed successfully.
+
+Design: DMAAPB                          
+Finished: Sun Jun 10 08:47:44 2018
+Total CPU Time:     00:00:12            Total Elapsed Time: 00:00:13
+Total Memory Usage: 326.9 Mbytes
+                        o - o - o - o - o - o
+
+
+Router 
+Design: D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\designer\DMAAPB\DMAAPBStarted: Sun Jun 10 08:47:47 2018
+
+Final stats: search run time 0.060741
+
+Router completed successfully.
+
+Design: D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\designer\DMAAPB\DMAAPB
+Finished: Sun Jun 10 08:47:51 2018
+Total CPU Time:     00:00:03            Total Elapsed Time: 00:00:04
+Total Memory Usage: 496.9 Mbytes
+                        o - o - o - o - o - o
+
+Info: Iteration 1:
+  Total violating paths eligible for improvement: 0
+  Worst minimum delay slack: 
+Resource Usage
++---------------+------+-------+------------+
+| Type          | Used | Total | Percentage |
++---------------+------+-------+------------+
+| 4LUT          | 74   | 12084 | 0.61       |
+| DFF           | 52   | 12084 | 0.43       |
+| I/O Register  | 0    | 246   | 0.00       |
+| Logic Element | 74   | 12084 | 0.61       |
++---------------+------+-------+------------+
+

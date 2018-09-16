@@ -1,0 +1,71 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3 in library COREAPB3_LIB.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3 in library COREAPB3_LIB.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\CoreAPBLSRAM.v":29:7:29:40|Synthesizing module DMAAPB_COREAPBLSRAM_0_COREAPBLSRAM in library COREAPBLSRAM_LIB.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":382:7:382:13|Synthesizing module RAM1K18 in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":28:7:28:48|Synthesizing module DMAAPB_COREAPBLSRAM_0_lsram_1024to70656x16 in library COREAPBLSRAM_LIB.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS_syn.v":5:7:5:13|Synthesizing module MSS_010 in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB_MSS\DMAAPB_MSS.v":9:7:9:16|Synthesizing module DMAAPB_MSS in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":376:7:376:9|Synthesizing module VCC in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":372:7:372:9|Synthesizing module GND in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":727:7:727:9|Synthesizing module CCC in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\FCCC_0\DMAAPB_FCCC_0_FCCC.v":5:7:5:24|Synthesizing module DMAAPB_FCCC_0_FCCC in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":5:7:5:22|Synthesizing module DMAAPB_OSC_0_OSC in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\generic\smartfusion2.v":718:7:718:14|Synthesizing module SYSRESET in library work.
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\DMAAPB.v":9:7:9:12|Synthesizing module DMAAPB in library work.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\OSC_0\DMAAPB_OSC_0_OSC.v":14:7:14:9|Input XTL is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":60:40:60:42|Input ren is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\work\DMAAPB\COREAPBLSRAM_0\rtl\vlog\core\lsram_1024to70656x16.v":62:40:62:47|Input readAddr is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":73:13:73:19|Input PRESETN is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":74:13:74:16|Input PCLK is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":104:18:104:25|Input PRDATAS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":105:18:105:25|Input PRDATAS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":106:18:106:25|Input PRDATAS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":108:18:108:25|Input PRDATAS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":109:18:109:25|Input PRDATAS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":110:18:110:25|Input PRDATAS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":111:18:111:25|Input PRDATAS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":112:18:112:25|Input PRDATAS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":113:18:113:25|Input PRDATAS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":114:18:114:26|Input PRDATAS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":115:18:115:26|Input PRDATAS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":116:18:116:26|Input PRDATAS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":117:18:117:26|Input PRDATAS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":118:18:118:26|Input PRDATAS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":119:18:119:26|Input PRDATAS15 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":121:13:121:20|Input PREADYS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":122:13:122:20|Input PREADYS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":123:13:123:20|Input PREADYS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":125:13:125:20|Input PREADYS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":126:13:126:20|Input PREADYS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":127:13:127:20|Input PREADYS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":128:13:128:20|Input PREADYS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":129:13:129:20|Input PREADYS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":130:13:130:20|Input PREADYS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":131:13:131:21|Input PREADYS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":132:13:132:21|Input PREADYS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":133:13:133:21|Input PREADYS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":134:13:134:21|Input PREADYS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":135:13:135:21|Input PREADYS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":136:13:136:21|Input PREADYS15 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":138:13:138:21|Input PSLVERRS0 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":139:13:139:21|Input PSLVERRS1 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":140:13:140:21|Input PSLVERRS2 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":142:13:142:21|Input PSLVERRS4 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":143:13:143:21|Input PSLVERRS5 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":144:13:144:21|Input PSLVERRS6 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":145:13:145:21|Input PSLVERRS7 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":146:13:146:21|Input PSLVERRS8 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":147:13:147:21|Input PSLVERRS9 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":148:13:148:22|Input PSLVERRS10 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":149:13:149:22|Input PSLVERRS11 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":150:13:150:22|Input PSLVERRS12 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused.
+@N: CL159 :"D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused.
+@N|Running in 64-bit mode
+

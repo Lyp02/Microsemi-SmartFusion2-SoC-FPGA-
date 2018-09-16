@@ -1,0 +1,27 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.8 SP2 11.8.2.4
+
+# Design Name: DMAAPB 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 144 TQ , Speed grade: STD 
+
+# Date generated: Sat Jun 09 15:05:17 2018 
+
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# Core cell constraints
+#
+

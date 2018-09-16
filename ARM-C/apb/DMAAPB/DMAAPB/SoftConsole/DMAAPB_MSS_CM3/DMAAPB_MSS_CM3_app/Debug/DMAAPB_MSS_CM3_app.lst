@@ -1,0 +1,2677 @@
+
+DMAAPB_MSS_CM3_app:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vector_table 00000190  00000000  60000000  00008000  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .boot_code    00000410  00000190  60000190  00008190  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text         00000de0  000005a0  600005a0  000085a0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .data         00000010  20000000  60001380  00010000  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .bss          00000c50  20000010  60001390  00010010  2**4
+                  ALLOC
+  5 .heap         0000e3a0  20000c60  60001390  00010c60  2**4
+                  ALLOC
+  6 .stack        00001000  2000f000  60001390  00017000  2**4
+                  ALLOC
+  7 .comment      000000ac  00000000  00000000  00010010  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 000001b8  00000000  00000000  000100bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_pubnames 0000033a  00000000  00000000  00010274  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_info   00002823  00000000  00000000  000105ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_abbrev 000005fb  00000000  00000000  00012dd1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   00000d35  00000000  00000000  000133cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_frame  000005ac  00000000  00000000  00014104  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_str    000016db  00000000  00000000  000146b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_loc    00000903  00000000  00000000  00015d8b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_macinfo 0001be29  00000000  00000000  0001668e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .ARM.attributes 00000025  00000000  00000000  000324b7  2**0
+                  CONTENTS, READONLY
+ 18 .debug_ranges 00000198  00000000  00000000  000324dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .vector_table:
+
+00000000 <__vector_table_start>:
+
+/*==============================================================================
+ * Close a file.
+ */
+int _close(int file)
+{
+   0:	20010000 	.word	0x20010000
+/*==============================================================================
+ * Create a new process.
+ */
+int _fork(void)
+{
+    errno = EAGAIN;
+   4:	00000191 	.word	0x00000191
+/*==============================================================================
+ * Close a file.
+ */
+int _close(int file)
+{
+    return -1;
+   8:	0000037f 	.word	0x0000037f
+}
+   c:	00000381 	.word	0x00000381
+ * Create a new process.
+ */
+int _fork(void)
+{
+    errno = EAGAIN;
+    return -1;
+  10:	00000383 	.word	0x00000383
+}
+  14:	00000385 	.word	0x00000385
+ * Transfer control to a new process.
+ */
+int _execve(char *name, char **argv, char **env)
+{
+    errno = ENOMEM;
+    return -1;
+  18:	00000387 	.word	0x00000387
+	...
+    if (heap_end == 0)
+    {
+      heap_end = &_end;
+    }
+    
+    prev_heap_end = heap_end;
+  2c:	00000389 	.word	0x00000389
+  30:	0000038b 	.word	0x0000038b
+    
+    asm volatile ("MRS %0, msp" : "=r" (stack_ptr) );
+  34:	00000000 	.word	0x00000000
+  38:	0000038d 	.word	0x0000038d
+    if(heap_end < stack_ptr)
+  3c:	0000038f 	.word	0x0000038f
+  40:	00000391 	.word	0x00000391
+  44:	00000393 	.word	0x00000393
+  48:	00000395 	.word	0x00000395
+        /*
+         * Heap is at an address below the stack, growing up toward the stack.
+         * The stack is above the heap, growing down towards the heap.
+         * Make sure the stack and heap do not run into each other.
+         */
+        if (heap_end + incr > stack_ptr)
+  4c:	00000397 	.word	0x00000397
+  50:	00000399 	.word	0x00000399
+  54:	0000039b 	.word	0x0000039b
+  58:	0000039d 	.word	0x0000039d
+  5c:	0000039f 	.word	0x0000039f
+        {
+          _write_r ((void *)0, 1, "Heap and stack collision\n", 25);
+  60:	000003a1 	.word	0x000003a1
+  64:	000003a3 	.word	0x000003a3
+  68:	000003a5 	.word	0x000003a5
+  6c:	000003a7 	.word	0x000003a7
+  70:	000003a9 	.word	0x000003a9
+  74:	00000fe5 	.word	0x00000fe5
+          _exit (1);
+  78:	000003ad 	.word	0x000003ad
+  7c:	000003af 	.word	0x000003af
+         * SmartFusion2 cache design.
+         */
+        extern char _eheap;     /* Defined by the linker */
+        char *top_of_heap;
+        
+        top_of_heap = &_eheap;
+  80:	000003b1 	.word	0x000003b1
+  84:	000003b3 	.word	0x000003b3
+        if(heap_end + incr  > top_of_heap)
+  88:	000003b5 	.word	0x000003b5
+  8c:	000003b7 	.word	0x000003b7
+  90:	000003b9 	.word	0x000003b9
+  94:	000003bb 	.word	0x000003bb
+  98:	000003bd 	.word	0x000003bd
+        {
+          _write_r ((void *)0, 1, "Out of heap memory\n", 25);
+  9c:	000003bf 	.word	0x000003bf
+  a0:	000003c1 	.word	0x000003c1
+  a4:	000003c3 	.word	0x000003c3
+  a8:	000003c5 	.word	0x000003c5
+  ac:	000003c7 	.word	0x000003c7
+  b0:	000003c9 	.word	0x000003c9
+          _exit (1);
+  b4:	000003cb 	.word	0x000003cb
+  b8:	000003cd 	.word	0x000003cd
+         * Make sure the stack and heap do not run into each other.
+         */
+        if (heap_end + incr > stack_ptr)
+        {
+          _write_r ((void *)0, 1, "Heap and stack collision\n", 25);
+          _exit (1);
+  bc:	000003cf 	.word	0x000003cf
+          _write_r ((void *)0, 1, "Out of heap memory\n", 25);
+          _exit (1);
+        }
+    }
+  
+    heap_end += incr;
+  c0:	000003d1 	.word	0x000003d1
+  c4:	000003d3 	.word	0x000003d3
+  c8:	000003d5 	.word	0x000003d5
+  cc:	000003d7 	.word	0x000003d7
+  d0:	000003d9 	.word	0x000003d9
+  d4:	000003db 	.word	0x000003db
+    return (caddr_t) prev_heap_end;
+}
+  d8:	000003dd 	.word	0x000003dd
+  dc:	000003df 	.word	0x000003df
+  e0:	000003e1 	.word	0x000003e1
+
+            uint32_t standby_sel;
+            uint8_t clock_source;
+
+            standby_sel = (SYSREG->MSSDDR_FACC2_CR >> FACC_STANDBY_SHIFT) & FACC_STANDBY_SEL_MASK;
+            clock_source = standby_clock_lut[standby_sel];
+  e4:	000003e3 	.word	0x000003e3
+  e8:	000003e5 	.word	0x000003e5
+  ec:	000003e7 	.word	0x000003e7
+            switch(clock_source)
+  f0:	000003e9 	.word	0x000003e9
+  f4:	000003eb 	.word	0x000003eb
+  f8:	000003ed 	.word	0x000003ed
+  fc:	000003ef 	.word	0x000003ef
+            {
+                case RCOSC_25_50MHZ_CLK_SRC:
+                    clk_src = get_rcosc_25_50mhz_frequency();
+ 100:	000003f1 	.word	0x000003f1
+ 104:	000003f3 	.word	0x000003f3
+                    set_clock_frequency_globals(clk_src);
+ 108:	000003f5 	.word	0x000003f5
+                break;
+ 10c:	000003f7 	.word	0x000003f7
+
+                case CLK_XTAL_CLK_SRC:
+                    set_clock_frequency_globals(FREQ_32KHZ);
+ 110:	000003f9 	.word	0x000003f9
+ 114:	000003fb 	.word	0x000003fb
+                break;
+
+                case RCOSC_1_MHZ_CLK_SRC:
+                    set_clock_frequency_globals(FREQ_1MHZ);
+ 118:	000003fd 	.word	0x000003fd
+ 11c:	000003ff 	.word	0x000003ff
+ 120:	00000401 	.word	0x00000401
+                break;
+ 124:	00000403 	.word	0x00000403
+
+                case CCC2ASCI_CLK_SRC:
+                    /* Fall through. */
+                default:
+                    set_clock_frequency_globals(FREQ_1MHZ);
+ 128:	00000405 	.word	0x00000405
+ 12c:	00000407 	.word	0x00000407
+ 130:	00000409 	.word	0x00000409
+ 134:	0000040b 	.word	0x0000040b
+        }
+    }
+    else
+    {
+        /* PLL initialization mode. Running from 25/50MHZ RC oscillator. */
+        clk_src = get_rcosc_25_50mhz_frequency();
+ 138:	0000040d 	.word	0x0000040d
+ 13c:	0000040f 	.word	0x0000040f
+        set_clock_frequency_globals(clk_src);
+ 140:	00000411 	.word	0x00000411
+    }
+}
+ 144:	00000413 	.word	0x00000413
+ 148:	00000415 	.word	0x00000415
+ 14c:	00000417 	.word	0x00000417
+ 150:	00000419 	.word	0x00000419
+ 154:	0000041b 	.word	0x0000041b
+ 158:	0000041d 	.word	0x0000041d
+ 15c:	0000041f 	.word	0x0000041f
+ 160:	00000421 	.word	0x00000421
+ 164:	00000423 	.word	0x00000423
+ 168:	00000425 	.word	0x00000425
+ 16c:	00000427 	.word	0x00000427
+ 170:	00000429 	.word	0x00000429
+ 174:	0000042b 	.word	0x0000042b
+ 178:	0000042d 	.word	0x0000042d
+ 17c:	0000042f 	.word	0x0000042f
+ 180:	00000431 	.word	0x00000431
+ 184:	00000433 	.word	0x00000433
+	...
+
+Disassembly of section .boot_code:
+
+00000190 <Reset_Handler>:
+ 190:	f04f 0b00 	mov.w	fp, #0
+ 194:	f8df 02be 	ldr.w	r0, [pc, #702]	; 456 <SF2_MDDR_MODE_CR>
+ 198:	6800      	ldr	r0, [r0, #0]
+ 19a:	f8df 12b6 	ldr.w	r1, [pc, #694]	; 452 <SF2_EDAC_CR>
+ 19e:	6809      	ldr	r1, [r1, #0]
+ 1a0:	f001 0103 	and.w	r1, r1, #3
+ 1a4:	f000 001c 	and.w	r0, r0, #28
+ 1a8:	2814      	cmp	r0, #20
+ 1aa:	d101      	bne.n	1b0 <check_esram_edac>
+ 1ac:	f04b 0b02 	orr.w	fp, fp, #2
+
+000001b0 <check_esram_edac>:
+ 1b0:	2900      	cmp	r1, #0
+ 1b2:	d001      	beq.n	1b8 <check_stack_init>
+ 1b4:	f04b 0b01 	orr.w	fp, fp, #1
+
+000001b8 <check_stack_init>:
+ 1b8:	f1bb 0f00 	cmp.w	fp, #0
+ 1bc:	d005      	beq.n	1ca <system_init>
+
+000001be <clear_stack>:
+ 1be:	48a7      	ldr	r0, [pc, #668]	; (45c <SF2_MDDR_MODE_CR+0x6>)
+ 1c0:	49a7      	ldr	r1, [pc, #668]	; (460 <SF2_MDDR_MODE_CR+0xa>)
+ 1c2:	f8df 2272 	ldr.w	r2, [pc, #626]	; 436 <RAM_INIT_PATTERN>
+ 1c6:	f000 f89f 	bl	308 <fill_memory>
+
+000001ca <system_init>:
+ 1ca:	48a6      	ldr	r0, [pc, #664]	; (464 <SF2_MDDR_MODE_CR+0xe>)
+ 1cc:	4780      	blx	r0
+ 1ce:	f00b 0a02 	and.w	sl, fp, #2
+ 1d2:	f1ba 0f00 	cmp.w	sl, #0
+ 1d6:	d00c      	beq.n	1f2 <remap_memory>
+ 1d8:	f8df 026e 	ldr.w	r0, [pc, #622]	; 44a <SF2_DDRB_NB_SIZE>
+ 1dc:	f8df 126e 	ldr.w	r1, [pc, #622]	; 44e <SF2_DDRB_CR>
+ 1e0:	6802      	ldr	r2, [r0, #0]
+ 1e2:	680b      	ldr	r3, [r1, #0]
+ 1e4:	b40f      	push	{r0, r1, r2, r3}
+ 1e6:	f04f 0200 	mov.w	r2, #0
+ 1ea:	f04f 03ff 	mov.w	r3, #255	; 0xff
+ 1ee:	6002      	str	r2, [r0, #0]
+ 1f0:	600b      	str	r3, [r1, #0]
+
+000001f2 <remap_memory>:
+ 1f2:	489d      	ldr	r0, [pc, #628]	; (468 <SF2_MDDR_MODE_CR+0x12>)
+ 1f4:	4a9d      	ldr	r2, [pc, #628]	; (46c <SF2_MDDR_MODE_CR+0x16>)
+ 1f6:	4b9e      	ldr	r3, [pc, #632]	; (470 <SF2_MDDR_MODE_CR+0x1a>)
+ 1f8:	2802      	cmp	r0, #2
+ 1fa:	d108      	bne.n	20e <check_esram_remap>
+ 1fc:	f8df 123e 	ldr.w	r1, [pc, #574]	; 43e <SF2_ESRAM_CR>
+ 200:	600a      	str	r2, [r1, #0]
+ 202:	f8df 1242 	ldr.w	r1, [pc, #578]	; 446 <SF2_ENVM_REMAP_CR>
+ 206:	600a      	str	r2, [r1, #0]
+ 208:	f8df 1236 	ldr.w	r1, [pc, #566]	; 442 <SF2_DDR_CR>
+ 20c:	600b      	str	r3, [r1, #0]
+
+0000020e <check_esram_remap>:
+ 20e:	2801      	cmp	r0, #1
+ 210:	d108      	bne.n	224 <check_mirrored_nvm>
+ 212:	f8df 122e 	ldr.w	r1, [pc, #558]	; 442 <SF2_DDR_CR>
+ 216:	600a      	str	r2, [r1, #0]
+ 218:	f8df 122a 	ldr.w	r1, [pc, #554]	; 446 <SF2_ENVM_REMAP_CR>
+ 21c:	600a      	str	r2, [r1, #0]
+ 21e:	f8df 121e 	ldr.w	r1, [pc, #542]	; 43e <SF2_ESRAM_CR>
+ 222:	600b      	str	r3, [r1, #0]
+
+00000224 <check_mirrored_nvm>:
+ 224:	4893      	ldr	r0, [pc, #588]	; (474 <SF2_MDDR_MODE_CR+0x1e>)
+ 226:	2800      	cmp	r0, #0
+ 228:	d109      	bne.n	23e <copy_data>
+ 22a:	4893      	ldr	r0, [pc, #588]	; (478 <SF2_MDDR_MODE_CR+0x22>)
+ 22c:	4993      	ldr	r1, [pc, #588]	; (47c <SF2_MDDR_MODE_CR+0x26>)
+ 22e:	4a94      	ldr	r2, [pc, #592]	; (480 <SF2_MDDR_MODE_CR+0x2a>)
+ 230:	f000 f832 	bl	298 <block_copy>
+
+00000234 <copy_text>:
+ 234:	4893      	ldr	r0, [pc, #588]	; (484 <SF2_MDDR_MODE_CR+0x2e>)
+ 236:	4994      	ldr	r1, [pc, #592]	; (488 <SF2_MDDR_MODE_CR+0x32>)
+ 238:	4a94      	ldr	r2, [pc, #592]	; (48c <SF2_MDDR_MODE_CR+0x36>)
+ 23a:	f000 f82d 	bl	298 <block_copy>
+
+0000023e <copy_data>:
+ 23e:	4894      	ldr	r0, [pc, #592]	; (490 <SF2_MDDR_MODE_CR+0x3a>)
+ 240:	4994      	ldr	r1, [pc, #592]	; (494 <SF2_MDDR_MODE_CR+0x3e>)
+ 242:	4a95      	ldr	r2, [pc, #596]	; (498 <SF2_MDDR_MODE_CR+0x42>)
+ 244:	f000 f828 	bl	298 <block_copy>
+
+00000248 <clear_bss>:
+ 248:	4894      	ldr	r0, [pc, #592]	; (49c <SF2_MDDR_MODE_CR+0x46>)
+ 24a:	4995      	ldr	r1, [pc, #596]	; (4a0 <SF2_MDDR_MODE_CR+0x4a>)
+ 24c:	f8df 21e6 	ldr.w	r2, [pc, #486]	; 436 <RAM_INIT_PATTERN>
+ 250:	f000 f85a 	bl	308 <fill_memory>
+
+00000254 <clear_heap>:
+ 254:	f1bb 0f00 	cmp.w	fp, #0
+ 258:	d012      	beq.n	280 <call_glob_ctor>
+ 25a:	4892      	ldr	r0, [pc, #584]	; (4a4 <SF2_MDDR_MODE_CR+0x4e>)
+ 25c:	4992      	ldr	r1, [pc, #584]	; (4a8 <SF2_MDDR_MODE_CR+0x52>)
+ 25e:	f8df 21da 	ldr.w	r2, [pc, #474]	; 43a <HEAP_INIT_PATTERN>
+ 262:	f000 f851 	bl	308 <fill_memory>
+ 266:	f00b 0a02 	and.w	sl, fp, #2
+ 26a:	f1ba 0f00 	cmp.w	sl, #0
+ 26e:	d007      	beq.n	280 <call_glob_ctor>
+ 270:	bc0f      	pop	{r0, r1, r2, r3}
+ 272:	6002      	str	r2, [r0, #0]
+ 274:	600b      	str	r3, [r1, #0]
+ 276:	bf00      	nop
+ 278:	f3af 8000 	nop.w
+ 27c:	f3af 8000 	nop.w
+
+00000280 <call_glob_ctor>:
+ 280:	f8df 0228 	ldr.w	r0, [pc, #552]	; 4ac <SF2_MDDR_MODE_CR+0x56>
+ 284:	f20f 0e03 	addw	lr, pc, #3
+ 288:	4700      	bx	r0
+
+0000028a <branch_to_main>:
+ 28a:	f04f 0000 	mov.w	r0, #0
+ 28e:	f04f 0100 	mov.w	r1, #0
+ 292:	f8df f21c 	ldr.w	pc, [pc, #540]	; 4b0 <SF2_MDDR_MODE_CR+0x5a>
+
+00000296 <ExitLoop>:
+ 296:	e7fe      	b.n	296 <ExitLoop>
+
+00000298 <block_copy>:
+ 298:	e92d 41f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, lr}
+ 29c:	4288      	cmp	r0, r1
+ 29e:	d025      	beq.n	2ec <block_copy_exit>
+ 2a0:	ebb2 0201 	subs.w	r2, r2, r1
+ 2a4:	d500      	bpl.n	2a8 <block_copy_address_ok>
+ 2a6:	e7fe      	b.n	2a6 <block_copy+0xe>
+
+000002a8 <block_copy_address_ok>:
+ 2a8:	ea40 0301 	orr.w	r3, r0, r1
+ 2ac:	f013 0303 	ands.w	r3, r3, #3
+ 2b0:	d002      	beq.n	2b8 <block_copy_continue>
+
+000002b2 <block_copy_byte_copy>:
+ 2b2:	f000 f81d 	bl	2f0 <block_copy_byte>
+ 2b6:	e019      	b.n	2ec <block_copy_exit>
+
+000002b8 <block_copy_continue>:
+ 2b8:	f04f 0300 	mov.w	r3, #0
+ 2bc:	4690      	mov	r8, r2
+ 2be:	1112      	asrs	r2, r2, #4
+ 2c0:	d0f7      	beq.n	2b2 <block_copy_byte_copy>
+
+000002c2 <block_copy_loop>:
+ 2c2:	429a      	cmp	r2, r3
+ 2c4:	bf1c      	itt	ne
+ 2c6:	c8f0      	ldmiane	r0!, {r4, r5, r6, r7}
+ 2c8:	c1f0      	stmiane	r1!, {r4, r5, r6, r7}
+ 2ca:	f103 0301 	add.w	r3, r3, #1
+ 2ce:	d1f8      	bne.n	2c2 <block_copy_loop>
+ 2d0:	f008 080f 	and.w	r8, r8, #15
+ 2d4:	f1b8 0f00 	cmp.w	r8, #0
+ 2d8:	d008      	beq.n	2ec <block_copy_exit>
+
+000002da <copy_spare_bytes>:
+ 2da:	7804      	ldrb	r4, [r0, #0]
+ 2dc:	700c      	strb	r4, [r1, #0]
+ 2de:	f100 0001 	add.w	r0, r0, #1
+ 2e2:	f101 0101 	add.w	r1, r1, #1
+ 2e6:	f1b8 0801 	subs.w	r8, r8, #1
+ 2ea:	d1f6      	bne.n	2da <copy_spare_bytes>
+
+000002ec <block_copy_exit>:
+ 2ec:	e8bd 81f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, pc}
+
+000002f0 <block_copy_byte>:
+ 2f0:	b508      	push	{r3, lr}
+ 2f2:	f04f 0300 	mov.w	r3, #0
+
+000002f6 <block_copy_byte_loop>:
+ 2f6:	7803      	ldrb	r3, [r0, #0]
+ 2f8:	700b      	strb	r3, [r1, #0]
+ 2fa:	f100 0001 	add.w	r0, r0, #1
+ 2fe:	f101 0101 	add.w	r1, r1, #1
+ 302:	3a01      	subs	r2, #1
+ 304:	d1f7      	bne.n	2f6 <block_copy_byte_loop>
+ 306:	bd08      	pop	{r3, pc}
+
+00000308 <fill_memory>:
+ 308:	4288      	cmp	r0, r1
+ 30a:	d037      	beq.n	37c <fill_memory_exit>
+ 30c:	f000 0603 	and.w	r6, r0, #3
+ 310:	2e00      	cmp	r6, #0
+ 312:	d014      	beq.n	33e <fill_memory_end_start>
+ 314:	f04f 0504 	mov.w	r5, #4
+ 318:	eba5 0406 	sub.w	r4, r5, r6
+ 31c:	f04f 0708 	mov.w	r7, #8
+ 320:	fb07 f806 	mul.w	r8, r7, r6
+ 324:	4691      	mov	r9, r2
+ 326:	fa69 f908 	ror.w	r9, r9, r8
+
+0000032a <fill_memory_spare_bytes_start>:
+ 32a:	2c00      	cmp	r4, #0
+ 32c:	d007      	beq.n	33e <fill_memory_end_start>
+ 32e:	f880 9000 	strb.w	r9, [r0]
+ 332:	fa69 f907 	ror.w	r9, r9, r7
+ 336:	f100 0001 	add.w	r0, r0, #1
+ 33a:	3c01      	subs	r4, #1
+ 33c:	e7f5      	b.n	32a <fill_memory_spare_bytes_start>
+
+0000033e <fill_memory_end_start>:
+ 33e:	f04f 0600 	mov.w	r6, #0
+ 342:	460f      	mov	r7, r1
+ 344:	1a09      	subs	r1, r1, r0
+ 346:	4688      	mov	r8, r1
+ 348:	1109      	asrs	r1, r1, #4
+ 34a:	4691      	mov	r9, r2
+ 34c:	4614      	mov	r4, r2
+ 34e:	4615      	mov	r5, r2
+ 350:	42b1      	cmp	r1, r6
+ 352:	d006      	beq.n	362 <fill_memory_spare_bytes_end>
+
+00000354 <fill_memory_loop>:
+ 354:	bf18      	it	ne
+ 356:	e8a0 0234 	stmiane.w	r0!, {r2, r4, r5, r9}
+ 35a:	f106 0601 	add.w	r6, r6, #1
+ 35e:	42b1      	cmp	r1, r6
+ 360:	d1f8      	bne.n	354 <fill_memory_loop>
+
+00000362 <fill_memory_spare_bytes_end>:
+ 362:	f008 080f 	and.w	r8, r8, #15
+
+00000366 <fill_memory_spare_end_loop>:
+ 366:	f1b8 0f00 	cmp.w	r8, #0
+ 36a:	d007      	beq.n	37c <fill_memory_exit>
+ 36c:	7002      	strb	r2, [r0, #0]
+ 36e:	ea4f 2232 	mov.w	r2, r2, ror #8
+ 372:	f100 0001 	add.w	r0, r0, #1
+ 376:	f1b8 0801 	subs.w	r8, r8, #1
+ 37a:	e7f4      	b.n	366 <fill_memory_spare_end_loop>
+
+0000037c <fill_memory_exit>:
+ 37c:	4770      	bx	lr
+
+0000037e <NMI_Handler>:
+ 37e:	e7fe      	b.n	37e <NMI_Handler>
+
+00000380 <HardFault_Handler>:
+ 380:	e7fe      	b.n	380 <HardFault_Handler>
+
+00000382 <MemManage_Handler>:
+ 382:	e7fe      	b.n	382 <MemManage_Handler>
+
+00000384 <BusFault_Handler>:
+ 384:	e7fe      	b.n	384 <BusFault_Handler>
+
+00000386 <UsageFault_Handler>:
+ 386:	e7fe      	b.n	386 <UsageFault_Handler>
+
+00000388 <SVC_Handler>:
+ 388:	e7fe      	b.n	388 <SVC_Handler>
+
+0000038a <DebugMon_Handler>:
+ 38a:	e7fe      	b.n	38a <DebugMon_Handler>
+
+0000038c <PendSV_Handler>:
+ 38c:	e7fe      	b.n	38c <PendSV_Handler>
+
+0000038e <SysTick_Handler>:
+ 38e:	e7fe      	b.n	38e <SysTick_Handler>
+
+00000390 <WdogWakeup_IRQHandler>:
+ 390:	e7fe      	b.n	390 <WdogWakeup_IRQHandler>
+
+00000392 <RTC_Wakeup_IRQHandler>:
+ 392:	e7fe      	b.n	392 <RTC_Wakeup_IRQHandler>
+
+00000394 <SPI0_IRQHandler>:
+ 394:	e7fe      	b.n	394 <SPI0_IRQHandler>
+
+00000396 <SPI1_IRQHandler>:
+ 396:	e7fe      	b.n	396 <SPI1_IRQHandler>
+
+00000398 <I2C0_IRQHandler>:
+ 398:	e7fe      	b.n	398 <I2C0_IRQHandler>
+
+0000039a <I2C0_SMBAlert_IRQHandler>:
+ 39a:	e7fe      	b.n	39a <I2C0_SMBAlert_IRQHandler>
+
+0000039c <I2C0_SMBus_IRQHandler>:
+ 39c:	e7fe      	b.n	39c <I2C0_SMBus_IRQHandler>
+
+0000039e <I2C1_IRQHandler>:
+ 39e:	e7fe      	b.n	39e <I2C1_IRQHandler>
+
+000003a0 <I2C1_SMBAlert_IRQHandler>:
+ 3a0:	e7fe      	b.n	3a0 <I2C1_SMBAlert_IRQHandler>
+
+000003a2 <I2C1_SMBus_IRQHandler>:
+ 3a2:	e7fe      	b.n	3a2 <I2C1_SMBus_IRQHandler>
+
+000003a4 <UART0_IRQHandler>:
+ 3a4:	e7fe      	b.n	3a4 <UART0_IRQHandler>
+
+000003a6 <UART1_IRQHandler>:
+ 3a6:	e7fe      	b.n	3a6 <UART1_IRQHandler>
+
+000003a8 <EthernetMAC_IRQHandler>:
+ 3a8:	e7fe      	b.n	3a8 <EthernetMAC_IRQHandler>
+ 3aa:	e7fe      	b.n	3aa <EthernetMAC_IRQHandler+0x2>
+
+000003ac <Timer1_IRQHandler>:
+ 3ac:	e7fe      	b.n	3ac <Timer1_IRQHandler>
+
+000003ae <Timer2_IRQHandler>:
+ 3ae:	e7fe      	b.n	3ae <Timer2_IRQHandler>
+
+000003b0 <CAN_IRQHandler>:
+ 3b0:	e7fe      	b.n	3b0 <CAN_IRQHandler>
+
+000003b2 <ENVM0_IRQHandler>:
+ 3b2:	e7fe      	b.n	3b2 <ENVM0_IRQHandler>
+
+000003b4 <ENVM1_IRQHandler>:
+ 3b4:	e7fe      	b.n	3b4 <ENVM1_IRQHandler>
+
+000003b6 <ComBlk_IRQHandler>:
+ 3b6:	e7fe      	b.n	3b6 <ComBlk_IRQHandler>
+
+000003b8 <USB_IRQHandler>:
+ 3b8:	e7fe      	b.n	3b8 <USB_IRQHandler>
+
+000003ba <USB_DMA_IRQHandler>:
+ 3ba:	e7fe      	b.n	3ba <USB_DMA_IRQHandler>
+
+000003bc <PLL_Lock_IRQHandler>:
+ 3bc:	e7fe      	b.n	3bc <PLL_Lock_IRQHandler>
+
+000003be <PLL_LockLost_IRQHandler>:
+ 3be:	e7fe      	b.n	3be <PLL_LockLost_IRQHandler>
+
+000003c0 <CommSwitchError_IRQHandler>:
+ 3c0:	e7fe      	b.n	3c0 <CommSwitchError_IRQHandler>
+
+000003c2 <CacheError_IRQHandler>:
+ 3c2:	e7fe      	b.n	3c2 <CacheError_IRQHandler>
+
+000003c4 <DDR_IRQHandler>:
+ 3c4:	e7fe      	b.n	3c4 <DDR_IRQHandler>
+
+000003c6 <HPDMA_Complete_IRQHandler>:
+ 3c6:	e7fe      	b.n	3c6 <HPDMA_Complete_IRQHandler>
+
+000003c8 <HPDMA_Error_IRQHandler>:
+ 3c8:	e7fe      	b.n	3c8 <HPDMA_Error_IRQHandler>
+
+000003ca <ECC_Error_IRQHandler>:
+ 3ca:	e7fe      	b.n	3ca <ECC_Error_IRQHandler>
+
+000003cc <MDDR_IOCalib_IRQHandler>:
+ 3cc:	e7fe      	b.n	3cc <MDDR_IOCalib_IRQHandler>
+
+000003ce <FAB_PLL_Lock_IRQHandler>:
+ 3ce:	e7fe      	b.n	3ce <FAB_PLL_Lock_IRQHandler>
+
+000003d0 <FAB_PLL_LockLost_IRQHandler>:
+ 3d0:	e7fe      	b.n	3d0 <FAB_PLL_LockLost_IRQHandler>
+
+000003d2 <FIC64_IRQHandler>:
+ 3d2:	e7fe      	b.n	3d2 <FIC64_IRQHandler>
+
+000003d4 <FabricIrq0_IRQHandler>:
+ 3d4:	e7fe      	b.n	3d4 <FabricIrq0_IRQHandler>
+
+000003d6 <FabricIrq1_IRQHandler>:
+ 3d6:	e7fe      	b.n	3d6 <FabricIrq1_IRQHandler>
+
+000003d8 <FabricIrq2_IRQHandler>:
+ 3d8:	e7fe      	b.n	3d8 <FabricIrq2_IRQHandler>
+
+000003da <FabricIrq3_IRQHandler>:
+ 3da:	e7fe      	b.n	3da <FabricIrq3_IRQHandler>
+
+000003dc <FabricIrq4_IRQHandler>:
+ 3dc:	e7fe      	b.n	3dc <FabricIrq4_IRQHandler>
+
+000003de <FabricIrq5_IRQHandler>:
+ 3de:	e7fe      	b.n	3de <FabricIrq5_IRQHandler>
+
+000003e0 <FabricIrq6_IRQHandler>:
+ 3e0:	e7fe      	b.n	3e0 <FabricIrq6_IRQHandler>
+
+000003e2 <FabricIrq7_IRQHandler>:
+ 3e2:	e7fe      	b.n	3e2 <FabricIrq7_IRQHandler>
+
+000003e4 <FabricIrq8_IRQHandler>:
+ 3e4:	e7fe      	b.n	3e4 <FabricIrq8_IRQHandler>
+
+000003e6 <FabricIrq9_IRQHandler>:
+ 3e6:	e7fe      	b.n	3e6 <FabricIrq9_IRQHandler>
+
+000003e8 <FabricIrq10_IRQHandler>:
+ 3e8:	e7fe      	b.n	3e8 <FabricIrq10_IRQHandler>
+
+000003ea <FabricIrq11_IRQHandler>:
+ 3ea:	e7fe      	b.n	3ea <FabricIrq11_IRQHandler>
+
+000003ec <FabricIrq12_IRQHandler>:
+ 3ec:	e7fe      	b.n	3ec <FabricIrq12_IRQHandler>
+
+000003ee <FabricIrq13_IRQHandler>:
+ 3ee:	e7fe      	b.n	3ee <FabricIrq13_IRQHandler>
+
+000003f0 <FabricIrq14_IRQHandler>:
+ 3f0:	e7fe      	b.n	3f0 <FabricIrq14_IRQHandler>
+
+000003f2 <FabricIrq15_IRQHandler>:
+ 3f2:	e7fe      	b.n	3f2 <FabricIrq15_IRQHandler>
+
+000003f4 <GPIO0_IRQHandler>:
+ 3f4:	e7fe      	b.n	3f4 <GPIO0_IRQHandler>
+
+000003f6 <GPIO1_IRQHandler>:
+ 3f6:	e7fe      	b.n	3f6 <GPIO1_IRQHandler>
+
+000003f8 <GPIO2_IRQHandler>:
+ 3f8:	e7fe      	b.n	3f8 <GPIO2_IRQHandler>
+
+000003fa <GPIO3_IRQHandler>:
+ 3fa:	e7fe      	b.n	3fa <GPIO3_IRQHandler>
+
+000003fc <GPIO4_IRQHandler>:
+ 3fc:	e7fe      	b.n	3fc <GPIO4_IRQHandler>
+
+000003fe <GPIO5_IRQHandler>:
+ 3fe:	e7fe      	b.n	3fe <GPIO5_IRQHandler>
+
+00000400 <GPIO6_IRQHandler>:
+ 400:	e7fe      	b.n	400 <GPIO6_IRQHandler>
+
+00000402 <GPIO7_IRQHandler>:
+ 402:	e7fe      	b.n	402 <GPIO7_IRQHandler>
+
+00000404 <GPIO8_IRQHandler>:
+ 404:	e7fe      	b.n	404 <GPIO8_IRQHandler>
+
+00000406 <GPIO9_IRQHandler>:
+ 406:	e7fe      	b.n	406 <GPIO9_IRQHandler>
+
+00000408 <GPIO10_IRQHandler>:
+ 408:	e7fe      	b.n	408 <GPIO10_IRQHandler>
+
+0000040a <GPIO11_IRQHandler>:
+ 40a:	e7fe      	b.n	40a <GPIO11_IRQHandler>
+
+0000040c <GPIO12_IRQHandler>:
+ 40c:	e7fe      	b.n	40c <GPIO12_IRQHandler>
+
+0000040e <GPIO13_IRQHandler>:
+ 40e:	e7fe      	b.n	40e <GPIO13_IRQHandler>
+
+00000410 <GPIO14_IRQHandler>:
+ 410:	e7fe      	b.n	410 <GPIO14_IRQHandler>
+
+00000412 <GPIO15_IRQHandler>:
+ 412:	e7fe      	b.n	412 <GPIO15_IRQHandler>
+
+00000414 <GPIO16_IRQHandler>:
+ 414:	e7fe      	b.n	414 <GPIO16_IRQHandler>
+
+00000416 <GPIO17_IRQHandler>:
+ 416:	e7fe      	b.n	416 <GPIO17_IRQHandler>
+
+00000418 <GPIO18_IRQHandler>:
+ 418:	e7fe      	b.n	418 <GPIO18_IRQHandler>
+
+0000041a <GPIO19_IRQHandler>:
+ 41a:	e7fe      	b.n	41a <GPIO19_IRQHandler>
+
+0000041c <GPIO20_IRQHandler>:
+ 41c:	e7fe      	b.n	41c <GPIO20_IRQHandler>
+
+0000041e <GPIO21_IRQHandler>:
+ 41e:	e7fe      	b.n	41e <GPIO21_IRQHandler>
+
+00000420 <GPIO22_IRQHandler>:
+ 420:	e7fe      	b.n	420 <GPIO22_IRQHandler>
+
+00000422 <GPIO23_IRQHandler>:
+ 422:	e7fe      	b.n	422 <GPIO23_IRQHandler>
+
+00000424 <GPIO24_IRQHandler>:
+ 424:	e7fe      	b.n	424 <GPIO24_IRQHandler>
+
+00000426 <GPIO25_IRQHandler>:
+ 426:	e7fe      	b.n	426 <GPIO25_IRQHandler>
+
+00000428 <GPIO26_IRQHandler>:
+ 428:	e7fe      	b.n	428 <GPIO26_IRQHandler>
+
+0000042a <GPIO27_IRQHandler>:
+ 42a:	e7fe      	b.n	42a <GPIO27_IRQHandler>
+
+0000042c <GPIO28_IRQHandler>:
+ 42c:	e7fe      	b.n	42c <GPIO28_IRQHandler>
+
+0000042e <GPIO29_IRQHandler>:
+ 42e:	e7fe      	b.n	42e <GPIO29_IRQHandler>
+
+00000430 <GPIO30_IRQHandler>:
+ 430:	e7fe      	b.n	430 <GPIO30_IRQHandler>
+
+00000432 <GPIO31_IRQHandler>:
+ 432:	e7fe      	b.n	432 <GPIO31_IRQHandler>
+
+00000434 <mscc_post_hw_cfg_init>:
+ 434:	4770      	bx	lr
+
+00000436 <RAM_INIT_PATTERN>:
+ 436:	0000      	.short	0x0000
+	...
+
+0000043a <HEAP_INIT_PATTERN>:
+ 43a:	a2a2      	.short	0xa2a2
+ 43c:	a2a2      	.short	0xa2a2
+
+0000043e <SF2_ESRAM_CR>:
+ 43e:	8000      	.short	0x8000
+ 440:	4003      	.short	0x4003
+
+00000442 <SF2_DDR_CR>:
+ 442:	8008      	.short	0x8008
+ 444:	4003      	.short	0x4003
+
+00000446 <SF2_ENVM_REMAP_CR>:
+ 446:	8010      	.short	0x8010
+ 448:	4003      	.short	0x4003
+
+0000044a <SF2_DDRB_NB_SIZE>:
+ 44a:	8030      	.short	0x8030
+ 44c:	4003      	.short	0x4003
+
+0000044e <SF2_DDRB_CR>:
+ 44e:	8034      	.short	0x8034
+ 450:	4003      	.short	0x4003
+
+00000452 <SF2_EDAC_CR>:
+ 452:	8038      	.short	0x8038
+ 454:	4003      	.short	0x4003
+
+00000456 <SF2_MDDR_MODE_CR>:
+ 456:	0818      	.short	0x0818
+ 458:	00004002 	.word	0x00004002
+ 45c:	2000f000 	.word	0x2000f000
+ 460:	20010000 	.word	0x20010000
+ 464:	000004c1 	.word	0x000004c1
+	...
+ 470:	00000001 	.word	0x00000001
+ 474:	00000001 	.word	0x00000001
+ 478:	60000000 	.word	0x60000000
+ 47c:	00000000 	.word	0x00000000
+ 480:	00000190 	.word	0x00000190
+ 484:	600005a0 	.word	0x600005a0
+ 488:	000005a0 	.word	0x000005a0
+ 48c:	00001380 	.word	0x00001380
+ 490:	60001380 	.word	0x60001380
+ 494:	20000000 	.word	0x20000000
+ 498:	20000010 	.word	0x20000010
+ 49c:	20000010 	.word	0x20000010
+ 4a0:	20000c60 	.word	0x20000c60
+ 4a4:	20000c60 	.word	0x20000c60
+ 4a8:	2000f000 	.word	0x2000f000
+ 4ac:	00001119 	.word	0x00001119
+ 4b0:	00000881 	.word	0x00000881
+ 4b4:	f3af 8000 	nop.w
+ 4b8:	f3af 8000 	nop.w
+ 4bc:	f3af 8000 	nop.w
+
+000004c0 <SystemInit>:
+
+/***************************************************************************//**
+ * See system_m2sxxx.h for details.
+ */
+void SystemInit(void)
+{
+ 4c0:	b580      	push	{r7, lr}
+ 4c2:	af00      	add	r7, sp, #0
+     */
+#if (MSS_SYS_FACC_INIT_BY_CORTEX == 1)
+    complete_clock_config();
+#endif
+
+    silicon_workarounds();
+ 4c4:	f000 f838 	bl	538 <silicon_workarounds>
+    /*--------------------------------------------------------------------------
+     * Set STKALIGN to ensure exception stacking starts on 8 bytes address
+     * boundary. This ensures compliance with the "Procedure Call Standards for
+     * the ARM Architecture" (AAPCS).
+     */
+    SCB->CCR |= SCB_CCR_STKALIGN_Msk;
+ 4c8:	f64e 5300 	movw	r3, #60672	; 0xed00
+ 4cc:	f2ce 0300 	movt	r3, #57344	; 0xe000
+ 4d0:	f64e 5200 	movw	r2, #60672	; 0xed00
+ 4d4:	f2ce 0200 	movt	r2, #57344	; 0xe000
+ 4d8:	6952      	ldr	r2, [r2, #20]
+ 4da:	f442 7200 	orr.w	r2, r2, #512	; 0x200
+ 4de:	615a      	str	r2, [r3, #20]
+#endif
+
+    /*--------------------------------------------------------------------------
+     * Call user defined configuration function.
+     */
+    mscc_post_hw_cfg_init();
+ 4e0:	f7ff ffa8 	bl	434 <mscc_post_hw_cfg_init>
+    do
+    {
+        init_done = CORE_SF2_CFG->INIT_DONE & INIT_DONE_MASK;
+    } while (0u == init_done);
+#endif
+}
+ 4e4:	bd80      	pop	{r7, pc}
+ 4e6:	bf00      	nop
+
+000004e8 <get_silicon_revision>:
+
+/*------------------------------------------------------------------------------
+  Retrieve silicon revision from system registers.
+ */
+static uint32_t get_silicon_revision(void)
+{
+ 4e8:	b480      	push	{r7}
+ 4ea:	b083      	sub	sp, #12
+ 4ec:	af00      	add	r7, sp, #0
+    uint32_t silicon_revision;
+    uint32_t device_version;
+
+    device_version = SYSREG->DEVICE_VERSION;
+ 4ee:	f248 0300 	movw	r3, #32768	; 0x8000
+ 4f2:	f2c4 0303 	movt	r3, #16387	; 0x4003
+ 4f6:	f8d3 314c 	ldr.w	r3, [r3, #332]	; 0x14c
+ 4fa:	607b      	str	r3, [r7, #4]
+    switch(device_version)
+ 4fc:	687a      	ldr	r2, [r7, #4]
+ 4fe:	f64f 0302 	movw	r3, #63490	; 0xf802
+ 502:	429a      	cmp	r2, r3
+ 504:	d006      	beq.n	514 <get_silicon_revision+0x2c>
+ 506:	f64f 0302 	movw	r3, #63490	; 0xf802
+ 50a:	f2c0 0301 	movt	r3, #1
+ 50e:	429a      	cmp	r2, r3
+ 510:	d004      	beq.n	51c <get_silicon_revision+0x34>
+ 512:	e007      	b.n	524 <get_silicon_revision+0x3c>
+    {
+        case 0x0000F802:
+            silicon_revision = M2S050_REV_A_SILICON;
+ 514:	f04f 0301 	mov.w	r3, #1
+ 518:	603b      	str	r3, [r7, #0]
+            break;
+ 51a:	e006      	b.n	52a <get_silicon_revision+0x42>
+
+        case 0x0001F802:
+            silicon_revision = M2S050_REV_B_SILICON;
+ 51c:	f04f 0302 	mov.w	r3, #2
+ 520:	603b      	str	r3, [r7, #0]
+            break;
+ 522:	e002      	b.n	52a <get_silicon_revision+0x42>
+
+        default:
+            silicon_revision = UNKNOWN_SILICON_REV;
+ 524:	f04f 0300 	mov.w	r3, #0
+ 528:	603b      	str	r3, [r7, #0]
+            break;
+    }
+
+    return silicon_revision;
+ 52a:	683b      	ldr	r3, [r7, #0]
+}
+ 52c:	4618      	mov	r0, r3
+ 52e:	f107 070c 	add.w	r7, r7, #12
+ 532:	46bd      	mov	sp, r7
+ 534:	bc80      	pop	{r7}
+ 536:	4770      	bx	lr
+
+00000538 <silicon_workarounds>:
+
+/*------------------------------------------------------------------------------
+  Workarounds for various silicon versions.
+ */
+static void silicon_workarounds(void)
+{
+ 538:	b580      	push	{r7, lr}
+ 53a:	b082      	sub	sp, #8
+ 53c:	af00      	add	r7, sp, #0
+    uint32_t silicon_revision;
+
+    silicon_revision = get_silicon_revision();
+ 53e:	f7ff ffd3 	bl	4e8 <get_silicon_revision>
+ 542:	4603      	mov	r3, r0
+ 544:	607b      	str	r3, [r7, #4]
+
+    switch(silicon_revision)
+ 546:	687b      	ldr	r3, [r7, #4]
+ 548:	2b01      	cmp	r3, #1
+ 54a:	d101      	bne.n	550 <silicon_workarounds+0x18>
+    {
+        case M2S050_REV_A_SILICON:
+            m2s050_rev_a_workarounds();
+ 54c:	f000 f804 	bl	558 <m2s050_rev_a_workarounds>
+        case UNKNOWN_SILICON_REV:
+            /* Fall through. */
+        default:
+            break;
+    }
+}
+ 550:	f107 0708 	add.w	r7, r7, #8
+ 554:	46bd      	mov	sp, r7
+ 556:	bd80      	pop	{r7, pc}
+
+00000558 <m2s050_rev_a_workarounds>:
+
+/*------------------------------------------------------------------------------
+  Silicon workarounds for M2S050 rev A.
+ */
+static void m2s050_rev_a_workarounds(void)
+{
+ 558:	b480      	push	{r7}
+ 55a:	af00      	add	r7, sp, #0
+    /*--------------------------------------------------------------------------
+     * Work around a couple of silicon issues:
+     */
+    /* DDR_CLK_EN <- 1 */
+    SYSREG->MSSDDR_FACC1_CR |= (uint32_t)1 << DDR_CLK_EN_SHIFT;
+ 55c:	f248 0300 	movw	r3, #32768	; 0x8000
+ 560:	f2c4 0303 	movt	r3, #16387	; 0x4003
+ 564:	f248 0200 	movw	r2, #32768	; 0x8000
+ 568:	f2c4 0203 	movt	r2, #16387	; 0x4003
+ 56c:	f8d2 2098 	ldr.w	r2, [r2, #152]	; 0x98
+ 570:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+ 574:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
+
+    /* CONTROLLER_PLL_INIT <- 0 */
+    SYSREG->MSSDDR_FACC1_CR = SYSREG->MSSDDR_FACC1_CR & ~CONTROLLER_PLL_INIT_MASK;
+ 578:	f248 0300 	movw	r3, #32768	; 0x8000
+ 57c:	f2c4 0303 	movt	r3, #16387	; 0x4003
+ 580:	f248 0200 	movw	r2, #32768	; 0x8000
+ 584:	f2c4 0203 	movt	r2, #16387	; 0x4003
+ 588:	f8d2 2098 	ldr.w	r2, [r2, #152]	; 0x98
+ 58c:	f022 6280 	bic.w	r2, r2, #67108864	; 0x4000000
+ 590:	f8c3 2098 	str.w	r2, [r3, #152]	; 0x98
+}
+ 594:	46bd      	mov	sp, r7
+ 596:	bc80      	pop	{r7}
+ 598:	4770      	bx	lr
+ 59a:	bf00      	nop
+ 59c:	0000      	lsls	r0, r0, #0
+	...
+
+Disassembly of section .text:
+
+000005a0 <__do_global_dtors_aux>:
+     5a0:	f240 0310 	movw	r3, #16
+     5a4:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     5a8:	781a      	ldrb	r2, [r3, #0]
+     5aa:	b90a      	cbnz	r2, 5b0 <__do_global_dtors_aux+0x10>
+     5ac:	2001      	movs	r0, #1
+     5ae:	7018      	strb	r0, [r3, #0]
+     5b0:	4770      	bx	lr
+     5b2:	bf00      	nop
+
+000005b4 <frame_dummy>:
+     5b4:	f240 0000 	movw	r0, #0
+     5b8:	f2c2 0000 	movt	r0, #8192	; 0x2000
+     5bc:	b508      	push	{r3, lr}
+     5be:	6803      	ldr	r3, [r0, #0]
+     5c0:	b12b      	cbz	r3, 5ce <frame_dummy+0x1a>
+     5c2:	f240 0300 	movw	r3, #0
+     5c6:	f2c0 0300 	movt	r3, #0
+     5ca:	b103      	cbz	r3, 5ce <frame_dummy+0x1a>
+     5cc:	4798      	blx	r3
+     5ce:	bd08      	pop	{r3, pc}
+
+000005d0 <PDMA_disable_irq>:
+ 
+  @param channel_id
+    The channel_id parameter identifies the PDMA channel used by the function.
+ */
+static __INLINE void PDMA_disable_irq( pdma_channel_id_t channel_id )
+{
+     5d0:	b480      	push	{r7}
+     5d2:	b083      	sub	sp, #12
+     5d4:	af00      	add	r7, sp, #0
+     5d6:	4603      	mov	r3, r0
+     5d8:	71fb      	strb	r3, [r7, #7]
+    PDMA->CHANNEL[channel_id].CRTL &= ~PDMA_IRQ_ENABLE_MASK;
+     5da:	f243 0300 	movw	r3, #12288	; 0x3000
+     5de:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     5e2:	79f9      	ldrb	r1, [r7, #7]
+     5e4:	f243 0200 	movw	r2, #12288	; 0x3000
+     5e8:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     5ec:	79f8      	ldrb	r0, [r7, #7]
+     5ee:	f100 0001 	add.w	r0, r0, #1
+     5f2:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     5f6:	4402      	add	r2, r0
+     5f8:	6812      	ldr	r2, [r2, #0]
+     5fa:	f022 0240 	bic.w	r2, r2, #64	; 0x40
+     5fe:	f101 0101 	add.w	r1, r1, #1
+     602:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     606:	440b      	add	r3, r1
+     608:	601a      	str	r2, [r3, #0]
+}
+     60a:	f107 070c 	add.w	r7, r7, #12
+     60e:	46bd      	mov	sp, r7
+     610:	bc80      	pop	{r7}
+     612:	4770      	bx	lr
+
+00000614 <load_pattern>:
+void load_pattern
+(
+    uint16_t * buffer,
+    uint16_t size
+)
+{
+     614:	b480      	push	{r7}
+     616:	b085      	sub	sp, #20
+     618:	af00      	add	r7, sp, #0
+     61a:	6078      	str	r0, [r7, #4]
+     61c:	460b      	mov	r3, r1
+     61e:	807b      	strh	r3, [r7, #2]
+    uint32_t i;
+    static uint32_t increment = 1;
+    for(i = 0; i < size; ++i)
+     620:	f04f 0300 	mov.w	r3, #0
+     624:	60fb      	str	r3, [r7, #12]
+     626:	e013      	b.n	650 <load_pattern+0x3c>
+    {
+        buffer[i] = i + increment;
+     628:	68fb      	ldr	r3, [r7, #12]
+     62a:	ea4f 0243 	mov.w	r2, r3, lsl #1
+     62e:	687b      	ldr	r3, [r7, #4]
+     630:	441a      	add	r2, r3
+     632:	68fb      	ldr	r3, [r7, #12]
+     634:	b299      	uxth	r1, r3
+     636:	f240 0304 	movw	r3, #4
+     63a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     63e:	681b      	ldr	r3, [r3, #0]
+     640:	b29b      	uxth	r3, r3
+     642:	440b      	add	r3, r1
+     644:	b29b      	uxth	r3, r3
+     646:	8013      	strh	r3, [r2, #0]
+    uint16_t size
+)
+{
+    uint32_t i;
+    static uint32_t increment = 1;
+    for(i = 0; i < size; ++i)
+     648:	68fb      	ldr	r3, [r7, #12]
+     64a:	f103 0301 	add.w	r3, r3, #1
+     64e:	60fb      	str	r3, [r7, #12]
+     650:	887a      	ldrh	r2, [r7, #2]
+     652:	68fb      	ldr	r3, [r7, #12]
+     654:	429a      	cmp	r2, r3
+     656:	d8e7      	bhi.n	628 <load_pattern+0x14>
+    {
+        buffer[i] = i + increment;
+    }
+    ++increment;
+     658:	f240 0304 	movw	r3, #4
+     65c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     660:	681b      	ldr	r3, [r3, #0]
+     662:	f103 0201 	add.w	r2, r3, #1
+     666:	f240 0304 	movw	r3, #4
+     66a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     66e:	601a      	str	r2, [r3, #0]
+}
+     670:	f107 0714 	add.w	r7, r7, #20
+     674:	46bd      	mov	sp, r7
+     676:	bc80      	pop	{r7}
+     678:	4770      	bx	lr
+     67a:	bf00      	nop
+
+0000067c <ping_pong_handler>:
+
+/***************************************************************************//**
+ * PDMA interrupt handler called when a PDMA transfer has completed.
+ */
+void ping_pong_handler(void)
+{
+     67c:	b580      	push	{r7, lr}
+     67e:	b082      	sub	sp, #8
+     680:	af00      	add	r7, sp, #0
+    uint32_t dma_size;
+
+    /*
+     * Check if the last buffer has been reached.
+     */
+    if(g_size_to_send < DMA_TRANSFER_SIZE)
+     682:	f240 031c 	movw	r3, #28
+     686:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     68a:	681b      	ldr	r3, [r3, #0]
+     68c:	2b1f      	cmp	r3, #31
+     68e:	dc06      	bgt.n	69e <ping_pong_handler+0x22>
+    {
+        dma_size = g_size_to_send;
+     690:	f240 031c 	movw	r3, #28
+     694:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     698:	681b      	ldr	r3, [r3, #0]
+     69a:	607b      	str	r3, [r7, #4]
+     69c:	e002      	b.n	6a4 <ping_pong_handler+0x28>
+    }
+    else
+    {
+        dma_size = DMA_TRANSFER_SIZE;
+     69e:	f04f 0320 	mov.w	r3, #32
+     6a2:	607b      	str	r3, [r7, #4]
+    }
+
+    /*
+     * Prepare next buffer to be transferred.
+     */
+    PDMA_load_next_buffer(PDMA_CHANNEL_0,
+     6a4:	f240 0314 	movw	r3, #20
+     6a8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6ac:	6819      	ldr	r1, [r3, #0]
+     6ae:	f240 0318 	movw	r3, #24
+     6b2:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6b6:	681a      	ldr	r2, [r3, #0]
+     6b8:	687b      	ldr	r3, [r7, #4]
+     6ba:	b29b      	uxth	r3, r3
+     6bc:	f04f 0000 	mov.w	r0, #0
+     6c0:	f000 fb50 	bl	d64 <PDMA_load_next_buffer>
+                          (uint32_t)g_source_addr,
+                          (uint32_t)g_target_addr,
+                          dma_size);
+    g_source_addr += dma_size * sizeof(uint16_t);
+     6c4:	687b      	ldr	r3, [r7, #4]
+     6c6:	ea4f 0243 	mov.w	r2, r3, lsl #1
+     6ca:	f240 0314 	movw	r3, #20
+     6ce:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6d2:	681b      	ldr	r3, [r3, #0]
+     6d4:	441a      	add	r2, r3
+     6d6:	f240 0314 	movw	r3, #20
+     6da:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6de:	601a      	str	r2, [r3, #0]
+    g_target_addr += dma_size * sizeof(uint16_t);
+     6e0:	687b      	ldr	r3, [r7, #4]
+     6e2:	ea4f 0243 	mov.w	r2, r3, lsl #1
+     6e6:	f240 0318 	movw	r3, #24
+     6ea:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6ee:	681b      	ldr	r3, [r3, #0]
+     6f0:	441a      	add	r2, r3
+     6f2:	f240 0318 	movw	r3, #24
+     6f6:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     6fa:	601a      	str	r2, [r3, #0]
+    g_size_to_send -= dma_size;
+     6fc:	f240 031c 	movw	r3, #28
+     700:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     704:	681b      	ldr	r3, [r3, #0]
+     706:	461a      	mov	r2, r3
+     708:	687b      	ldr	r3, [r7, #4]
+     70a:	ebc3 0302 	rsb	r3, r3, r2
+     70e:	461a      	mov	r2, r3
+     710:	f240 031c 	movw	r3, #28
+     714:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     718:	601a      	str	r2, [r3, #0]
+
+    /*
+     * Disable PDMA channel 0 interrupts the complete data has been passd to the
+     * PDMA driver.
+     */
+    if(g_size_to_send <= 0)
+     71a:	f240 031c 	movw	r3, #28
+     71e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     722:	681b      	ldr	r3, [r3, #0]
+     724:	2b00      	cmp	r3, #0
+     726:	dc03      	bgt.n	730 <ping_pong_handler+0xb4>
+    {
+        PDMA_disable_irq(PDMA_CHANNEL_0);
+     728:	f04f 0000 	mov.w	r0, #0
+     72c:	f7ff ff50 	bl	5d0 <PDMA_disable_irq>
+    }
+}
+     730:	f107 0708 	add.w	r7, r7, #8
+     734:	46bd      	mov	sp, r7
+     736:	bd80      	pop	{r7, pc}
+
+00000738 <start_transfer>:
+(
+    uint16_t *buffer_a,
+    uint32_t *buffer_b,
+    uint32_t size
+)
+{
+     738:	b580      	push	{r7, lr}
+     73a:	b084      	sub	sp, #16
+     73c:	af00      	add	r7, sp, #0
+     73e:	60f8      	str	r0, [r7, #12]
+     740:	60b9      	str	r1, [r7, #8]
+     742:	607a      	str	r2, [r7, #4]
+    /*
+     * Register the PDMA handler that will feed the PDMA channel.
+     */
+    PDMA_set_irq_handler(PDMA_CHANNEL_0, ping_pong_handler);
+     744:	f04f 0000 	mov.w	r0, #0
+     748:	f240 617d 	movw	r1, #1661	; 0x67d
+     74c:	f2c0 0100 	movt	r1, #0
+     750:	f000 fc8e 	bl	1070 <PDMA_set_irq_handler>
+    /*
+     * Disable PDMA channel interrupt while we set setup the transfer and
+     * modify the value of global variables used by the PDMA channel
+     * interrupt handler.
+     */
+    PDMA_disable_irq(PDMA_CHANNEL_0);
+     754:	f04f 0000 	mov.w	r0, #0
+     758:	f7ff ff3a 	bl	5d0 <PDMA_disable_irq>
+
+    /*
+     * Initialize global varialbes used to manage the ping pong transfer.
+     */
+    g_source_addr = (uint32_t)buffer_a;
+     75c:	68fa      	ldr	r2, [r7, #12]
+     75e:	f240 0314 	movw	r3, #20
+     762:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     766:	601a      	str	r2, [r3, #0]
+    g_target_addr = (uint32_t)buffer_b;
+     768:	68ba      	ldr	r2, [r7, #8]
+     76a:	f240 0318 	movw	r3, #24
+     76e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     772:	601a      	str	r2, [r3, #0]
+    g_size_to_send = size;
+     774:	687a      	ldr	r2, [r7, #4]
+     776:	f240 031c 	movw	r3, #28
+     77a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     77e:	601a      	str	r2, [r3, #0]
+
+    /*
+     * Initiate PDMA transfer.
+     */
+    PDMA_start(PDMA_CHANNEL_0,
+     780:	f240 0314 	movw	r3, #20
+     784:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     788:	681a      	ldr	r2, [r3, #0]
+     78a:	f240 0318 	movw	r3, #24
+     78e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     792:	681b      	ldr	r3, [r3, #0]
+     794:	f04f 0000 	mov.w	r0, #0
+     798:	4611      	mov	r1, r2
+     79a:	461a      	mov	r2, r3
+     79c:	f04f 0320 	mov.w	r3, #32
+     7a0:	f000 f9c6 	bl	b30 <PDMA_start>
+               (uint32_t)g_source_addr,
+               (uint32_t)g_target_addr,
+               DMA_TRANSFER_SIZE);
+
+    g_source_addr += DMA_TRANSFER_SIZE * sizeof(uint16_t);
+     7a4:	f240 0314 	movw	r3, #20
+     7a8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7ac:	681b      	ldr	r3, [r3, #0]
+     7ae:	f103 0240 	add.w	r2, r3, #64	; 0x40
+     7b2:	f240 0314 	movw	r3, #20
+     7b6:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7ba:	601a      	str	r2, [r3, #0]
+    g_target_addr += DMA_TRANSFER_SIZE * sizeof(uint16_t);
+     7bc:	f240 0318 	movw	r3, #24
+     7c0:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7c4:	681b      	ldr	r3, [r3, #0]
+     7c6:	f103 0240 	add.w	r2, r3, #64	; 0x40
+     7ca:	f240 0318 	movw	r3, #24
+     7ce:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7d2:	601a      	str	r2, [r3, #0]
+    g_size_to_send -= DMA_TRANSFER_SIZE;
+     7d4:	f240 031c 	movw	r3, #28
+     7d8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7dc:	681b      	ldr	r3, [r3, #0]
+     7de:	f1a3 0220 	sub.w	r2, r3, #32
+     7e2:	f240 031c 	movw	r3, #28
+     7e6:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7ea:	601a      	str	r2, [r3, #0]
+
+    /*
+     * Prepare second buffer to transfer.
+     */
+    PDMA_load_next_buffer(PDMA_CHANNEL_0,
+     7ec:	f240 0314 	movw	r3, #20
+     7f0:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7f4:	681a      	ldr	r2, [r3, #0]
+     7f6:	f240 0318 	movw	r3, #24
+     7fa:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     7fe:	681b      	ldr	r3, [r3, #0]
+     800:	f04f 0000 	mov.w	r0, #0
+     804:	4611      	mov	r1, r2
+     806:	461a      	mov	r2, r3
+     808:	f04f 0320 	mov.w	r3, #32
+     80c:	f000 faaa 	bl	d64 <PDMA_load_next_buffer>
+                          (uint32_t)g_source_addr,
+                          (uint32_t)g_target_addr,
+                          DMA_TRANSFER_SIZE);
+    g_source_addr += DMA_TRANSFER_SIZE * sizeof(uint16_t);
+     810:	f240 0314 	movw	r3, #20
+     814:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     818:	681b      	ldr	r3, [r3, #0]
+     81a:	f103 0240 	add.w	r2, r3, #64	; 0x40
+     81e:	f240 0314 	movw	r3, #20
+     822:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     826:	601a      	str	r2, [r3, #0]
+    g_target_addr += DMA_TRANSFER_SIZE * sizeof(uint16_t);
+     828:	f240 0318 	movw	r3, #24
+     82c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     830:	681b      	ldr	r3, [r3, #0]
+     832:	f103 0240 	add.w	r2, r3, #64	; 0x40
+     836:	f240 0318 	movw	r3, #24
+     83a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     83e:	601a      	str	r2, [r3, #0]
+    g_size_to_send -= DMA_TRANSFER_SIZE;
+     840:	f240 031c 	movw	r3, #28
+     844:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     848:	681b      	ldr	r3, [r3, #0]
+     84a:	f1a3 0220 	sub.w	r2, r3, #32
+     84e:	f240 031c 	movw	r3, #28
+     852:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     856:	601a      	str	r2, [r3, #0]
+
+    /*
+     * Enable PDMA interrupt generated by channel 0.
+     */
+    PDMA_enable_irq(PDMA_CHANNEL_0);
+     858:	f04f 0000 	mov.w	r0, #0
+     85c:	f000 fc36 	bl	10cc <PDMA_enable_irq>
+}
+     860:	f107 0710 	add.w	r7, r7, #16
+     864:	46bd      	mov	sp, r7
+     866:	bd80      	pop	{r7, pc}
+
+00000868 <wait_transfer_complete>:
+/***************************************************************************//**
+ * Wait for ping pong PDMA trnasfer to complete by observing the number of data
+ * bytes left to transfer.
+ */
+void wait_transfer_complete(void)
+{
+     868:	b480      	push	{r7}
+     86a:	af00      	add	r7, sp, #0
+    while(g_size_to_send > 0)
+     86c:	f240 031c 	movw	r3, #28
+     870:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     874:	681b      	ldr	r3, [r3, #0]
+     876:	2b00      	cmp	r3, #0
+     878:	dcf8      	bgt.n	86c <wait_transfer_complete+0x4>
+    {
+        ;
+    }
+}
+     87a:	46bd      	mov	sp, r7
+     87c:	bc80      	pop	{r7}
+     87e:	4770      	bx	lr
+
+00000880 <main>:
+
+/***************************************************************************//**
+ * main function.
+ */
+int main(void)
+{
+     880:	b580      	push	{r7, lr}
+     882:	b082      	sub	sp, #8
+     884:	af00      	add	r7, sp, #0
+    /*
+     *  Initialize PDMA controller.
+     */
+    PDMA_init();
+     886:	f000 f861 	bl	94c <PDMA_init>
+
+    /*
+     * Configure PDMA channel 0 to perform a memory to memory word transfer
+     * incrementing both source and destination address after each transfer.
+     */
+    PDMA_configure(PDMA_CHANNEL_0,
+     88a:	f04f 0000 	mov.w	r0, #0
+     88e:	f04f 010b 	mov.w	r1, #11
+     892:	f642 0208 	movw	r2, #10248	; 0x2808
+     896:	f04f 030a 	mov.w	r3, #10
+     89a:	f000 f8a7 	bl	9ec <PDMA_configure>
+                   PDMA_TO_FIC_0_DMAREADY_0,
+                   PDMA_WORD_TRANSFER | PDMA_LOW_PRIORITY
+                                          | PDMA_INC_SRC_TWO_BYTES
+                                          | PDMA_INC_DEST_TWO_BYTES,
+                                          PDMA_DEFAULT_WRITE_ADJ);
+    uint16_t *FIC0_BASE = (uint16_t *)FIC0_BASE_ADDR;
+     89e:	f04f 534c 	mov.w	r3, #855638016	; 0x33000000
+     8a2:	607b      	str	r3, [r7, #4]
+        volatile uint32_t dummy;
+
+        /*
+         * Load pattern into g_buffer_a word array.
+         */
+        load_pattern(g_buffer_a, BUFFER_A_SIZE);
+     8a4:	f240 0058 	movw	r0, #88	; 0x58
+     8a8:	f2c2 0000 	movt	r0, #8192	; 0x2000
+     8ac:	f44f 7100 	mov.w	r1, #512	; 0x200
+     8b0:	f7ff feb0 	bl	614 <load_pattern>
+
+        /*
+         * Transfer from g_buffer_a[] to g_buffer_b.
+         */
+        start_transfer(g_buffer_a, FIC0_BASE, BUFFER_A_SIZE);
+     8b4:	687b      	ldr	r3, [r7, #4]
+     8b6:	f240 0058 	movw	r0, #88	; 0x58
+     8ba:	f2c2 0000 	movt	r0, #8192	; 0x2000
+     8be:	4619      	mov	r1, r3
+     8c0:	f44f 7200 	mov.w	r2, #512	; 0x200
+     8c4:	f7ff ff38 	bl	738 <start_transfer>
+
+        /*
+         * Wait for full buffer to be transferred.
+         */
+        wait_transfer_complete();
+     8c8:	f7ff ffce 	bl	868 <wait_transfer_complete>
+        /*
+         * Set a breakpoint on the next line. Adding a watch on the g_buffer_b
+         * buffer will show the the content of the buffer change as the DMA
+         * transfers take place from g_buffer_a to g_buffer_b.
+         */
+        ++dummy;
+     8cc:	683b      	ldr	r3, [r7, #0]
+     8ce:	f103 0301 	add.w	r3, r3, #1
+     8d2:	603b      	str	r3, [r7, #0]
+    }
+     8d4:	e7e6      	b.n	8a4 <main+0x24>
+     8d6:	bf00      	nop
+
+000008d8 <NVIC_EnableIRQ>:
+    The function enables a device-specific interrupt in the NVIC interrupt controller.
+
+    \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+__STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
+{
+     8d8:	b480      	push	{r7}
+     8da:	b083      	sub	sp, #12
+     8dc:	af00      	add	r7, sp, #0
+     8de:	4603      	mov	r3, r0
+     8e0:	71fb      	strb	r3, [r7, #7]
+  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
+     8e2:	f24e 1300 	movw	r3, #57600	; 0xe100
+     8e6:	f2ce 0300 	movt	r3, #57344	; 0xe000
+     8ea:	f997 2007 	ldrsb.w	r2, [r7, #7]
+     8ee:	ea4f 1252 	mov.w	r2, r2, lsr #5
+     8f2:	79f9      	ldrb	r1, [r7, #7]
+     8f4:	f001 011f 	and.w	r1, r1, #31
+     8f8:	f04f 0001 	mov.w	r0, #1
+     8fc:	fa00 f101 	lsl.w	r1, r0, r1
+     900:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+}
+     904:	f107 070c 	add.w	r7, r7, #12
+     908:	46bd      	mov	sp, r7
+     90a:	bc80      	pop	{r7}
+     90c:	4770      	bx	lr
+     90e:	bf00      	nop
+
+00000910 <NVIC_ClearPendingIRQ>:
+    The function clears the pending bit of an external interrupt.
+
+    \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+__STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+{
+     910:	b480      	push	{r7}
+     912:	b083      	sub	sp, #12
+     914:	af00      	add	r7, sp, #0
+     916:	4603      	mov	r3, r0
+     918:	71fb      	strb	r3, [r7, #7]
+  NVIC->ICPR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+     91a:	f24e 1300 	movw	r3, #57600	; 0xe100
+     91e:	f2ce 0300 	movt	r3, #57344	; 0xe000
+     922:	f997 2007 	ldrsb.w	r2, [r7, #7]
+     926:	ea4f 1252 	mov.w	r2, r2, lsr #5
+     92a:	79f9      	ldrb	r1, [r7, #7]
+     92c:	f001 011f 	and.w	r1, r1, #31
+     930:	f04f 0001 	mov.w	r0, #1
+     934:	fa00 f101 	lsl.w	r1, r0, r1
+     938:	f102 0260 	add.w	r2, r2, #96	; 0x60
+     93c:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+}
+     940:	f107 070c 	add.w	r7, r7, #12
+     944:	46bd      	mov	sp, r7
+     946:	bc80      	pop	{r7}
+     948:	4770      	bx	lr
+     94a:	bf00      	nop
+
+0000094c <PDMA_init>:
+
+/***************************************************************************//**
+ * See mss_pdma.h for description of this function.
+ */
+void PDMA_init(void)
+{
+     94c:	b580      	push	{r7, lr}
+     94e:	b082      	sub	sp, #8
+     950:	af00      	add	r7, sp, #0
+    int32_t i;
+    
+    /* Reset PDMA block. */
+    SYSREG->SOFT_RST_CR |= PDMA_SOFT_RESET;
+     952:	f248 0300 	movw	r3, #32768	; 0x8000
+     956:	f2c4 0303 	movt	r3, #16387	; 0x4003
+     95a:	f248 0200 	movw	r2, #32768	; 0x8000
+     95e:	f2c4 0203 	movt	r2, #16387	; 0x4003
+     962:	6c92      	ldr	r2, [r2, #72]	; 0x48
+     964:	f042 0220 	orr.w	r2, r2, #32
+     968:	649a      	str	r2, [r3, #72]	; 0x48
+    
+    /* Clear any previously pended MSS PDMA interrupt */
+    NVIC_ClearPendingIRQ(DMA_IRQn);
+     96a:	f04f 000d 	mov.w	r0, #13
+     96e:	f7ff ffcf 	bl	910 <NVIC_ClearPendingIRQ>
+        
+    /* Take PDMA controller out of reset*/
+    SYSREG->SOFT_RST_CR &= ~PDMA_SOFT_RESET;
+     972:	f248 0300 	movw	r3, #32768	; 0x8000
+     976:	f2c4 0303 	movt	r3, #16387	; 0x4003
+     97a:	f248 0200 	movw	r2, #32768	; 0x8000
+     97e:	f2c4 0203 	movt	r2, #16387	; 0x4003
+     982:	6c92      	ldr	r2, [r2, #72]	; 0x48
+     984:	f022 0220 	bic.w	r2, r2, #32
+     988:	649a      	str	r2, [r3, #72]	; 0x48
+    
+    /* Initialize channels state information. */
+    for(i = 0; i < NB_OF_PDMA_CHANNELS; ++i)
+     98a:	f04f 0300 	mov.w	r3, #0
+     98e:	607b      	str	r3, [r7, #4]
+     990:	e024      	b.n	9dc <PDMA_init+0x90>
+    {
+        g_pdma_next_channel[i] = NEXT_CHANNEL_A;
+     992:	687a      	ldr	r2, [r7, #4]
+     994:	f240 0320 	movw	r3, #32
+     998:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     99c:	f04f 0100 	mov.w	r1, #0
+     9a0:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_a[i] = CHANNEL_STOPPED;
+     9a2:	687a      	ldr	r2, [r7, #4]
+     9a4:	f240 0328 	movw	r3, #40	; 0x28
+     9a8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     9ac:	f04f 0100 	mov.w	r1, #0
+     9b0:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_b[i] = CHANNEL_STOPPED;
+     9b2:	687a      	ldr	r2, [r7, #4]
+     9b4:	f240 0330 	movw	r3, #48	; 0x30
+     9b8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     9bc:	f04f 0100 	mov.w	r1, #0
+     9c0:	5499      	strb	r1, [r3, r2]
+        g_pdma_isr_table[i] = 0;
+     9c2:	687a      	ldr	r2, [r7, #4]
+     9c4:	f240 0338 	movw	r3, #56	; 0x38
+     9c8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     9cc:	f04f 0100 	mov.w	r1, #0
+     9d0:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+        
+    /* Take PDMA controller out of reset*/
+    SYSREG->SOFT_RST_CR &= ~PDMA_SOFT_RESET;
+    
+    /* Initialize channels state information. */
+    for(i = 0; i < NB_OF_PDMA_CHANNELS; ++i)
+     9d4:	687b      	ldr	r3, [r7, #4]
+     9d6:	f103 0301 	add.w	r3, r3, #1
+     9da:	607b      	str	r3, [r7, #4]
+     9dc:	687b      	ldr	r3, [r7, #4]
+     9de:	2b07      	cmp	r3, #7
+     9e0:	ddd7      	ble.n	992 <PDMA_init+0x46>
+        g_pdma_next_channel[i] = NEXT_CHANNEL_A;
+        g_pdma_started_a[i] = CHANNEL_STOPPED;
+        g_pdma_started_b[i] = CHANNEL_STOPPED;
+        g_pdma_isr_table[i] = 0;
+    }
+}
+     9e2:	f107 0708 	add.w	r7, r7, #8
+     9e6:	46bd      	mov	sp, r7
+     9e8:	bd80      	pop	{r7, pc}
+     9ea:	bf00      	nop
+
+000009ec <PDMA_configure>:
+    pdma_channel_id_t channel_id,
+    pdma_src_dest_t src_dest,
+    uint32_t channel_cfg,
+    uint8_t write_adjust
+)
+{
+     9ec:	b580      	push	{r7, lr}
+     9ee:	b098      	sub	sp, #96	; 0x60
+     9f0:	af00      	add	r7, sp, #0
+     9f2:	60ba      	str	r2, [r7, #8]
+     9f4:	4602      	mov	r2, r0
+     9f6:	73fa      	strb	r2, [r7, #15]
+     9f8:	460a      	mov	r2, r1
+     9fa:	73ba      	strb	r2, [r7, #14]
+     9fc:	71fb      	strb	r3, [r7, #7]
+        CHANNEL_N_CTRL_PDMA_MASK | ( (uint32_t)12 << CHANNEL_N_PERIPH_SELECT_SHIFT) | CHANNEL_N_DIRECTION_MASK, /* PDMA_TO_FIC_1_DMAREADY_1 */
+        CHANNEL_N_CTRL_PDMA_MASK | ( (uint32_t)13 << CHANNEL_N_PERIPH_SELECT_SHIFT),                            /* PDMA_FROM_FIC_1_DMAREADY_0 */
+        CHANNEL_N_CTRL_PDMA_MASK | ( (uint32_t)13 << CHANNEL_N_PERIPH_SELECT_SHIFT) | CHANNEL_N_DIRECTION_MASK, /* PDMA_TO_FIC_1_DMAREADY_0 */
+        CHANNEL_N_CTRL_PDMA_MASK | ( (uint32_t)14 << CHANNEL_N_PERIPH_SELECT_SHIFT),                            /* PDMA_FROM_COMBLK */
+        CHANNEL_N_CTRL_PDMA_MASK | ( (uint32_t)15 << CHANNEL_N_PERIPH_SELECT_SHIFT) | CHANNEL_N_DIRECTION_MASK  /* PDMA_TO_COMBLK */
+    };
+     9fe:	f241 3308 	movw	r3, #4872	; 0x1308
+     a02:	f2c0 0300 	movt	r3, #0
+     a06:	f107 0110 	add.w	r1, r7, #16
+     a0a:	461a      	mov	r2, r3
+     a0c:	f04f 0350 	mov.w	r3, #80	; 0x50
+     a10:	4608      	mov	r0, r1
+     a12:	4611      	mov	r1, r2
+     a14:	461a      	mov	r2, r3
+     a16:	f000 fba7 	bl	1168 <memcpy>
+    
+    /* Reset the channel. */
+    PDMA->CHANNEL[channel_id].CRTL |= CHANNEL_RESET_MASK;
+     a1a:	f243 0300 	movw	r3, #12288	; 0x3000
+     a1e:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     a22:	7bf9      	ldrb	r1, [r7, #15]
+     a24:	f243 0200 	movw	r2, #12288	; 0x3000
+     a28:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     a2c:	7bf8      	ldrb	r0, [r7, #15]
+     a2e:	f100 0001 	add.w	r0, r0, #1
+     a32:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     a36:	4402      	add	r2, r0
+     a38:	6812      	ldr	r2, [r2, #0]
+     a3a:	f042 0220 	orr.w	r2, r2, #32
+     a3e:	f101 0101 	add.w	r1, r1, #1
+     a42:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     a46:	440b      	add	r3, r1
+     a48:	601a      	str	r2, [r3, #0]
+    PDMA->CHANNEL[channel_id].CRTL &= ~CHANNEL_RESET_MASK;
+     a4a:	f243 0300 	movw	r3, #12288	; 0x3000
+     a4e:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     a52:	7bf9      	ldrb	r1, [r7, #15]
+     a54:	f243 0200 	movw	r2, #12288	; 0x3000
+     a58:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     a5c:	7bf8      	ldrb	r0, [r7, #15]
+     a5e:	f100 0001 	add.w	r0, r0, #1
+     a62:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     a66:	4402      	add	r2, r0
+     a68:	6812      	ldr	r2, [r2, #0]
+     a6a:	f022 0220 	bic.w	r2, r2, #32
+     a6e:	f101 0101 	add.w	r1, r1, #1
+     a72:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     a76:	440b      	add	r3, r1
+     a78:	601a      	str	r2, [r3, #0]
+
+    /* Configure PDMA channel's data source and destination. */
+    if(src_dest != PDMA_MEM_TO_MEM)
+     a7a:	7bbb      	ldrb	r3, [r7, #14]
+     a7c:	2b14      	cmp	r3, #20
+     a7e:	d01f      	beq.n	ac0 <PDMA_configure+0xd4>
+    {
+        PDMA->CHANNEL[channel_id].CRTL |= src_dest_to_ctrl_reg_lut[src_dest];
+     a80:	f243 0300 	movw	r3, #12288	; 0x3000
+     a84:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     a88:	7bf9      	ldrb	r1, [r7, #15]
+     a8a:	f243 0200 	movw	r2, #12288	; 0x3000
+     a8e:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     a92:	7bf8      	ldrb	r0, [r7, #15]
+     a94:	f100 0001 	add.w	r0, r0, #1
+     a98:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     a9c:	4402      	add	r2, r0
+     a9e:	6810      	ldr	r0, [r2, #0]
+     aa0:	7bba      	ldrb	r2, [r7, #14]
+     aa2:	ea4f 0282 	mov.w	r2, r2, lsl #2
+     aa6:	f107 0c60 	add.w	ip, r7, #96	; 0x60
+     aaa:	4462      	add	r2, ip
+     aac:	f852 2c50 	ldr.w	r2, [r2, #-80]
+     ab0:	ea40 0202 	orr.w	r2, r0, r2
+     ab4:	f101 0101 	add.w	r1, r1, #1
+     ab8:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     abc:	440b      	add	r3, r1
+     abe:	601a      	str	r2, [r3, #0]
+    }
+    
+    /* Configure PDMA channel trnasfer size, priority, source and destination address increment. */
+    PDMA->CHANNEL[channel_id].CRTL |= channel_cfg;
+     ac0:	f243 0300 	movw	r3, #12288	; 0x3000
+     ac4:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     ac8:	7bf9      	ldrb	r1, [r7, #15]
+     aca:	f243 0200 	movw	r2, #12288	; 0x3000
+     ace:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     ad2:	7bf8      	ldrb	r0, [r7, #15]
+     ad4:	f100 0001 	add.w	r0, r0, #1
+     ad8:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     adc:	4402      	add	r2, r0
+     ade:	6810      	ldr	r0, [r2, #0]
+     ae0:	68ba      	ldr	r2, [r7, #8]
+     ae2:	ea40 0202 	orr.w	r2, r0, r2
+     ae6:	f101 0101 	add.w	r1, r1, #1
+     aea:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     aee:	440b      	add	r3, r1
+     af0:	601a      	str	r2, [r3, #0]
+
+    /* Posted write adjust. */
+    PDMA->CHANNEL[channel_id].CRTL |= ((uint32_t)write_adjust << CHAN_POSTED_WRITE_ADJUST_SHIFT);
+     af2:	f243 0300 	movw	r3, #12288	; 0x3000
+     af6:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     afa:	7bf9      	ldrb	r1, [r7, #15]
+     afc:	f243 0200 	movw	r2, #12288	; 0x3000
+     b00:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     b04:	7bf8      	ldrb	r0, [r7, #15]
+     b06:	f100 0001 	add.w	r0, r0, #1
+     b0a:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     b0e:	4402      	add	r2, r0
+     b10:	6810      	ldr	r0, [r2, #0]
+     b12:	79fa      	ldrb	r2, [r7, #7]
+     b14:	ea4f 3282 	mov.w	r2, r2, lsl #14
+     b18:	ea40 0202 	orr.w	r2, r0, r2
+     b1c:	f101 0101 	add.w	r1, r1, #1
+     b20:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     b24:	440b      	add	r3, r1
+     b26:	601a      	str	r2, [r3, #0]
+}
+     b28:	f107 0760 	add.w	r7, r7, #96	; 0x60
+     b2c:	46bd      	mov	sp, r7
+     b2e:	bd80      	pop	{r7, pc}
+
+00000b30 <PDMA_start>:
+    pdma_channel_id_t channel_id,
+    uint32_t src_addr,
+    uint32_t dest_addr,
+    uint16_t transfer_count
+)
+{
+     b30:	b480      	push	{r7}
+     b32:	b085      	sub	sp, #20
+     b34:	af00      	add	r7, sp, #0
+     b36:	60b9      	str	r1, [r7, #8]
+     b38:	607a      	str	r2, [r7, #4]
+     b3a:	4602      	mov	r2, r0
+     b3c:	73fa      	strb	r2, [r7, #15]
+     b3e:	807b      	strh	r3, [r7, #2]
+    /* Pause transfer. */
+    PDMA->CHANNEL[channel_id].CRTL |= PAUSE_MASK;
+     b40:	f243 0300 	movw	r3, #12288	; 0x3000
+     b44:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     b48:	7bf9      	ldrb	r1, [r7, #15]
+     b4a:	f243 0200 	movw	r2, #12288	; 0x3000
+     b4e:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     b52:	7bf8      	ldrb	r0, [r7, #15]
+     b54:	f100 0001 	add.w	r0, r0, #1
+     b58:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     b5c:	4402      	add	r2, r0
+     b5e:	6812      	ldr	r2, [r2, #0]
+     b60:	f042 0210 	orr.w	r2, r2, #16
+     b64:	f101 0101 	add.w	r1, r1, #1
+     b68:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     b6c:	440b      	add	r3, r1
+     b6e:	601a      	str	r2, [r3, #0]
+    
+    /* Clear complete transfers. */
+    if(PDMA->CHANNEL[channel_id].STATUS & PORT_A_COMPLETE_MASK)
+     b70:	f243 0300 	movw	r3, #12288	; 0x3000
+     b74:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     b78:	7bfa      	ldrb	r2, [r7, #15]
+     b7a:	f102 0201 	add.w	r2, r2, #1
+     b7e:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     b82:	4413      	add	r3, r2
+     b84:	f103 0304 	add.w	r3, r3, #4
+     b88:	681b      	ldr	r3, [r3, #0]
+     b8a:	f003 0301 	and.w	r3, r3, #1
+     b8e:	b2db      	uxtb	r3, r3
+     b90:	2b00      	cmp	r3, #0
+     b92:	d01f      	beq.n	bd4 <PDMA_start+0xa4>
+    {
+        PDMA->CHANNEL[channel_id].CRTL |= CLEAR_PORT_A_DONE_MASK;
+     b94:	f243 0300 	movw	r3, #12288	; 0x3000
+     b98:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     b9c:	7bf9      	ldrb	r1, [r7, #15]
+     b9e:	f243 0200 	movw	r2, #12288	; 0x3000
+     ba2:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     ba6:	7bf8      	ldrb	r0, [r7, #15]
+     ba8:	f100 0001 	add.w	r0, r0, #1
+     bac:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     bb0:	4402      	add	r2, r0
+     bb2:	6812      	ldr	r2, [r2, #0]
+     bb4:	f042 0280 	orr.w	r2, r2, #128	; 0x80
+     bb8:	f101 0101 	add.w	r1, r1, #1
+     bbc:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     bc0:	440b      	add	r3, r1
+     bc2:	601a      	str	r2, [r3, #0]
+        g_pdma_started_a[channel_id] = CHANNEL_STOPPED;
+     bc4:	7bfa      	ldrb	r2, [r7, #15]
+     bc6:	f240 0328 	movw	r3, #40	; 0x28
+     bca:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     bce:	f04f 0100 	mov.w	r1, #0
+     bd2:	5499      	strb	r1, [r3, r2]
+    }
+    if(PDMA->CHANNEL[channel_id].STATUS & PORT_B_COMPLETE_MASK)
+     bd4:	f243 0300 	movw	r3, #12288	; 0x3000
+     bd8:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     bdc:	7bfa      	ldrb	r2, [r7, #15]
+     bde:	f102 0201 	add.w	r2, r2, #1
+     be2:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     be6:	4413      	add	r3, r2
+     be8:	f103 0304 	add.w	r3, r3, #4
+     bec:	681b      	ldr	r3, [r3, #0]
+     bee:	f003 0302 	and.w	r3, r3, #2
+     bf2:	2b00      	cmp	r3, #0
+     bf4:	d01f      	beq.n	c36 <PDMA_start+0x106>
+    {
+        PDMA->CHANNEL[channel_id].CRTL |= CLEAR_PORT_B_DONE_MASK;
+     bf6:	f243 0300 	movw	r3, #12288	; 0x3000
+     bfa:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     bfe:	7bf9      	ldrb	r1, [r7, #15]
+     c00:	f243 0200 	movw	r2, #12288	; 0x3000
+     c04:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     c08:	7bf8      	ldrb	r0, [r7, #15]
+     c0a:	f100 0001 	add.w	r0, r0, #1
+     c0e:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     c12:	4402      	add	r2, r0
+     c14:	6812      	ldr	r2, [r2, #0]
+     c16:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+     c1a:	f101 0101 	add.w	r1, r1, #1
+     c1e:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     c22:	440b      	add	r3, r1
+     c24:	601a      	str	r2, [r3, #0]
+        g_pdma_started_b[channel_id] = CHANNEL_STOPPED;
+     c26:	7bfa      	ldrb	r2, [r7, #15]
+     c28:	f240 0330 	movw	r3, #48	; 0x30
+     c2c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     c30:	f04f 0100 	mov.w	r1, #0
+     c34:	5499      	strb	r1, [r3, r2]
+    }
+    
+    /* Load source, destination and transfer count. */
+    if(PDMA->CHANNEL[channel_id].STATUS & BUFFER_B_SELECT_MASK)
+     c36:	f243 0300 	movw	r3, #12288	; 0x3000
+     c3a:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     c3e:	7bfa      	ldrb	r2, [r7, #15]
+     c40:	f102 0201 	add.w	r2, r2, #1
+     c44:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     c48:	4413      	add	r3, r2
+     c4a:	f103 0304 	add.w	r3, r3, #4
+     c4e:	681b      	ldr	r3, [r3, #0]
+     c50:	f003 0304 	and.w	r3, r3, #4
+     c54:	2b00      	cmp	r3, #0
+     c56:	d034      	beq.n	cc2 <PDMA_start+0x192>
+    {
+        g_pdma_next_channel[channel_id] = NEXT_CHANNEL_A;
+     c58:	7bfa      	ldrb	r2, [r7, #15]
+     c5a:	f240 0320 	movw	r3, #32
+     c5e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     c62:	f04f 0100 	mov.w	r1, #0
+     c66:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_b[channel_id] = CHANNEL_STARTED;
+     c68:	7bfa      	ldrb	r2, [r7, #15]
+     c6a:	f240 0330 	movw	r3, #48	; 0x30
+     c6e:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     c72:	f04f 0101 	mov.w	r1, #1
+     c76:	5499      	strb	r1, [r3, r2]
+        
+        PDMA->CHANNEL[channel_id].BUFFER_B_SRC_ADDR = src_addr;
+     c78:	f243 0300 	movw	r3, #12288	; 0x3000
+     c7c:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     c80:	7bfa      	ldrb	r2, [r7, #15]
+     c82:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     c86:	4413      	add	r3, r2
+     c88:	f103 0334 	add.w	r3, r3, #52	; 0x34
+     c8c:	68ba      	ldr	r2, [r7, #8]
+     c8e:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_B_DEST_ADDR = dest_addr;
+     c90:	f243 0300 	movw	r3, #12288	; 0x3000
+     c94:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     c98:	7bfa      	ldrb	r2, [r7, #15]
+     c9a:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     c9e:	4413      	add	r3, r2
+     ca0:	f103 0338 	add.w	r3, r3, #56	; 0x38
+     ca4:	687a      	ldr	r2, [r7, #4]
+     ca6:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_B_TRANSFER_COUNT = transfer_count;
+     ca8:	f243 0300 	movw	r3, #12288	; 0x3000
+     cac:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     cb0:	7bf9      	ldrb	r1, [r7, #15]
+     cb2:	887a      	ldrh	r2, [r7, #2]
+     cb4:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     cb8:	440b      	add	r3, r1
+     cba:	f103 033c 	add.w	r3, r3, #60	; 0x3c
+     cbe:	601a      	str	r2, [r3, #0]
+     cc0:	e033      	b.n	d2a <PDMA_start+0x1fa>
+    }
+    else
+    {
+        g_pdma_next_channel[channel_id] = NEXT_CHANNEL_B;
+     cc2:	7bfa      	ldrb	r2, [r7, #15]
+     cc4:	f240 0320 	movw	r3, #32
+     cc8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     ccc:	f04f 0101 	mov.w	r1, #1
+     cd0:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_a[channel_id] = CHANNEL_STARTED;
+     cd2:	7bfa      	ldrb	r2, [r7, #15]
+     cd4:	f240 0328 	movw	r3, #40	; 0x28
+     cd8:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     cdc:	f04f 0101 	mov.w	r1, #1
+     ce0:	5499      	strb	r1, [r3, r2]
+        
+        PDMA->CHANNEL[channel_id].BUFFER_A_SRC_ADDR = src_addr;
+     ce2:	f243 0300 	movw	r3, #12288	; 0x3000
+     ce6:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     cea:	7bfa      	ldrb	r2, [r7, #15]
+     cec:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     cf0:	4413      	add	r3, r2
+     cf2:	f103 0328 	add.w	r3, r3, #40	; 0x28
+     cf6:	68ba      	ldr	r2, [r7, #8]
+     cf8:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_A_DEST_ADDR = dest_addr;
+     cfa:	f243 0300 	movw	r3, #12288	; 0x3000
+     cfe:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     d02:	7bfa      	ldrb	r2, [r7, #15]
+     d04:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     d08:	4413      	add	r3, r2
+     d0a:	f103 032c 	add.w	r3, r3, #44	; 0x2c
+     d0e:	687a      	ldr	r2, [r7, #4]
+     d10:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_A_TRANSFER_COUNT = transfer_count;
+     d12:	f243 0300 	movw	r3, #12288	; 0x3000
+     d16:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     d1a:	7bf9      	ldrb	r1, [r7, #15]
+     d1c:	887a      	ldrh	r2, [r7, #2]
+     d1e:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     d22:	440b      	add	r3, r1
+     d24:	f103 0330 	add.w	r3, r3, #48	; 0x30
+     d28:	601a      	str	r2, [r3, #0]
+    }
+    
+    /* Start transfer */
+    PDMA->CHANNEL[channel_id].CRTL &= ~PAUSE_MASK;
+     d2a:	f243 0300 	movw	r3, #12288	; 0x3000
+     d2e:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     d32:	7bf9      	ldrb	r1, [r7, #15]
+     d34:	f243 0200 	movw	r2, #12288	; 0x3000
+     d38:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     d3c:	7bf8      	ldrb	r0, [r7, #15]
+     d3e:	f100 0001 	add.w	r0, r0, #1
+     d42:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     d46:	4402      	add	r2, r0
+     d48:	6812      	ldr	r2, [r2, #0]
+     d4a:	f022 0210 	bic.w	r2, r2, #16
+     d4e:	f101 0101 	add.w	r1, r1, #1
+     d52:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     d56:	440b      	add	r3, r1
+     d58:	601a      	str	r2, [r3, #0]
+}
+     d5a:	f107 0714 	add.w	r7, r7, #20
+     d5e:	46bd      	mov	sp, r7
+     d60:	bc80      	pop	{r7}
+     d62:	4770      	bx	lr
+
+00000d64 <PDMA_load_next_buffer>:
+    pdma_channel_id_t channel_id,
+    uint32_t src_addr,
+    uint32_t dest_addr,
+    uint16_t transfer_count
+)
+{
+     d64:	b480      	push	{r7}
+     d66:	b089      	sub	sp, #36	; 0x24
+     d68:	af00      	add	r7, sp, #0
+     d6a:	60b9      	str	r1, [r7, #8]
+     d6c:	607a      	str	r2, [r7, #4]
+     d6e:	4602      	mov	r2, r0
+     d70:	73fa      	strb	r2, [r7, #15]
+     d72:	807b      	strh	r3, [r7, #2]
+    if(NEXT_CHANNEL_A == g_pdma_next_channel[channel_id])
+     d74:	7bfa      	ldrb	r2, [r7, #15]
+     d76:	f240 0320 	movw	r3, #32
+     d7a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     d7e:	5c9b      	ldrb	r3, [r3, r2]
+     d80:	2b00      	cmp	r3, #0
+     d82:	d168      	bne.n	e56 <PDMA_load_next_buffer+0xf2>
+    {
+        /* Wait for channel A current transfer completion. */
+        if(CHANNEL_STARTED == g_pdma_started_a[channel_id])
+     d84:	7bfa      	ldrb	r2, [r7, #15]
+     d86:	f240 0328 	movw	r3, #40	; 0x28
+     d8a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     d8e:	5c9b      	ldrb	r3, [r3, r2]
+     d90:	2b01      	cmp	r3, #1
+     d92:	d12b      	bne.n	dec <PDMA_load_next_buffer+0x88>
+        {
+            uint32_t completed;
+            uint32_t channel_mask;
+            channel_mask = (uint32_t)1 << ((uint32_t)channel_id * 2U);
+     d94:	7bfb      	ldrb	r3, [r7, #15]
+     d96:	ea4f 0343 	mov.w	r3, r3, lsl #1
+     d9a:	f04f 0201 	mov.w	r2, #1
+     d9e:	fa02 f303 	lsl.w	r3, r2, r3
+     da2:	617b      	str	r3, [r7, #20]
+            do {
+                completed = PDMA->BUFFER_STATUS & channel_mask;
+     da4:	f243 0300 	movw	r3, #12288	; 0x3000
+     da8:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     dac:	685a      	ldr	r2, [r3, #4]
+     dae:	697b      	ldr	r3, [r7, #20]
+     db0:	ea02 0303 	and.w	r3, r2, r3
+     db4:	613b      	str	r3, [r7, #16]
+            } while(0u == completed);
+     db6:	693b      	ldr	r3, [r7, #16]
+     db8:	2b00      	cmp	r3, #0
+     dba:	d0f3      	beq.n	da4 <PDMA_load_next_buffer+0x40>
+            PDMA->CHANNEL[channel_id].CRTL |= CLEAR_PORT_A_DONE_MASK;
+     dbc:	f243 0300 	movw	r3, #12288	; 0x3000
+     dc0:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     dc4:	7bf9      	ldrb	r1, [r7, #15]
+     dc6:	f243 0200 	movw	r2, #12288	; 0x3000
+     dca:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     dce:	7bf8      	ldrb	r0, [r7, #15]
+     dd0:	f100 0001 	add.w	r0, r0, #1
+     dd4:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     dd8:	4402      	add	r2, r0
+     dda:	6812      	ldr	r2, [r2, #0]
+     ddc:	f042 0280 	orr.w	r2, r2, #128	; 0x80
+     de0:	f101 0101 	add.w	r1, r1, #1
+     de4:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     de8:	440b      	add	r3, r1
+     dea:	601a      	str	r2, [r3, #0]
+        }
+        /* Load source, destination and transfer count. */
+        PDMA->CHANNEL[channel_id].BUFFER_A_SRC_ADDR = src_addr;
+     dec:	f243 0300 	movw	r3, #12288	; 0x3000
+     df0:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     df4:	7bfa      	ldrb	r2, [r7, #15]
+     df6:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     dfa:	4413      	add	r3, r2
+     dfc:	f103 0328 	add.w	r3, r3, #40	; 0x28
+     e00:	68ba      	ldr	r2, [r7, #8]
+     e02:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_A_DEST_ADDR = dest_addr;
+     e04:	f243 0300 	movw	r3, #12288	; 0x3000
+     e08:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     e0c:	7bfa      	ldrb	r2, [r7, #15]
+     e0e:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     e12:	4413      	add	r3, r2
+     e14:	f103 032c 	add.w	r3, r3, #44	; 0x2c
+     e18:	687a      	ldr	r2, [r7, #4]
+     e1a:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_A_TRANSFER_COUNT = transfer_count;
+     e1c:	f243 0300 	movw	r3, #12288	; 0x3000
+     e20:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     e24:	7bf9      	ldrb	r1, [r7, #15]
+     e26:	887a      	ldrh	r2, [r7, #2]
+     e28:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     e2c:	440b      	add	r3, r1
+     e2e:	f103 0330 	add.w	r3, r3, #48	; 0x30
+     e32:	601a      	str	r2, [r3, #0]
+        
+        /* Update channel state information. */
+        g_pdma_next_channel[channel_id] = NEXT_CHANNEL_B;
+     e34:	7bfa      	ldrb	r2, [r7, #15]
+     e36:	f240 0320 	movw	r3, #32
+     e3a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     e3e:	f04f 0101 	mov.w	r1, #1
+     e42:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_a[channel_id] = CHANNEL_STARTED;
+     e44:	7bfa      	ldrb	r2, [r7, #15]
+     e46:	f240 0328 	movw	r3, #40	; 0x28
+     e4a:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     e4e:	f04f 0101 	mov.w	r1, #1
+     e52:	5499      	strb	r1, [r3, r2]
+     e54:	e069      	b.n	f2a <PDMA_load_next_buffer+0x1c6>
+    }
+    else
+    {
+        /* Wait for channel B current transfer completion. */
+        if(CHANNEL_STARTED == g_pdma_started_b[channel_id])
+     e56:	7bfa      	ldrb	r2, [r7, #15]
+     e58:	f240 0330 	movw	r3, #48	; 0x30
+     e5c:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     e60:	5c9b      	ldrb	r3, [r3, r2]
+     e62:	2b01      	cmp	r3, #1
+     e64:	d12d      	bne.n	ec2 <PDMA_load_next_buffer+0x15e>
+        {
+            uint32_t completed;
+            uint32_t channel_mask;
+            channel_mask = (uint32_t)1 << (((uint32_t)channel_id * 2U) + 1U);
+     e66:	7bfb      	ldrb	r3, [r7, #15]
+     e68:	ea4f 0343 	mov.w	r3, r3, lsl #1
+     e6c:	f103 0301 	add.w	r3, r3, #1
+     e70:	f04f 0201 	mov.w	r2, #1
+     e74:	fa02 f303 	lsl.w	r3, r2, r3
+     e78:	61fb      	str	r3, [r7, #28]
+            do {
+                completed = PDMA->BUFFER_STATUS & channel_mask;
+     e7a:	f243 0300 	movw	r3, #12288	; 0x3000
+     e7e:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     e82:	685a      	ldr	r2, [r3, #4]
+     e84:	69fb      	ldr	r3, [r7, #28]
+     e86:	ea02 0303 	and.w	r3, r2, r3
+     e8a:	61bb      	str	r3, [r7, #24]
+            } while(0u == completed);
+     e8c:	69bb      	ldr	r3, [r7, #24]
+     e8e:	2b00      	cmp	r3, #0
+     e90:	d0f3      	beq.n	e7a <PDMA_load_next_buffer+0x116>
+            PDMA->CHANNEL[channel_id].CRTL |= CLEAR_PORT_B_DONE_MASK;
+     e92:	f243 0300 	movw	r3, #12288	; 0x3000
+     e96:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     e9a:	7bf9      	ldrb	r1, [r7, #15]
+     e9c:	f243 0200 	movw	r2, #12288	; 0x3000
+     ea0:	f2c4 0200 	movt	r2, #16384	; 0x4000
+     ea4:	7bf8      	ldrb	r0, [r7, #15]
+     ea6:	f100 0001 	add.w	r0, r0, #1
+     eaa:	ea4f 1040 	mov.w	r0, r0, lsl #5
+     eae:	4402      	add	r2, r0
+     eb0:	6812      	ldr	r2, [r2, #0]
+     eb2:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+     eb6:	f101 0101 	add.w	r1, r1, #1
+     eba:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     ebe:	440b      	add	r3, r1
+     ec0:	601a      	str	r2, [r3, #0]
+        }            
+        /* Load source, destination and transfer count. */
+        PDMA->CHANNEL[channel_id].BUFFER_B_SRC_ADDR = src_addr;
+     ec2:	f243 0300 	movw	r3, #12288	; 0x3000
+     ec6:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     eca:	7bfa      	ldrb	r2, [r7, #15]
+     ecc:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     ed0:	4413      	add	r3, r2
+     ed2:	f103 0334 	add.w	r3, r3, #52	; 0x34
+     ed6:	68ba      	ldr	r2, [r7, #8]
+     ed8:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_B_DEST_ADDR = dest_addr;
+     eda:	f243 0300 	movw	r3, #12288	; 0x3000
+     ede:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     ee2:	7bfa      	ldrb	r2, [r7, #15]
+     ee4:	ea4f 1242 	mov.w	r2, r2, lsl #5
+     ee8:	4413      	add	r3, r2
+     eea:	f103 0338 	add.w	r3, r3, #56	; 0x38
+     eee:	687a      	ldr	r2, [r7, #4]
+     ef0:	601a      	str	r2, [r3, #0]
+        PDMA->CHANNEL[channel_id].BUFFER_B_TRANSFER_COUNT = transfer_count;
+     ef2:	f243 0300 	movw	r3, #12288	; 0x3000
+     ef6:	f2c4 0300 	movt	r3, #16384	; 0x4000
+     efa:	7bf9      	ldrb	r1, [r7, #15]
+     efc:	887a      	ldrh	r2, [r7, #2]
+     efe:	ea4f 1141 	mov.w	r1, r1, lsl #5
+     f02:	440b      	add	r3, r1
+     f04:	f103 033c 	add.w	r3, r3, #60	; 0x3c
+     f08:	601a      	str	r2, [r3, #0]
+        
+        /* Update channel state information. */
+        g_pdma_next_channel[channel_id] = NEXT_CHANNEL_A;
+     f0a:	7bfa      	ldrb	r2, [r7, #15]
+     f0c:	f240 0320 	movw	r3, #32
+     f10:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     f14:	f04f 0100 	mov.w	r1, #0
+     f18:	5499      	strb	r1, [r3, r2]
+        g_pdma_started_b[channel_id] = CHANNEL_STARTED;
+     f1a:	7bfa      	ldrb	r2, [r7, #15]
+     f1c:	f240 0330 	movw	r3, #48	; 0x30
+     f20:	f2c2 0300 	movt	r3, #8192	; 0x2000
+     f24:	f04f 0101 	mov.w	r1, #1
+     f28:	5499      	strb	r1, [r3, r2]
+    }
+}
+     f2a:	f107 0724 	add.w	r7, r7, #36	; 0x24
+     f2e:	46bd      	mov	sp, r7
+     f30:	bc80      	pop	{r7}
+     f32:	4770      	bx	lr
+
+00000f34 <get_channel_id_from_status>:
+
+static pdma_channel_id_t get_channel_id_from_status
+(
+    uint16_t status
+)
+{
+     f34:	b480      	push	{r7}
+     f36:	b085      	sub	sp, #20
+     f38:	af00      	add	r7, sp, #0
+     f3a:	4603      	mov	r3, r0
+     f3c:	80fb      	strh	r3, [r7, #6]
+    pdma_channel_id_t channel_id = PDMA_CHANNEL_0;
+     f3e:	f04f 0300 	mov.w	r3, #0
+     f42:	73fb      	strb	r3, [r7, #15]
+    
+    if(status & CHANNEL_0_STATUS_BITS_MASK)
+     f44:	88fb      	ldrh	r3, [r7, #6]
+     f46:	f003 0303 	and.w	r3, r3, #3
+     f4a:	2b00      	cmp	r3, #0
+     f4c:	d003      	beq.n	f56 <get_channel_id_from_status+0x22>
+    {
+        channel_id = PDMA_CHANNEL_0;
+     f4e:	f04f 0300 	mov.w	r3, #0
+     f52:	73fb      	strb	r3, [r7, #15]
+     f54:	e03f      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_1_STATUS_BITS_MASK)
+     f56:	88fb      	ldrh	r3, [r7, #6]
+     f58:	f003 030c 	and.w	r3, r3, #12
+     f5c:	2b00      	cmp	r3, #0
+     f5e:	d003      	beq.n	f68 <get_channel_id_from_status+0x34>
+    {
+        channel_id = PDMA_CHANNEL_1;
+     f60:	f04f 0301 	mov.w	r3, #1
+     f64:	73fb      	strb	r3, [r7, #15]
+     f66:	e036      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_2_STATUS_BITS_MASK)
+     f68:	88fb      	ldrh	r3, [r7, #6]
+     f6a:	f003 0330 	and.w	r3, r3, #48	; 0x30
+     f6e:	2b00      	cmp	r3, #0
+     f70:	d003      	beq.n	f7a <get_channel_id_from_status+0x46>
+    {
+        channel_id = PDMA_CHANNEL_2;
+     f72:	f04f 0302 	mov.w	r3, #2
+     f76:	73fb      	strb	r3, [r7, #15]
+     f78:	e02d      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_3_STATUS_BITS_MASK)
+     f7a:	88fb      	ldrh	r3, [r7, #6]
+     f7c:	f003 03c0 	and.w	r3, r3, #192	; 0xc0
+     f80:	2b00      	cmp	r3, #0
+     f82:	d003      	beq.n	f8c <get_channel_id_from_status+0x58>
+    {
+        channel_id = PDMA_CHANNEL_3;
+     f84:	f04f 0303 	mov.w	r3, #3
+     f88:	73fb      	strb	r3, [r7, #15]
+     f8a:	e024      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_4_STATUS_BITS_MASK)
+     f8c:	88fb      	ldrh	r3, [r7, #6]
+     f8e:	f403 7340 	and.w	r3, r3, #768	; 0x300
+     f92:	2b00      	cmp	r3, #0
+     f94:	d003      	beq.n	f9e <get_channel_id_from_status+0x6a>
+    {
+        channel_id = PDMA_CHANNEL_4;
+     f96:	f04f 0304 	mov.w	r3, #4
+     f9a:	73fb      	strb	r3, [r7, #15]
+     f9c:	e01b      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_5_STATUS_BITS_MASK)
+     f9e:	88fb      	ldrh	r3, [r7, #6]
+     fa0:	f403 6340 	and.w	r3, r3, #3072	; 0xc00
+     fa4:	2b00      	cmp	r3, #0
+     fa6:	d003      	beq.n	fb0 <get_channel_id_from_status+0x7c>
+    {
+        channel_id = PDMA_CHANNEL_5;
+     fa8:	f04f 0305 	mov.w	r3, #5
+     fac:	73fb      	strb	r3, [r7, #15]
+     fae:	e012      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_6_STATUS_BITS_MASK)
+     fb0:	88fb      	ldrh	r3, [r7, #6]
+     fb2:	f403 5340 	and.w	r3, r3, #12288	; 0x3000
+     fb6:	2b00      	cmp	r3, #0
+     fb8:	d003      	beq.n	fc2 <get_channel_id_from_status+0x8e>
+    {
+        channel_id = PDMA_CHANNEL_6;
+     fba:	f04f 0306 	mov.w	r3, #6
+     fbe:	73fb      	strb	r3, [r7, #15]
+     fc0:	e009      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else if(status & CHANNEL_7_STATUS_BITS_MASK)
+     fc2:	88fb      	ldrh	r3, [r7, #6]
+     fc4:	f403 4340 	and.w	r3, r3, #49152	; 0xc000
+     fc8:	2b00      	cmp	r3, #0
+     fca:	d003      	beq.n	fd4 <get_channel_id_from_status+0xa0>
+    {
+        channel_id = PDMA_CHANNEL_7;
+     fcc:	f04f 0307 	mov.w	r3, #7
+     fd0:	73fb      	strb	r3, [r7, #15]
+     fd2:	e000      	b.n	fd6 <get_channel_id_from_status+0xa2>
+    }
+    else
+    {
+        ASSERT(0);
+     fd4:	be00      	bkpt	0x0000
+    }
+    return channel_id;
+     fd6:	7bfb      	ldrb	r3, [r7, #15]
+}
+     fd8:	4618      	mov	r0, r3
+     fda:	f107 0714 	add.w	r7, r7, #20
+     fde:	46bd      	mov	sp, r7
+     fe0:	bc80      	pop	{r7}
+     fe2:	4770      	bx	lr
+
+00000fe4 <DMA_IRQHandler>:
+#if defined(__GNUC__)
+__attribute__((__interrupt__)) void DMA_IRQHandler(void)
+#else
+void DMA_IRQHandler(void)
+#endif
+{
+     fe4:	4668      	mov	r0, sp
+     fe6:	f020 0107 	bic.w	r1, r0, #7
+     fea:	468d      	mov	sp, r1
+     fec:	b581      	push	{r0, r7, lr}
+     fee:	b087      	sub	sp, #28
+     ff0:	af00      	add	r7, sp, #0
+        (uint16_t)0x00C0, /* PDMA_CHANNEL_3 */
+        (uint16_t)0x0300, /* PDMA_CHANNEL_4 */
+        (uint16_t)0x0C00, /* PDMA_CHANNEL_5 */
+        (uint16_t)0x3000, /* PDMA_CHANNEL_6 */
+        (uint16_t)0xC000, /* PDMA_CHANNEL_7 */
+    };
+     ff2:	f241 23f8 	movw	r3, #4856	; 0x12f8
+     ff6:	f2c0 0300 	movt	r3, #0
+     ffa:	f107 0c04 	add.w	ip, r7, #4
+     ffe:	cb0f      	ldmia	r3!, {r0, r1, r2, r3}
+    1000:	e88c 000f 	stmia.w	ip, {r0, r1, r2, r3}
+
+    status = (uint16_t)PDMA->BUFFER_STATUS;
+    1004:	f243 0300 	movw	r3, #12288	; 0x3000
+    1008:	f2c4 0300 	movt	r3, #16384	; 0x4000
+    100c:	685b      	ldr	r3, [r3, #4]
+    100e:	82bb      	strh	r3, [r7, #20]
+    
+    do {
+        channel_id = get_channel_id_from_status(status);
+    1010:	8abb      	ldrh	r3, [r7, #20]
+    1012:	4618      	mov	r0, r3
+    1014:	f7ff ff8e 	bl	f34 <get_channel_id_from_status>
+    1018:	4603      	mov	r3, r0
+    101a:	75fb      	strb	r3, [r7, #23]
+        status &= (uint16_t)~g_pdma_status_mask[channel_id];
+    101c:	7dfb      	ldrb	r3, [r7, #23]
+    101e:	ea4f 0343 	mov.w	r3, r3, lsl #1
+    1022:	f107 0218 	add.w	r2, r7, #24
+    1026:	4413      	add	r3, r2
+    1028:	f833 3c14 	ldrh.w	r3, [r3, #-20]
+    102c:	ea6f 0303 	mvn.w	r3, r3
+    1030:	b29a      	uxth	r2, r3
+    1032:	8abb      	ldrh	r3, [r7, #20]
+    1034:	ea02 0303 	and.w	r3, r2, r3
+    1038:	82bb      	strh	r3, [r7, #20]
+        if ( 0 != g_pdma_isr_table[channel_id])
+    103a:	7dfa      	ldrb	r2, [r7, #23]
+    103c:	f240 0338 	movw	r3, #56	; 0x38
+    1040:	f2c2 0300 	movt	r3, #8192	; 0x2000
+    1044:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+    1048:	2b00      	cmp	r3, #0
+    104a:	d007      	beq.n	105c <MAIN_STACK_SIZE+0x5c>
+        {
+            g_pdma_isr_table[channel_id]();
+    104c:	7dfa      	ldrb	r2, [r7, #23]
+    104e:	f240 0338 	movw	r3, #56	; 0x38
+    1052:	f2c2 0300 	movt	r3, #8192	; 0x2000
+    1056:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+    105a:	4798      	blx	r3
+        }
+    } while(0u != status);
+    105c:	8abb      	ldrh	r3, [r7, #20]
+    105e:	2b00      	cmp	r3, #0
+    1060:	d1d6      	bne.n	1010 <MAIN_STACK_SIZE+0x10>
+}
+    1062:	f107 071c 	add.w	r7, r7, #28
+    1066:	46bd      	mov	sp, r7
+    1068:	e8bd 4081 	ldmia.w	sp!, {r0, r7, lr}
+    106c:	4685      	mov	sp, r0
+    106e:	4770      	bx	lr
+
+00001070 <PDMA_set_irq_handler>:
+void PDMA_set_irq_handler
+(
+    pdma_channel_id_t channel_id,
+    pdma_channel_isr_t handler
+)
+{
+    1070:	b580      	push	{r7, lr}
+    1072:	b082      	sub	sp, #8
+    1074:	af00      	add	r7, sp, #0
+    1076:	4603      	mov	r3, r0
+    1078:	6039      	str	r1, [r7, #0]
+    107a:	71fb      	strb	r3, [r7, #7]
+    /* Save address of handler function in PDMA driver ISR lookup table. */
+    g_pdma_isr_table[channel_id] = handler;
+    107c:	79fa      	ldrb	r2, [r7, #7]
+    107e:	f240 0338 	movw	r3, #56	; 0x38
+    1082:	f2c2 0300 	movt	r3, #8192	; 0x2000
+    1086:	6839      	ldr	r1, [r7, #0]
+    1088:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+    
+    /* Enable PDMA channel's interrupt. */
+    PDMA->CHANNEL[channel_id].CRTL |= PDMA_IRQ_ENABLE_MASK;
+    108c:	f243 0300 	movw	r3, #12288	; 0x3000
+    1090:	f2c4 0300 	movt	r3, #16384	; 0x4000
+    1094:	79f9      	ldrb	r1, [r7, #7]
+    1096:	f243 0200 	movw	r2, #12288	; 0x3000
+    109a:	f2c4 0200 	movt	r2, #16384	; 0x4000
+    109e:	79f8      	ldrb	r0, [r7, #7]
+    10a0:	f100 0001 	add.w	r0, r0, #1
+    10a4:	ea4f 1040 	mov.w	r0, r0, lsl #5
+    10a8:	4402      	add	r2, r0
+    10aa:	6812      	ldr	r2, [r2, #0]
+    10ac:	f042 0240 	orr.w	r2, r2, #64	; 0x40
+    10b0:	f101 0101 	add.w	r1, r1, #1
+    10b4:	ea4f 1141 	mov.w	r1, r1, lsl #5
+    10b8:	440b      	add	r3, r1
+    10ba:	601a      	str	r2, [r3, #0]
+    
+    /* Enable PDMA interrupt in Cortex-M3 NVIC. */
+    NVIC_EnableIRQ(DMA_IRQn);
+    10bc:	f04f 000d 	mov.w	r0, #13
+    10c0:	f7ff fc0a 	bl	8d8 <NVIC_EnableIRQ>
+}
+    10c4:	f107 0708 	add.w	r7, r7, #8
+    10c8:	46bd      	mov	sp, r7
+    10ca:	bd80      	pop	{r7, pc}
+
+000010cc <PDMA_enable_irq>:
+
+/***************************************************************************//**
+ * See mss_pdma.h for description of this function.
+ */
+void PDMA_enable_irq( pdma_channel_id_t channel_id )
+{
+    10cc:	b580      	push	{r7, lr}
+    10ce:	b082      	sub	sp, #8
+    10d0:	af00      	add	r7, sp, #0
+    10d2:	4603      	mov	r3, r0
+    10d4:	71fb      	strb	r3, [r7, #7]
+    PDMA->CHANNEL[channel_id].CRTL |= PDMA_IRQ_ENABLE_MASK;
+    10d6:	f243 0300 	movw	r3, #12288	; 0x3000
+    10da:	f2c4 0300 	movt	r3, #16384	; 0x4000
+    10de:	79f9      	ldrb	r1, [r7, #7]
+    10e0:	f243 0200 	movw	r2, #12288	; 0x3000
+    10e4:	f2c4 0200 	movt	r2, #16384	; 0x4000
+    10e8:	79f8      	ldrb	r0, [r7, #7]
+    10ea:	f100 0001 	add.w	r0, r0, #1
+    10ee:	ea4f 1040 	mov.w	r0, r0, lsl #5
+    10f2:	4402      	add	r2, r0
+    10f4:	6812      	ldr	r2, [r2, #0]
+    10f6:	f042 0240 	orr.w	r2, r2, #64	; 0x40
+    10fa:	f101 0101 	add.w	r1, r1, #1
+    10fe:	ea4f 1141 	mov.w	r1, r1, lsl #5
+    1102:	440b      	add	r3, r1
+    1104:	601a      	str	r2, [r3, #0]
+    NVIC_EnableIRQ(DMA_IRQn);
+    1106:	f04f 000d 	mov.w	r0, #13
+    110a:	f7ff fbe5 	bl	8d8 <NVIC_EnableIRQ>
+}
+    110e:	f107 0708 	add.w	r7, r7, #8
+    1112:	46bd      	mov	sp, r7
+    1114:	bd80      	pop	{r7, pc}
+    1116:	bf00      	nop
+
+00001118 <__libc_init_array>:
+    1118:	b570      	push	{r4, r5, r6, lr}
+    111a:	f241 3670 	movw	r6, #4976	; 0x1370
+    111e:	f241 3570 	movw	r5, #4976	; 0x1370
+    1122:	f2c0 0600 	movt	r6, #0
+    1126:	f2c0 0500 	movt	r5, #0
+    112a:	1b76      	subs	r6, r6, r5
+    112c:	10b6      	asrs	r6, r6, #2
+    112e:	d006      	beq.n	113e <__libc_init_array+0x26>
+    1130:	2400      	movs	r4, #0
+    1132:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+    1136:	3401      	adds	r4, #1
+    1138:	4798      	blx	r3
+    113a:	42a6      	cmp	r6, r4
+    113c:	d8f9      	bhi.n	1132 <__libc_init_array+0x1a>
+    113e:	f241 3570 	movw	r5, #4976	; 0x1370
+    1142:	f241 3674 	movw	r6, #4980	; 0x1374
+    1146:	f2c0 0500 	movt	r5, #0
+    114a:	f2c0 0600 	movt	r6, #0
+    114e:	1b76      	subs	r6, r6, r5
+    1150:	f000 f902 	bl	1358 <_init>
+    1154:	10b6      	asrs	r6, r6, #2
+    1156:	d006      	beq.n	1166 <__libc_init_array+0x4e>
+    1158:	2400      	movs	r4, #0
+    115a:	f855 3024 	ldr.w	r3, [r5, r4, lsl #2]
+    115e:	3401      	adds	r4, #1
+    1160:	4798      	blx	r3
+    1162:	42a6      	cmp	r6, r4
+    1164:	d8f9      	bhi.n	115a <__libc_init_array+0x42>
+    1166:	bd70      	pop	{r4, r5, r6, pc}
+
+00001168 <memcpy>:
+    1168:	2a03      	cmp	r2, #3
+    116a:	e92d 07f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl}
+    116e:	d80b      	bhi.n	1188 <memcpy+0x20>
+    1170:	b13a      	cbz	r2, 1182 <memcpy+0x1a>
+    1172:	2300      	movs	r3, #0
+    1174:	f811 c003 	ldrb.w	ip, [r1, r3]
+    1178:	f800 c003 	strb.w	ip, [r0, r3]
+    117c:	3301      	adds	r3, #1
+    117e:	4293      	cmp	r3, r2
+    1180:	d1f8      	bne.n	1174 <memcpy+0xc>
+    1182:	e8bd 07f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl}
+    1186:	4770      	bx	lr
+    1188:	1882      	adds	r2, r0, r2
+    118a:	460c      	mov	r4, r1
+    118c:	4603      	mov	r3, r0
+    118e:	e003      	b.n	1198 <memcpy+0x30>
+    1190:	f814 1c01 	ldrb.w	r1, [r4, #-1]
+    1194:	f803 1c01 	strb.w	r1, [r3, #-1]
+    1198:	f003 0603 	and.w	r6, r3, #3
+    119c:	4619      	mov	r1, r3
+    119e:	46a4      	mov	ip, r4
+    11a0:	3301      	adds	r3, #1
+    11a2:	3401      	adds	r4, #1
+    11a4:	2e00      	cmp	r6, #0
+    11a6:	d1f3      	bne.n	1190 <memcpy+0x28>
+    11a8:	f01c 0403 	ands.w	r4, ip, #3
+    11ac:	4663      	mov	r3, ip
+    11ae:	bf08      	it	eq
+    11b0:	ebc1 0c02 	rsbeq	ip, r1, r2
+    11b4:	d068      	beq.n	1288 <memcpy+0x120>
+    11b6:	4265      	negs	r5, r4
+    11b8:	f1c4 0a04 	rsb	sl, r4, #4
+    11bc:	eb0c 0705 	add.w	r7, ip, r5
+    11c0:	4633      	mov	r3, r6
+    11c2:	ea4f 0aca 	mov.w	sl, sl, lsl #3
+    11c6:	f85c 6005 	ldr.w	r6, [ip, r5]
+    11ca:	ea4f 08c4 	mov.w	r8, r4, lsl #3
+    11ce:	1a55      	subs	r5, r2, r1
+    11d0:	e008      	b.n	11e4 <memcpy+0x7c>
+    11d2:	f857 4f04 	ldr.w	r4, [r7, #4]!
+    11d6:	4626      	mov	r6, r4
+    11d8:	fa04 f40a 	lsl.w	r4, r4, sl
+    11dc:	ea49 0404 	orr.w	r4, r9, r4
+    11e0:	50cc      	str	r4, [r1, r3]
+    11e2:	3304      	adds	r3, #4
+    11e4:	185c      	adds	r4, r3, r1
+    11e6:	2d03      	cmp	r5, #3
+    11e8:	fa26 f908 	lsr.w	r9, r6, r8
+    11ec:	f1a5 0504 	sub.w	r5, r5, #4
+    11f0:	eb0c 0603 	add.w	r6, ip, r3
+    11f4:	dced      	bgt.n	11d2 <memcpy+0x6a>
+    11f6:	2300      	movs	r3, #0
+    11f8:	e002      	b.n	1200 <memcpy+0x98>
+    11fa:	5cf1      	ldrb	r1, [r6, r3]
+    11fc:	54e1      	strb	r1, [r4, r3]
+    11fe:	3301      	adds	r3, #1
+    1200:	1919      	adds	r1, r3, r4
+    1202:	4291      	cmp	r1, r2
+    1204:	d3f9      	bcc.n	11fa <memcpy+0x92>
+    1206:	e7bc      	b.n	1182 <memcpy+0x1a>
+    1208:	f853 4c40 	ldr.w	r4, [r3, #-64]
+    120c:	f841 4c40 	str.w	r4, [r1, #-64]
+    1210:	f853 4c3c 	ldr.w	r4, [r3, #-60]
+    1214:	f841 4c3c 	str.w	r4, [r1, #-60]
+    1218:	f853 4c38 	ldr.w	r4, [r3, #-56]
+    121c:	f841 4c38 	str.w	r4, [r1, #-56]
+    1220:	f853 4c34 	ldr.w	r4, [r3, #-52]
+    1224:	f841 4c34 	str.w	r4, [r1, #-52]
+    1228:	f853 4c30 	ldr.w	r4, [r3, #-48]
+    122c:	f841 4c30 	str.w	r4, [r1, #-48]
+    1230:	f853 4c2c 	ldr.w	r4, [r3, #-44]
+    1234:	f841 4c2c 	str.w	r4, [r1, #-44]
+    1238:	f853 4c28 	ldr.w	r4, [r3, #-40]
+    123c:	f841 4c28 	str.w	r4, [r1, #-40]
+    1240:	f853 4c24 	ldr.w	r4, [r3, #-36]
+    1244:	f841 4c24 	str.w	r4, [r1, #-36]
+    1248:	f853 4c20 	ldr.w	r4, [r3, #-32]
+    124c:	f841 4c20 	str.w	r4, [r1, #-32]
+    1250:	f853 4c1c 	ldr.w	r4, [r3, #-28]
+    1254:	f841 4c1c 	str.w	r4, [r1, #-28]
+    1258:	f853 4c18 	ldr.w	r4, [r3, #-24]
+    125c:	f841 4c18 	str.w	r4, [r1, #-24]
+    1260:	f853 4c14 	ldr.w	r4, [r3, #-20]
+    1264:	f841 4c14 	str.w	r4, [r1, #-20]
+    1268:	f853 4c10 	ldr.w	r4, [r3, #-16]
+    126c:	f841 4c10 	str.w	r4, [r1, #-16]
+    1270:	f853 4c0c 	ldr.w	r4, [r3, #-12]
+    1274:	f841 4c0c 	str.w	r4, [r1, #-12]
+    1278:	f853 4c08 	ldr.w	r4, [r3, #-8]
+    127c:	f841 4c08 	str.w	r4, [r1, #-8]
+    1280:	f853 4c04 	ldr.w	r4, [r3, #-4]
+    1284:	f841 4c04 	str.w	r4, [r1, #-4]
+    1288:	461c      	mov	r4, r3
+    128a:	460d      	mov	r5, r1
+    128c:	3340      	adds	r3, #64	; 0x40
+    128e:	3140      	adds	r1, #64	; 0x40
+    1290:	f1bc 0f3f 	cmp.w	ip, #63	; 0x3f
+    1294:	f1ac 0c40 	sub.w	ip, ip, #64	; 0x40
+    1298:	dcb6      	bgt.n	1208 <memcpy+0xa0>
+    129a:	4621      	mov	r1, r4
+    129c:	462b      	mov	r3, r5
+    129e:	1b54      	subs	r4, r2, r5
+    12a0:	e00f      	b.n	12c2 <memcpy+0x15a>
+    12a2:	f851 5c10 	ldr.w	r5, [r1, #-16]
+    12a6:	f843 5c10 	str.w	r5, [r3, #-16]
+    12aa:	f851 5c0c 	ldr.w	r5, [r1, #-12]
+    12ae:	f843 5c0c 	str.w	r5, [r3, #-12]
+    12b2:	f851 5c08 	ldr.w	r5, [r1, #-8]
+    12b6:	f843 5c08 	str.w	r5, [r3, #-8]
+    12ba:	f851 5c04 	ldr.w	r5, [r1, #-4]
+    12be:	f843 5c04 	str.w	r5, [r3, #-4]
+    12c2:	2c0f      	cmp	r4, #15
+    12c4:	460d      	mov	r5, r1
+    12c6:	469c      	mov	ip, r3
+    12c8:	f101 0110 	add.w	r1, r1, #16
+    12cc:	f103 0310 	add.w	r3, r3, #16
+    12d0:	f1a4 0410 	sub.w	r4, r4, #16
+    12d4:	dce5      	bgt.n	12a2 <memcpy+0x13a>
+    12d6:	ebcc 0102 	rsb	r1, ip, r2
+    12da:	2300      	movs	r3, #0
+    12dc:	e003      	b.n	12e6 <memcpy+0x17e>
+    12de:	58ec      	ldr	r4, [r5, r3]
+    12e0:	f84c 4003 	str.w	r4, [ip, r3]
+    12e4:	3304      	adds	r3, #4
+    12e6:	195e      	adds	r6, r3, r5
+    12e8:	2903      	cmp	r1, #3
+    12ea:	eb03 040c 	add.w	r4, r3, ip
+    12ee:	f1a1 0104 	sub.w	r1, r1, #4
+    12f2:	dcf4      	bgt.n	12de <memcpy+0x176>
+    12f4:	e77f      	b.n	11f6 <memcpy+0x8e>
+    12f6:	bf00      	nop
+
+000012f8 <C.23.3704>:
+    12f8:	0003 000c 0030 00c0 0300 0c00 3000 c000     ....0........0..
+
+00001308 <C.22.3465>:
+    1308:	0001 0000 0003 0080 0001 0100 0003 0180     ................
+    1318:	0001 0200 0003 0280 0001 0300 0003 0380     ................
+    1328:	0001 0400 0003 0400 0001 0480 0003 0480     ................
+    1338:	0003 0500 0001 0580 0001 0600 0003 0600     ................
+    1348:	0001 0680 0003 0680 0001 0700 0003 0780     ................
+
+00001358 <_init>:
+    1358:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    135a:	bf00      	nop
+    135c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    135e:	bc08      	pop	{r3}
+    1360:	469e      	mov	lr, r3
+    1362:	4770      	bx	lr
+
+00001364 <_fini>:
+    1364:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    1366:	bf00      	nop
+    1368:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    136a:	bc08      	pop	{r3}
+    136c:	469e      	mov	lr, r3
+    136e:	4770      	bx	lr
+
+00001370 <__frame_dummy_init_array_entry>:
+    1370:	05b5 0000                                   ....
+
+00001374 <__do_global_dtors_aux_fini_array_entry>:
+    1374:	05a1 0000 0000 0000 0000 0000               ............

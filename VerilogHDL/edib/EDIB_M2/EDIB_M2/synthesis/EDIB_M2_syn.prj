@@ -1,0 +1,27 @@
+#add_file options
+add_file -verilog "D:/M2S010TQG144/EDIB_1/EDIB_M2/EDIB_M2/hdl/EDIB_M2.v"
+set_option -top_module EDIB_M2
+
+#device options
+set_option -technology SmartFusion2
+set_option -part M2S010
+set_option -package TQ144
+set_option -speed_grade STD
+set_option -opcond COMTC
+set_option -vlog_std v2001
+set_option -write_verilog 0
+
+set_option -async_globalthreshold 12
+set_option -clock_globalthreshold 2
+set_option -globalthreshold 5000
+set_option -low_power_ram_decomp 0
+set_option -retiming 0
+#compilation/mapping options
+set_option -symbolic_fsm_compiler true
+
+#compilation/mapping options
+set_option -frequency 100.000
+
+#simulation options
+impl -active "synthesis"
+project -result_file "D:/M2S010TQG144/EDIB_1/EDIB_M2/EDIB_M2/synthesis/EDIB_M2.edn"

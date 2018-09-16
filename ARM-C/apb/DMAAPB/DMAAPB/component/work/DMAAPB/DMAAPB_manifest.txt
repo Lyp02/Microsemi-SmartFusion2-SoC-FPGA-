@@ -1,0 +1,38 @@
+Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
+
+Date      :  Sun Jun 10 08:46:56 2018
+Project   :  D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB
+Component :  DMAAPB
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/CoreAPBLSRAM.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/lsram_1024to70656x16.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/lsram_2048to141312x8.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/lsram_512to35328x32.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/usram_128to9216x8.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/usram_64to2304x32.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/core/usram_64to4608x16.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/DMAAPB.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/FCCC_0/DMAAPB_FCCC_0_FCCC.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/OSC_0/DMAAPB_OSC_0_OSC.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/SgCore/OSC/2.0.101/osc_comps.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/SgCore/OSC/2.0.101/osc_comps_pre.v
+
+Stimulus files for all Simulation tools:
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/subsystem.bfm
+
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/COREAPBLSRAM/3.0.101/mti/scripts/compileList.do
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/COREAPBLSRAM/3.0.101/mti/scripts/run.do
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/Actel/DirectCore/COREAPBLSRAM/3.0.101/mti/scripts/wave.do
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/coreparameters.v
+    D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/component/work/DMAAPB/COREAPBLSRAM_0/rtl/vlog/test/user/tb.v
+

@@ -1,0 +1,610 @@
+Archive member included because of file (symbol)
+
+D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                              ./main.o (PDMA_init)
+D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                              D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o (SystemInit)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+                              D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o (__errno)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                              c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o) (_impure_ptr)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                              D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o (__libc_init_array)
+c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o) (memcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_buffer_a          0x400             ./main.o
+g_buffer_b          0x800             ./main.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text          0x00000000        0x0 ./main.o
+ .data          0x00000000        0x0 ./main.o
+ .bss           0x00000000        0x0 ./main.o
+ .text          0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .data          0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .bss           0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .text          0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data          0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss           0x00000000        0x0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.__env     0x00000000        0x4 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .data.environ  0x00000000        0x4 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._close   0x00000000       0x18 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._execve  0x00000000       0x28 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._exit    0x00000000        0xc D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fork    0x00000000       0x18 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._fstat   0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._getpid  0x00000000       0x10 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._isatty  0x00000000       0x18 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._kill    0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._link    0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._lseek   0x00000000       0x1c D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._open    0x00000000       0x1c D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._read    0x00000000       0x1c D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._write_r
+                0x00000000       0x20 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .rodata        0x00000000       0x30 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._sbrk    0x00000000       0xe4 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._stat    0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._times   0x00000000       0x18 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._unlink  0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text._wait    0x00000000       0x24 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss.heap_end.2220
+                0x00000000        0x4 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .text          0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .data          0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .bss           0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text.PDMA_status
+                0x00000000       0x38 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text.PDMA_clear_irq
+                0x00000000       0x74 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text          0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data          0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .bss           0x00000000        0x0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.SystemCoreClock
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyPCLK0
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyPCLK1
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyPCLK2
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyFIC0
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyFIC1
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .data.g_FrequencyFIC64
+                0x00000000        0x4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.SystemCoreClockUpdate
+                0x00000000      0x14c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.get_rcosc_25_50mhz_frequency
+                0x00000000       0x44 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.set_clock_frequency_globals
+                0x00000000       0x6c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .rodata.C.18.3527
+                0x00000000        0x8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text          0x00000000        0xc c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000       0xf4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata        0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata.str1.4
+                0x00000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x60000000         0x00040000         xr
+romMirror        0x00000000         0x00040000         xr
+ram              0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+LOAD ./main.o
+LOAD D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+LOAD D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+LOAD D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+START GROUP
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000000                __DYNAMIC = 0x0
+                0x20000000                RAM_START_ADDRESS = 0x20000000
+                0x00010000                RAM_SIZE = 0x10000
+                0x00001000                MAIN_STACK_SIZE = 0x1000
+                0x00001000                MIN_SIZE_HEAP = 0x1000
+                0x20010000                PROVIDE (__main_stack_start, (RAM_START_ADDRESS + RAM_SIZE))
+                0x20010000                PROVIDE (_estack, __main_stack_start)
+                0x00000001                PROVIDE (__mirrored_nvm, 0x1)
+                0x00000000                PROVIDE (__smartfusion2_memory_remap, 0x0)
+
+.vector_table   0x00000000      0x190 load address 0x60000000
+                0x60000000                __vector_table_load = LOADADDR (.vector_table)
+                0x00000000                __vector_table_start = .
+                0x00000000                __vector_table_vma_base_address = .
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x190 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x00000000                g_pfnVectors
+                0x00000190                . = ALIGN (0x10)
+                0x00000190                _evector_table = .
+
+.boot_code      0x00000190      0x410 load address 0x60000190
+ *(.boot_code)
+ .boot_code     0x00000190      0x330 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+                0x00000190                Reset_Handler
+                0x0000037e                NMI_Handler
+                0x00000380                HardFault_Handler
+                0x00000382                MemManage_Handler
+                0x00000384                BusFault_Handler
+                0x00000386                UsageFault_Handler
+                0x00000388                SVC_Handler
+                0x0000038a                DebugMon_Handler
+                0x0000038c                PendSV_Handler
+                0x0000038e                SysTick_Handler
+                0x00000390                WdogWakeup_IRQHandler
+                0x00000392                RTC_Wakeup_IRQHandler
+                0x00000394                SPI0_IRQHandler
+                0x00000396                SPI1_IRQHandler
+                0x00000398                I2C0_IRQHandler
+                0x0000039a                I2C0_SMBAlert_IRQHandler
+                0x0000039c                I2C0_SMBus_IRQHandler
+                0x0000039e                I2C1_IRQHandler
+                0x000003a0                I2C1_SMBAlert_IRQHandler
+                0x000003a2                I2C1_SMBus_IRQHandler
+                0x000003a4                UART0_IRQHandler
+                0x000003a6                UART1_IRQHandler
+                0x000003a8                EthernetMAC_IRQHandler
+                0x000003ac                Timer1_IRQHandler
+                0x000003ae                Timer2_IRQHandler
+                0x000003b0                CAN_IRQHandler
+                0x000003b2                ENVM0_IRQHandler
+                0x000003b4                ENVM1_IRQHandler
+                0x000003b6                ComBlk_IRQHandler
+                0x000003b8                USB_IRQHandler
+                0x000003ba                USB_DMA_IRQHandler
+                0x000003bc                PLL_Lock_IRQHandler
+                0x000003be                PLL_LockLost_IRQHandler
+                0x000003c0                CommSwitchError_IRQHandler
+                0x000003c2                CacheError_IRQHandler
+                0x000003c4                DDR_IRQHandler
+                0x000003c6                HPDMA_Complete_IRQHandler
+                0x000003c8                HPDMA_Error_IRQHandler
+                0x000003ca                ECC_Error_IRQHandler
+                0x000003cc                MDDR_IOCalib_IRQHandler
+                0x000003ce                FAB_PLL_Lock_IRQHandler
+                0x000003d0                FAB_PLL_LockLost_IRQHandler
+                0x000003d2                FIC64_IRQHandler
+                0x000003d4                FabricIrq0_IRQHandler
+                0x000003d6                FabricIrq1_IRQHandler
+                0x000003d8                FabricIrq2_IRQHandler
+                0x000003da                FabricIrq3_IRQHandler
+                0x000003dc                FabricIrq4_IRQHandler
+                0x000003de                FabricIrq5_IRQHandler
+                0x000003e0                FabricIrq6_IRQHandler
+                0x000003e2                FabricIrq7_IRQHandler
+                0x000003e4                FabricIrq8_IRQHandler
+                0x000003e6                FabricIrq9_IRQHandler
+                0x000003e8                FabricIrq10_IRQHandler
+                0x000003ea                FabricIrq11_IRQHandler
+                0x000003ec                FabricIrq12_IRQHandler
+                0x000003ee                FabricIrq13_IRQHandler
+                0x000003f0                FabricIrq14_IRQHandler
+                0x000003f2                FabricIrq15_IRQHandler
+                0x000003f4                GPIO0_IRQHandler
+                0x000003f6                GPIO1_IRQHandler
+                0x000003f8                GPIO2_IRQHandler
+                0x000003fa                GPIO3_IRQHandler
+                0x000003fc                GPIO4_IRQHandler
+                0x000003fe                GPIO5_IRQHandler
+                0x00000400                GPIO6_IRQHandler
+                0x00000402                GPIO7_IRQHandler
+                0x00000404                GPIO8_IRQHandler
+                0x00000406                GPIO9_IRQHandler
+                0x00000408                GPIO10_IRQHandler
+                0x0000040a                GPIO11_IRQHandler
+                0x0000040c                GPIO12_IRQHandler
+                0x0000040e                GPIO13_IRQHandler
+                0x00000410                GPIO14_IRQHandler
+                0x00000412                GPIO15_IRQHandler
+                0x00000414                GPIO16_IRQHandler
+                0x00000416                GPIO17_IRQHandler
+                0x00000418                GPIO18_IRQHandler
+                0x0000041a                GPIO19_IRQHandler
+                0x0000041c                GPIO20_IRQHandler
+                0x0000041e                GPIO21_IRQHandler
+                0x00000420                GPIO22_IRQHandler
+                0x00000422                GPIO23_IRQHandler
+                0x00000424                GPIO24_IRQHandler
+                0x00000426                GPIO25_IRQHandler
+                0x00000428                GPIO26_IRQHandler
+                0x0000042a                GPIO27_IRQHandler
+                0x0000042c                GPIO28_IRQHandler
+                0x0000042e                GPIO29_IRQHandler
+                0x00000430                GPIO30_IRQHandler
+                0x00000432                GPIO31_IRQHandler
+                0x00000434                mscc_post_hw_cfg_init
+ *system_m2sxxx.o(.text*)
+ .text.SystemInit
+                0x000004c0       0x28 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                0x000004c0                SystemInit
+ .text.get_silicon_revision
+                0x000004e8       0x50 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.silicon_workarounds
+                0x00000538       0x20 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .text.m2s050_rev_a_workarounds
+                0x00000558       0x44 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ *sys_config.o(.rodata*)
+                0x000005a0                . = ALIGN (0x10)
+ *fill*         0x0000059c        0x4 00
+
+.text           0x000005a0      0xde0 load address 0x600005a0
+ CREATE_OBJECT_SYMBOLS
+                0x600005a0                __text_load = LOADADDR (.text)
+                0x000005a0                __text_start = .
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000005a0       0x30 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text.PDMA_disable_irq
+                0x000005d0       0x44 ./main.o
+ .text.load_pattern
+                0x00000614       0x68 ./main.o
+                0x00000614                load_pattern
+ .text.ping_pong_handler
+                0x0000067c       0xbc ./main.o
+                0x0000067c                ping_pong_handler
+ .text.start_transfer
+                0x00000738      0x130 ./main.o
+                0x00000738                start_transfer
+ .text.wait_transfer_complete
+                0x00000868       0x18 ./main.o
+                0x00000868                wait_transfer_complete
+ .text.main     0x00000880       0x58 ./main.o
+                0x00000880                main
+ .text.NVIC_EnableIRQ
+                0x000008d8       0x38 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text.NVIC_ClearPendingIRQ
+                0x00000910       0x3c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text.PDMA_init
+                0x0000094c       0xa0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x0000094c                PDMA_init
+ .text.PDMA_configure
+                0x000009ec      0x144 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x000009ec                PDMA_configure
+ .text.PDMA_start
+                0x00000b30      0x234 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x00000b30                PDMA_start
+ .text.PDMA_load_next_buffer
+                0x00000d64      0x1d0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x00000d64                PDMA_load_next_buffer
+ .text.get_channel_id_from_status
+                0x00000f34       0xb0 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .text.DMA_IRQHandler
+                0x00000fe4       0x8c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x00000fe4                DMA_IRQHandler
+ .text.PDMA_set_irq_handler
+                0x00001070       0x5c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x00001070                PDMA_set_irq_handler
+ .text.PDMA_enable_irq
+                0x000010cc       0x4c D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                0x000010cc                PDMA_enable_irq
+ .text          0x00001118       0x50 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x00001118                __libc_init_array
+ .text          0x00001168      0x190 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x00001168                memcpy
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+                0x000012f8                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.C.23.3704
+                0x000012f8       0x10 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .rodata.C.22.3465
+                0x00001308       0x50 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.vector_table)
+ *(.init)
+ .init          0x00001358        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00001358                _init
+ .init          0x0000135c        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ *(.fini)
+ .fini          0x00001364        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00001364                _fini
+ .fini          0x00001368        0x8 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x00001370                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x00001370                PROVIDE (__preinit_array_end, .)
+                0x00001370                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00001370        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x00001374                PROVIDE (__init_array_end, .)
+                0x00001374                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ .fini_array    0x00001374        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00001378                PROVIDE (__fini_array_end, .)
+                0x00001380                . = ALIGN (0x10)
+ *fill*         0x00001378        0x8 00
+                0x00001380                __exidx_start = .
+
+.v4_bx          0x00001380        0x0 load address 0x60001380
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001380                __exidx_end = .
+                0x00001380                _etext = .
+
+.data           0x20000000       0x10 load address 0x60001380
+                0x60001380                __data_load = LOADADDR (.data)
+                0x60001380                _sidata = LOADADDR (.data)
+                0x20000000                __data_start = .
+                0x20000000                _sdata = .
+ *(.jcr)
+ .jcr           0x20000000        0x0 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x20000000        0x4 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.increment.3432
+                0x20000004        0x4 ./main.o
+                0x20000010                . = ALIGN (0x10)
+ *fill*         0x20000008        0x8 00
+                0x20000010                _edata = .
+
+.bss            0x20000010      0xc50 load address 0x60001390
+                0x20000010                __bss_start__ = .
+                0x20000010                _sbss = .
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x20000010        0x1 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x20000011        0x3 00
+ .bss.g_source_addr
+                0x20000014        0x4 ./main.o
+                0x20000014                g_source_addr
+ .bss.g_target_addr
+                0x20000018        0x4 ./main.o
+                0x20000018                g_target_addr
+ .bss.g_size_to_send
+                0x2000001c        0x4 ./main.o
+                0x2000001c                g_size_to_send
+ .bss.g_pdma_next_channel
+                0x20000020        0x8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .bss.g_pdma_started_a
+                0x20000028        0x8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .bss.g_pdma_started_b
+                0x20000030        0x8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .bss.g_pdma_isr_table
+                0x20000038       0x20 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ *(COMMON)
+ COMMON         0x20000058      0xc00 ./main.o
+                0x20000058                g_buffer_a
+                0x20000458                g_buffer_b
+                0x20000c60                . = ALIGN (0x10)
+ *fill*         0x20000c58        0x8 00
+                0x20000c60                __bss_end__ = .
+                0x20000c60                _end = .
+                0x20000c60                __end = _end
+                0x20000c60                _ebss = .
+                0x20000c60                PROVIDE (end, .)
+
+.heap           0x20000c60     0xe3a0 load address 0x60001390
+                0x20000c60                __heap_start__ = .
+                0x20001c60                . = (. + MIN_SIZE_HEAP)
+ *fill*         0x20000c60     0x1000 00
+                0x2000f000                . = (. + (((ABSOLUTE (RAM_START_ADDRESS) + RAM_SIZE) - MAIN_STACK_SIZE) - .))
+ *fill*         0x20001c60     0xd3a0 00
+                0x2000f000                _eheap = .
+
+.stack          0x2000f000     0x1000 load address 0x60001390
+                0x2000f000                __stack_start__ = .
+                0x20010000                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x2000f000     0x1000 00
+                0x20010000                _estack = .
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000       0xac
+ .comment       0x00000000       0x2b ./main.o
+ .comment       0x0000002b       0x2b D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .comment       0x00000056       0x2b D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .comment       0x00000081       0x2b D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_aranges  0x00000000      0x1b8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x48 ./main.o
+ .debug_aranges
+                0x00000048       0xa8 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_aranges
+                0x000000f0       0x78 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_aranges
+                0x00000168       0x50 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_pubnames
+                0x00000000      0x33a
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xc5 ./main.o
+ .debug_pubnames
+                0x000000c5       0xeb D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_pubnames
+                0x000001b0       0xbf D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_pubnames
+                0x0000026f       0xcb D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_info     0x00000000     0x2823
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x441 ./main.o
+ .debug_info    0x00000441      0x6ed D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_info    0x00000b2e     0x1136 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_info    0x00001c64      0xbbf D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_abbrev   0x00000000      0x5fb
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x17e ./main.o
+ .debug_abbrev  0x0000017e      0x170 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_abbrev  0x000002ee      0x1bd D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_abbrev  0x000004ab      0x150 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_line     0x00000000      0xd35
+ *(.debug_line)
+ .debug_line    0x00000000      0x279 ./main.o
+ .debug_line    0x00000279      0x4b6 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_line    0x0000072f      0x3de D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_line    0x00000b0d      0x228 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_frame    0x00000000      0x5ac
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xc0 ./main.o
+ .debug_frame   0x000000c0      0x21c D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_frame   0x000002dc      0x178 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_frame   0x00000454       0xd8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .debug_frame   0x0000052c       0x20 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .debug_frame   0x0000054c       0x2c c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x00000578       0x34 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+
+.debug_str      0x00000000     0x16db
+ *(.debug_str)
+ .debug_str     0x00000000      0x4a1 ./main.o
+                                0x50d (size before relaxing)
+ .debug_str     0x000004a1      0x268 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                                0x334 (size before relaxing)
+ .debug_str     0x00000709      0xdd2 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+                               0x124d (size before relaxing)
+ .debug_str     0x000014db      0x200 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+                                0xa14 (size before relaxing)
+
+.debug_loc      0x00000000      0x903
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x13e ./main.o
+ .debug_loc     0x0000013e      0x3c6 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_loc     0x00000504      0x296 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_loc     0x0000079a      0x169 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_macinfo  0x00000000    0x1be29
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000     0x7b9d ./main.o
+ .debug_macinfo
+                0x00007b9d     0x4bf0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_macinfo
+                0x0000c78d     0x82c8 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_macinfo
+                0x00014a55     0x73d4 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 ./main.o
+ .ARM.attributes
+                0x00000073       0x21 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/startup_m2sxxx.o
+ .ARM.attributes
+                0x00000094       0x31 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .ARM.attributes
+                0x000000c5       0x31 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .ARM.attributes
+                0x000000f6       0x31 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)
+ .ARM.attributes
+                0x00000127       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000150       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000179       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x000001a2       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000001cb       0x29 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .ARM.attributes
+                0x000001f4       0x19 c:/program files (x86)/microsemi/softconsole v3.4/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(DMAAPB_MSS_CM3_app elf32-littlearm)
+
+.debug_ranges   0x00000000      0x198
+ .debug_ranges  0x00000000       0x40 ./main.o
+ .debug_ranges  0x00000040       0xa0 D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/SoftConsole/DMAAPB_MSS_CM3/DMAAPB_MSS_CM3_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_ranges  0x000000e0       0x70 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(mss_pdma.o)
+ .debug_ranges  0x00000150       0x48 D:\M2S010TQG144\EDIB_1\DMAAPB\DMAAPB\SoftConsole\DMAAPB_MSS_CM3\DMAAPB_MSS_CM3_hw_platform\Debug\libDMAAPB_MSS_CM3_hw_platform.a(system_m2sxxx.o)

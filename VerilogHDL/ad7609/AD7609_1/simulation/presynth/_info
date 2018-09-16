@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/M2S010TQG144/AD7609_1/simulation
+vAD7609
+Z0 !s110 1529324060
+!i10b 1
+!s100 7NjA<9WVNd`?BTGWSV`Bo3
+Ij;MbgDg]YFDhhHj<KMN=m2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/M2S010TQG144/AD/AD7609_1/simulation
+w1527334947
+8D:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v
+FD:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v
+L0 21
+Z3 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z4 !s108 1529324060.000000
+!s107 D:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|D:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v|
+!s101 -O0
+!i113 1
+Z5 o-vlog01compat -work presynth -O0
+Z6 tCvgOpt 0
+n@a@d7609
+vAD7609_tb
+R0
+!i10b 1
+!s100 >Ai7K4>BTP7NcObIo2TTS1
+IM^dk=[LnnfSnY3Kb6`U[a1
+R1
+R2
+w1527337921
+8D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v
+FD:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v|
+!s90 -reportprogress|300|+incdir+D:/M2S010TQG144/AD/AD7609_1/stimulus|-vlog01compat|-work|presynth|D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v|
+!s101 -O0
+!i113 1
+R5
+!s92 +incdir+D:/M2S010TQG144/AD/AD7609_1/stimulus -vlog01compat -work presynth -O0
+R6
+n@a@d7609_tb

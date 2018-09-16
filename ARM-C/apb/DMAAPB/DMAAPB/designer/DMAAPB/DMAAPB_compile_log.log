@@ -1,0 +1,28 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       2 
+      Globals that cannot be demoted:      1 
+      Globals considered for demotion:     1 
+
+
+Info: List of globals that cannot be demoted: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    19     0      0      'FCCC_0/GL0_INST' 
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    0      18     1      'SYSRESET_0_RNIHNV1' 
+
+Info: Demotion information: 
+      Disconnected 1 data pins from global 'SYSRESET_0_RNIHNV1'. 
+Info: CMPG4-302: Added 0 row global instances.
+Info: CMPG4-303: Deleted 0 global instances.
+
+===============================================================================.
+
+INFO: Reading User PDC file D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/constraint/io/DMAAPB.io.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file D:/M2S010TQG144/EDIB_1/DMAAPB/DMAAPB/constraint/fp/DMAAPB.fp.pdc. 0 error(s) and 0 warning(s)

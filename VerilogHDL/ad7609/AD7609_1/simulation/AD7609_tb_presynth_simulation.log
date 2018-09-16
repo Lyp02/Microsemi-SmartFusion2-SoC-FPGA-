@@ -1,0 +1,53 @@
+# Reading C:/Microsemi/Libero_SoC_v11.8/Modelsim/tcl/vsim/pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi vmap 10.5c Lib Mapping Utility 2016.07 Jul 21 2016
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi vmap 10.5c Lib Mapping Utility 2016.07 Jul 21 2016
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v11.8/Designer/lib/modelsim/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi vlog 10.5c Compiler 2016.07 Jul 21 2016
+# Start time: 20:14:20 on Jun 18,2018
+# vlog -reportprogress 300 -vlog01compat -work presynth D:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v 
+# -- Compiling module AD7609
+# 
+# Top level modules:
+# 	AD7609
+# End time: 20:14:20 on Jun 18,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi vlog 10.5c Compiler 2016.07 Jul 21 2016
+# Start time: 20:14:20 on Jun 18,2018
+# vlog -reportprogress 300 "+incdir+D:/M2S010TQG144/AD/AD7609_1/stimulus" -vlog01compat -work presynth D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v 
+# -- Compiling module AD7609_tb
+# 
+# Top level modules:
+# 	AD7609_tb
+# End time: 20:14:20 on Jun 18,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.AD7609_tb 
+# Start time: 20:14:20 on Jun 18,2018
+# //  ModelSim Microsemi 10.5c Jul 21 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading presynth.AD7609_tb
+# Loading presynth.AD7609
+run -all
+# ** Note: $stop    : D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v(180)
+#    Time: 16880 ns  Iteration: 0  Instance: /AD7609_tb
+# Break in Module AD7609_tb at D:/M2S010TQG144/AD/AD7609_1/stimulus/AD7609_tb.v line 180
+run -all
+# Break key hit
+# Break in Module AD7609 at D:/M2S010TQG144/AD/AD7609_1/hdl/AD7609.v line 63
+# End time: 20:24:25 on Jun 18,2018, Elapsed time: 0:10:05
+# Errors: 0, Warnings: 0

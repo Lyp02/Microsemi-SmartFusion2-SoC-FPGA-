@@ -1,0 +1,4 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"D:\M2S010TQG144\EDIB_1\EDIB_CMD\EDIB_CMD\hdl\EDIB_CMD.v":1:7:1:14|Synthesizing module EDIB_CMD in library work.
+
